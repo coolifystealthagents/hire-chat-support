@@ -1,0 +1,167 @@
+{
+  "site": "HireChatSupport.com",
+  "repository": "coolifystealthagents/hire-chat-support",
+  "branch": "main",
+  "baseSha": "b91e0c4c0855be8c75fe430ac88dc4bd20955ead",
+  "publicationDate": "2026-10-12",
+  "counts": {
+    "blog": 12,
+    "research": 5,
+    "thumbnails": 17
+  },
+  "registryPaths": [
+    "lib/october-12/blogPosts.ts",
+    "lib/october-12/researchPosts.ts",
+    "lib/content.ts"
+  ],
+  "routePaths": [
+    "app/blog/[slug]/page.tsx",
+    "app/research/[slug]/page.tsx"
+  ],
+  "indexPaths": [
+    "app/blog/page.tsx",
+    "app/research/page.tsx"
+  ],
+  "sidebarPaths": [
+    "app/blog/[slug]/page.tsx",
+    "app/research/[slug]/page.tsx"
+  ],
+  "articles": [
+    {
+      "section": "Blog",
+      "title": "Preserving Chat Queue Ownership at Shift Change",
+      "slug": "chat-queue-ownership-at-shift-change",
+      "sourcePath": "lib/october-12/blogPosts.ts",
+      "thumbnailPath": "public/october-12/chat-queue-ownership-at-shift-change.webp",
+      "registryPath": "lib/content.ts"
+    },
+    {
+      "section": "Blog",
+      "title": "Escalating Payment Failure Chats Without Inventing a Diagnosis",
+      "slug": "payment-failure-chat-escalation",
+      "sourcePath": "lib/october-12/blogPosts.ts",
+      "thumbnailPath": "public/october-12/payment-failure-chat-escalation.webp",
+      "registryPath": "lib/content.ts"
+    },
+    {
+      "section": "Blog",
+      "title": "Handling Account Takeover Signals in Live Chat",
+      "slug": "account-takeover-chat-response",
+      "sourcePath": "lib/october-12/blogPosts.ts",
+      "thumbnailPath": "public/october-12/account-takeover-chat-response.webp",
+      "registryPath": "lib/content.ts"
+    },
+    {
+      "section": "Blog",
+      "title": "Routing Accessibility Requests from Chat to Resolution",
+      "slug": "accessibility-request-chat-handoff",
+      "sourcePath": "lib/october-12/blogPosts.ts",
+      "thumbnailPath": "public/october-12/accessibility-request-chat-handoff.webp",
+      "registryPath": "lib/content.ts"
+    },
+    {
+      "section": "Blog",
+      "title": "Building a Verifiable Subscription Cancellation Chat Record",
+      "slug": "subscription-cancellation-chat-record",
+      "sourcePath": "lib/october-12/blogPosts.ts",
+      "thumbnailPath": "public/october-12/subscription-cancellation-chat-record.webp",
+      "registryPath": "lib/content.ts"
+    },
+    {
+      "section": "Blog",
+      "title": "Retiring Expired Answers from a Chat Knowledge Base",
+      "slug": "chat-knowledge-answer-expiry",
+      "sourcePath": "lib/october-12/blogPosts.ts",
+      "thumbnailPath": "public/october-12/chat-knowledge-answer-expiry.webp",
+      "registryPath": "lib/content.ts"
+    },
+    {
+      "section": "Blog",
+      "title": "Writing Evidence-Bounded Delivery Delay Updates",
+      "slug": "delivery-delay-chat-update",
+      "sourcePath": "lib/october-12/blogPosts.ts",
+      "thumbnailPath": "public/october-12/delivery-delay-chat-update.webp",
+      "registryPath": "lib/content.ts"
+    },
+    {
+      "section": "Blog",
+      "title": "Separating Refund Preparation from Refund Approval in Chat",
+      "slug": "refund-approval-chat-boundary",
+      "sourcePath": "lib/october-12/blogPosts.ts",
+      "thumbnailPath": "public/october-12/refund-approval-chat-boundary.webp",
+      "registryPath": "lib/content.ts"
+    },
+    {
+      "section": "Blog",
+      "title": "Checking Meaning Across Multilingual Chat Handoffs",
+      "slug": "multilingual-chat-meaning-check",
+      "sourcePath": "lib/october-12/blogPosts.ts",
+      "thumbnailPath": "public/october-12/multilingual-chat-meaning-check.webp",
+      "registryPath": "lib/content.ts"
+    },
+    {
+      "section": "Blog",
+      "title": "Applying Retention Boundaries to Chat Transcripts",
+      "slug": "chat-transcript-retention-boundary",
+      "sourcePath": "lib/october-12/blogPosts.ts",
+      "thumbnailPath": "public/october-12/chat-transcript-retention-boundary.webp",
+      "registryPath": "lib/content.ts"
+    },
+    {
+      "section": "Blog",
+      "title": "Running a Chat Status Board During a Service Outage",
+      "slug": "service-outage-chat-status-board",
+      "sourcePath": "lib/october-12/blogPosts.ts",
+      "thumbnailPath": "public/october-12/service-outage-chat-status-board.webp",
+      "registryPath": "lib/content.ts"
+    },
+    {
+      "section": "Blog",
+      "title": "Escalating Vulnerable Customer Signals with Care",
+      "slug": "vulnerable-customer-chat-escalation",
+      "sourcePath": "lib/october-12/blogPosts.ts",
+      "thumbnailPath": "public/october-12/vulnerable-customer-chat-escalation.webp",
+      "registryPath": "lib/content.ts"
+    },
+    {
+      "section": "Research",
+      "title": "Reproducibility of High-Consequence Chat Escalations",
+      "slug": "chat-escalation-reproducibility-study",
+      "sourcePath": "lib/october-12/researchPosts.ts",
+      "thumbnailPath": "public/october-12/chat-escalation-reproducibility-study.webp",
+      "registryPath": "lib/content.ts"
+    },
+    {
+      "section": "Research",
+      "title": "Version Drift in Customer Support Knowledge Answers",
+      "slug": "knowledge-answer-version-drift-study",
+      "sourcePath": "lib/october-12/researchPosts.ts",
+      "thumbnailPath": "public/october-12/knowledge-answer-version-drift-study.webp",
+      "registryPath": "lib/content.ts"
+    },
+    {
+      "section": "Research",
+      "title": "Identity Verification Friction in Live Chat Handoffs",
+      "slug": "chat-identity-verification-friction-study",
+      "sourcePath": "lib/october-12/researchPosts.ts",
+      "thumbnailPath": "public/october-12/chat-identity-verification-friction-study.webp",
+      "registryPath": "lib/content.ts"
+    },
+    {
+      "section": "Research",
+      "title": "Freshness of Customer Chat Messages During Service Outages",
+      "slug": "outage-message-freshness-study",
+      "sourcePath": "lib/october-12/researchPosts.ts",
+      "thumbnailPath": "public/october-12/outage-message-freshness-study.webp",
+      "registryPath": "lib/content.ts"
+    },
+    {
+      "section": "Research",
+      "title": "Evidence Completeness in Refund-Related Chat Cases",
+      "slug": "refund-chat-evidence-completeness-study",
+      "sourcePath": "lib/october-12/researchPosts.ts",
+      "thumbnailPath": "public/october-12/refund-chat-evidence-completeness-study.webp",
+      "registryPath": "lib/content.ts"
+    }
+  ]
+}
