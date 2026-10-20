@@ -7,26 +7,22 @@ export const october12ResearchPosts: ResearchPost[] = [
     "cluster": "Escalation quality",
     "publishedAt": "2026-10-12",
     "image": "/october-12/chat-escalation-reproducibility-study.webp",
-    "finding": "Study design uses one bounded observation unit, ten evidence fields, seven adverse states, and one authority map; these are protocol counts, not performance claims.",
+    "finding": "This proposed protocol tests whether independent reviewers can reconstruct the same escalation path from retained evidence. It reports no observed agreement or service result.",
     "methodology": [
-      "Define the observation unit: use one escalation from first signal through owner acknowledgement and verified endpoint. The protocol question is whether two reviewers reconstruct the same customer state, authority boundary, and next action from the retained transcript and system evidence. Record the entry and exit events before sampling begins.",
-      "Declare the sample and exclusions: publish the cohort dates, channels, inclusion rule, and exclusions for one escalation from first signal through owner acknowledgement and verified endpoint. Keep ordinary, incomplete, corrected, urgent, inaccessible, and reopened cases visible as separate strata.",
-      "Preserve the evidence hierarchy: retain original wording, actor, channel, local timestamp, case identity, system event, controlling answer or policy version, permission state, correction history, and consequence. Label observation, named report, inference, and decision separately.",
-      "Reconstruct the chronology: order every event in one escalation from first signal through owner acknowledgement and verified endpoint without filling gaps from memory. Preserve original local values beside normalized values and flag conflicts instead of choosing the convenient record.",
-      "Design adverse controls: test missing identity, stale guidance, contradictory state, inaccessible evidence, late correction, privacy-sensitive content, and failed acknowledgement. Record which control caught each seeded condition.",
-      "Code authority transitions: mark the moment work passes between coordinator and decision owner. Support manager and specialist decision owner retain consequential authority; preparation or routing permission does not expand that authority.",
-      "Measure customer acknowledgement: distinguish message delivery from customer receipt and from resolution. Record the approved message, channel result, acknowledgement evidence, open questions, and residual work.",
-      "Audit privacy and minimization: collect only fields needed to answer HCS-R-1. Restrict reviewer access, redact exported examples, document retention, and log any exception to the minimum-necessary rule.",
-      "Run independent review: give a second reviewer the retained record without private context. Compare chronology, evidence classification, authority boundary, and next action; preserve disagreements for owner resolution.",
-      "State limitations and refresh triggers: report counts with denominators, exclusions, unresolved records, and gap concentration rather than outcome claims. Refresh after a system, role, policy, channel, or risk change and require owner acceptance before reuse."
+      "Select completed high-consequence escalations from declared dates and channels. Define qualifying triggers before sampling, such as account security, safety, legal notice, financial loss, or widespread service impact.",
+      "Create a sealed packet with original customer wording, identity state, timestamps, consulted source versions, actions, transfers, customer updates, owner acknowledgement, and endpoint. Exclude commentary unavailable during handling.",
+      "Give each packet independently to two reviewers. Ask them to identify the trigger, severity, missing evidence, permitted immediate action, required owner, and next customer commitment without consulting one another.",
+      "Compare outputs field by field. Code differences as missing evidence, ambiguous matrix language, chronology conflict, authority confusion, or reviewer error. Preserve unresolved disagreement rather than forcing consensus.",
+      "Seed test packets with a stale runbook, unavailable owner, conflicting state, unverified identity, and failed acknowledgement. Record which prescribed control catches each condition and which unsafe action remains possible.",
+      "Report cohort sizes, exclusions, complete reconstructions, disagreement categories, and missing packets. Owners approve any matrix repair before the blinded exercise is repeated on a new cohort."
     ],
     "findings": [
-      "For high-consequence chat escalation, a closed ticket is weaker than a linked chain containing original wording, versioned evidence, authority decision, delivered message, acknowledgement, and residual work.",
-      "Missing evidence in one escalation from first signal through owner acknowledgement and verified endpoint must not be replaced by habit, a likely explanation, or a favorable outcome; doing so hides the process weakness the review should expose.",
-      "Permission to coordinate does not imply permission to disclose, diagnose, credit, restrict, or make regulated judgments. The authority map must name support manager and specialist decision owner.",
-      "Adverse review should include wrong identity, stale answer, contradictory state, inaccessible source, late correction, privacy-sensitive content, and failed acknowledgement.",
-      "A reproducible HCS-R-1 record retains original local time and field values beside normalized values so boundary cases remain reviewable.",
-      "Pilot high-consequence chat escalation in a declared cohort, repair gaps, secure owner acceptance, test rollback, and refresh after any system, role, policy, or risk change."
+      "A reconstructable escalation links its trigger, source version, authority decision, owner acceptance, customer update, and endpoint.",
+      "Reviewer disagreement should be classified by cause.",
+      "An unavailable owner requires a tested fallback, not borrowed authority.",
+      "Seeded cases test design without inventing live failures.",
+      "Missing packets and exclusions belong beside reviewed counts.",
+      "Any later improvement claim requires a separate completed analysis."
     ],
     "sources": [
       {
@@ -98,26 +94,22 @@ export const october12ResearchPosts: ResearchPost[] = [
     "cluster": "Knowledge governance",
     "publishedAt": "2026-10-12",
     "image": "/october-12/knowledge-answer-version-drift-study.webp",
-    "finding": "Study design uses one bounded observation unit, ten evidence fields, seven adverse states, and one authority map; these are protocol counts, not performance claims.",
+    "finding": "This proposed protocol traces whether a customer answer can be tied to the policy and publication version that controlled when it was used. It reports no measured drift rate.",
     "methodology": [
-      "Define the observation unit: use one knowledge answer across approval, publication, use, revision, withdrawal, and correction. The protocol question is whether agents can identify which approved answer controlled at the time of a customer reply and subsequent correction. Record the entry and exit events before sampling begins.",
-      "Declare the sample and exclusions: publish the cohort dates, channels, inclusion rule, and exclusions for one knowledge answer across approval, publication, use, revision, withdrawal, and correction. Keep ordinary, incomplete, corrected, urgent, inaccessible, and reopened cases visible as separate strata.",
-      "Preserve the evidence hierarchy: retain original wording, actor, channel, local timestamp, case identity, system event, controlling answer or policy version, permission state, correction history, and consequence. Label observation, named report, inference, and decision separately.",
-      "Reconstruct the chronology: order every event in one knowledge answer across approval, publication, use, revision, withdrawal, and correction without filling gaps from memory. Preserve original local values beside normalized values and flag conflicts instead of choosing the convenient record.",
-      "Design adverse controls: test missing identity, stale guidance, contradictory state, inaccessible evidence, late correction, privacy-sensitive content, and failed acknowledgement. Record which control caught each seeded condition.",
-      "Code authority transitions: mark the moment work passes between coordinator and decision owner. Knowledge owner and policy author retain consequential authority; preparation or routing permission does not expand that authority.",
-      "Measure customer acknowledgement: distinguish message delivery from customer receipt and from resolution. Record the approved message, channel result, acknowledgement evidence, open questions, and residual work.",
-      "Audit privacy and minimization: collect only fields needed to answer HCS-R-2. Restrict reviewer access, redact exported examples, document retention, and log any exception to the minimum-necessary rule.",
-      "Run independent review: give a second reviewer the retained record without private context. Compare chronology, evidence classification, authority boundary, and next action; preserve disagreements for owner resolution.",
-      "State limitations and refresh triggers: report counts with denominators, exclusions, unresolved records, and gap concentration rather than outcome claims. Refresh after a system, role, policy, channel, or risk change and require owner acceptance before reuse."
+      "Build an answer registry for one product area with governing source, content owner, approval event, publication identifier, effective time, retirement state, and channels.",
+      "Choose a cohort by answer family and usage period. Include active, revised, withdrawn, duplicated, and corrected articles, and state how drafts or inaccessible records are handled.",
+      "Join each sampled customer response timestamp to the answer version available then. Retain the exact answer and source reference instead of substituting the newest wording.",
+      "Test lineage both ways: each answer points to a source, and each material source change identifies affected answers. Log broken links, absent approvers, overlapping dates, and uncontrolled copies.",
+      "Compare eligibility, price, identity steps, deadlines, limitations, triggers, and commitments rather than relying on version labels. Track correction delivery when outdated wording reached a customer.",
+      "Report confirmed outdated use, uncertain lineage, and unclear current guidance separately, with denominators. The policy owner approves repairs and the lineage check repeats after publication."
     ],
     "findings": [
-      "For knowledge answer version drift, a closed ticket is weaker than a linked chain containing original wording, versioned evidence, authority decision, delivered message, acknowledgement, and residual work.",
-      "Missing evidence in one knowledge answer across approval, publication, use, revision, withdrawal, and correction must not be replaced by habit, a likely explanation, or a favorable outcome; doing so hides the process weakness the review should expose.",
-      "Permission to coordinate does not imply permission to disclose, diagnose, credit, restrict, or make regulated judgments. The authority map must name knowledge owner and policy author.",
-      "Adverse review should include wrong identity, stale answer, contradictory state, inaccessible source, late correction, privacy-sensitive content, and failed acknowledgement.",
-      "A reproducible HCS-R-2 record retains original local time and field values beside normalized values so boundary cases remain reviewable.",
-      "Pilot knowledge answer version drift in a declared cohort, repair gaps, secure owner acceptance, test rollback, and refresh after any system, role, policy, or risk change."
+      "Effective times and channel copies are needed to establish which answer governed.",
+      "Copied text outside the registry creates another drift surface.",
+      "The policy owner decides the controlling statement.",
+      "Corrections need delivery and affected-case records.",
+      "Uncertain lineage is not confirmed drift.",
+      "This protocol tests accountability rather than current accuracy."
     ],
     "sources": [
       {
@@ -189,26 +181,22 @@ export const october12ResearchPosts: ResearchPost[] = [
     "cluster": "Identity operations",
     "publishedAt": "2026-10-12",
     "image": "/october-12/chat-identity-verification-friction-study.webp",
-    "finding": "Study design uses one bounded observation unit, ten evidence fields, seven adverse states, and one authority map; these are protocol counts, not performance claims.",
+    "finding": "This proposed protocol maps where legitimate customers cannot complete an approved verification path while preserving account controls. It reports no friction rate or accessibility outcome.",
     "methodology": [
-      "Define the observation unit: use one verification attempt through fallback, owner decision, customer communication, and recovery. The protocol question is whether verification failures and accessibility barriers are measured without weakening account-protection controls. Record the entry and exit events before sampling begins.",
-      "Declare the sample and exclusions: publish the cohort dates, channels, inclusion rule, and exclusions for one verification attempt through fallback, owner decision, customer communication, and recovery. Keep ordinary, incomplete, corrected, urgent, inaccessible, and reopened cases visible as separate strata.",
-      "Preserve the evidence hierarchy: retain original wording, actor, channel, local timestamp, case identity, system event, controlling answer or policy version, permission state, correction history, and consequence. Label observation, named report, inference, and decision separately.",
-      "Reconstruct the chronology: order every event in one verification attempt through fallback, owner decision, customer communication, and recovery without filling gaps from memory. Preserve original local values beside normalized values and flag conflicts instead of choosing the convenient record.",
-      "Design adverse controls: test missing identity, stale guidance, contradictory state, inaccessible evidence, late correction, privacy-sensitive content, and failed acknowledgement. Record which control caught each seeded condition.",
-      "Code authority transitions: mark the moment work passes between coordinator and decision owner. Identity owner, security lead, and accessibility owner retain consequential authority; preparation or routing permission does not expand that authority.",
-      "Measure customer acknowledgement: distinguish message delivery from customer receipt and from resolution. Record the approved message, channel result, acknowledgement evidence, open questions, and residual work.",
-      "Audit privacy and minimization: collect only fields needed to answer HCS-R-3. Restrict reviewer access, redact exported examples, document retention, and log any exception to the minimum-necessary rule.",
-      "Run independent review: give a second reviewer the retained record without private context. Compare chronology, evidence classification, authority boundary, and next action; preserve disagreements for owner resolution.",
-      "State limitations and refresh triggers: report counts with denominators, exclusions, unresolved records, and gap concentration rather than outcome claims. Refresh after a system, role, policy, channel, or risk change and require owner acceptance before reuse."
+      "Have identity and security owners define approved paths, prohibited disclosures, retry limits, lock conditions, and fallback authorities before case collection.",
+      "Sample attempts by path and outcome, including completion, abandonment, timeout, lock, fallback request, and owner exception. Preserve each path denominator and declare attack-traffic exclusions.",
+      "Build an event sequence from prompts, customer responses, system outcomes, elapsed intervals, channel changes, and accessibility requests. Do not copy secret answers or identity documents into the extract.",
+      "Code friction as instruction comprehension, unavailable factor, delivery failure, inaccessible interaction, data mismatch, rate limit, agent routing, or unresolved system state.",
+      "Test alternatives with accessibility and security owners. The question is whether an alternative reaches the approved assurance boundary, not whether controls can be relaxed.",
+      "Report counts by path with missing events and privacy redactions. Owners choose wording, interface, channel, or fallback changes; repeat the protocol and watch lockouts as a guardrail."
     ],
     "findings": [
-      "For chat identity verification, a closed ticket is weaker than a linked chain containing original wording, versioned evidence, authority decision, delivered message, acknowledgement, and residual work.",
-      "Missing evidence in one verification attempt through fallback, owner decision, customer communication, and recovery must not be replaced by habit, a likely explanation, or a favorable outcome; doing so hides the process weakness the review should expose.",
-      "Permission to coordinate does not imply permission to disclose, diagnose, credit, restrict, or make regulated judgments. The authority map must name identity owner, security lead, and accessibility owner.",
-      "Adverse review should include wrong identity, stale answer, contradictory state, inaccessible source, late correction, privacy-sensitive content, and failed acknowledgement.",
-      "A reproducible HCS-R-3 record retains original local time and field values beside normalized values so boundary cases remain reviewable.",
-      "Pilot chat identity verification in a declared cohort, repair gaps, secure owner acceptance, test rollback, and refresh after any system, role, policy, or risk change."
+      "Different friction locations require different owners.",
+      "Fallbacks require an approved assurance boundary.",
+      "The extract should minimize identity data.",
+      "Accessibility barriers remain a distinct analysis group.",
+      "Convenience cannot justify premature disclosure.",
+      "Conclusions require denominators and guardrail outcomes."
     ],
     "sources": [
       {
@@ -280,26 +268,22 @@ export const october12ResearchPosts: ResearchPost[] = [
     "cluster": "Incident communication",
     "publishedAt": "2026-10-12",
     "image": "/october-12/outage-message-freshness-study.webp",
-    "finding": "Study design uses one bounded observation unit, ten evidence fields, seven adverse states, and one authority map; these are protocol counts, not performance claims.",
+    "finding": "This proposed protocol evaluates outage-message lifecycle controls against incident updates and promised refresh times. It does not claim that current messages are timely.",
     "methodology": [
-      "Define the observation unit: use one outage message version from approval through delivery, correction, and retirement. The protocol question is whether customer-facing statements remain aligned with the current incident scope, approved language, and next-update commitment. Record the entry and exit events before sampling begins.",
-      "Declare the sample and exclusions: publish the cohort dates, channels, inclusion rule, and exclusions for one outage message version from approval through delivery, correction, and retirement. Keep ordinary, incomplete, corrected, urgent, inaccessible, and reopened cases visible as separate strata.",
-      "Preserve the evidence hierarchy: retain original wording, actor, channel, local timestamp, case identity, system event, controlling answer or policy version, permission state, correction history, and consequence. Label observation, named report, inference, and decision separately.",
-      "Reconstruct the chronology: order every event in one outage message version from approval through delivery, correction, and retirement without filling gaps from memory. Preserve original local values beside normalized values and flag conflicts instead of choosing the convenient record.",
-      "Design adverse controls: test missing identity, stale guidance, contradictory state, inaccessible evidence, late correction, privacy-sensitive content, and failed acknowledgement. Record which control caught each seeded condition.",
-      "Code authority transitions: mark the moment work passes between coordinator and decision owner. Incident commander and communications owner retain consequential authority; preparation or routing permission does not expand that authority.",
-      "Measure customer acknowledgement: distinguish message delivery from customer receipt and from resolution. Record the approved message, channel result, acknowledgement evidence, open questions, and residual work.",
-      "Audit privacy and minimization: collect only fields needed to answer HCS-R-4. Restrict reviewer access, redact exported examples, document retention, and log any exception to the minimum-necessary rule.",
-      "Run independent review: give a second reviewer the retained record without private context. Compare chronology, evidence classification, authority boundary, and next action; preserve disagreements for owner resolution.",
-      "State limitations and refresh triggers: report counts with denominators, exclusions, unresolved records, and gap concentration rather than outcome claims. Refresh after a system, role, policy, channel, or risk change and require owner acceptance before reuse."
+      "Define a message lifecycle from incident-owner approval through publication, replacement, and retirement. Capture incident ID, scope, wording, approver, channels, publish time, next update, and successor version.",
+      "Select declared incidents across severity and duration, including false starts, scope changes, partial recovery, and corrections rather than only clean outages.",
+      "Build an authoritative incident timeline. Place every customer-message version on it and compare stated scope, workaround, certainty, and next update with what was approved then.",
+      "Measure freshness against each message own update commitment and the communication rule. Mark overdue active messages, conflicting channel copies, reachable retired text, and unapproved updates.",
+      "Check propagation across every included channel. A successful publish in one tool does not establish that chat macros, status pages, email drafts, or agent notices changed.",
+      "Report messages superseded on time, overdue commitments, conflicting versions, and unverified delivery with denominators. Test repairs in a tabletop scope expansion before adoption."
     ],
     "findings": [
-      "For outage message freshness, a closed ticket is weaker than a linked chain containing original wording, versioned evidence, authority decision, delivered message, acknowledgement, and residual work.",
-      "Missing evidence in one outage message version from approval through delivery, correction, and retirement must not be replaced by habit, a likely explanation, or a favorable outcome; doing so hides the process weakness the review should expose.",
-      "Permission to coordinate does not imply permission to disclose, diagnose, credit, restrict, or make regulated judgments. The authority map must name incident commander and communications owner.",
-      "Adverse review should include wrong identity, stale answer, contradictory state, inaccessible source, late correction, privacy-sensitive content, and failed acknowledgement.",
-      "A reproducible HCS-R-4 record retains original local time and field values beside normalized values so boundary cases remain reviewable.",
-      "Pilot outage message freshness in a declared cohort, repair gaps, secure owner acceptance, test rollback, and refresh after any system, role, policy, or risk change."
+      "Freshness depends on approved state and the stated update commitment.",
+      "Each channel needs delivery evidence.",
+      "Reachable retired text can conflict with a new message.",
+      "Restoration estimates stay with incident authority.",
+      "A tabletop can expose propagation gaps.",
+      "Customer outcomes require evidence beyond lifecycle controls."
     ],
     "sources": [
       {
@@ -371,26 +355,22 @@ export const october12ResearchPosts: ResearchPost[] = [
     "cluster": "Financial support",
     "publishedAt": "2026-10-12",
     "image": "/october-12/refund-chat-evidence-completeness-study.webp",
-    "finding": "Study design uses one bounded observation unit, ten evidence fields, seven adverse states, and one authority map; these are protocol counts, not performance claims.",
+    "finding": "This proposed protocol tests whether refund cases preserve evidence for an authorized decision and later reconciliation. It reports no approval rate or financial outcome.",
     "methodology": [
-      "Define the observation unit: use one refund request from customer wording through approval, processor event, notice, and reconciliation. The protocol question is whether purchase identity, policy version, exception rationale, authority, and settlement state remain linked without asking chat agents to approve refunds. Record the entry and exit events before sampling begins.",
-      "Declare the sample and exclusions: publish the cohort dates, channels, inclusion rule, and exclusions for one refund request from customer wording through approval, processor event, notice, and reconciliation. Keep ordinary, incomplete, corrected, urgent, inaccessible, and reopened cases visible as separate strata.",
-      "Preserve the evidence hierarchy: retain original wording, actor, channel, local timestamp, case identity, system event, controlling answer or policy version, permission state, correction history, and consequence. Label observation, named report, inference, and decision separately.",
-      "Reconstruct the chronology: order every event in one refund request from customer wording through approval, processor event, notice, and reconciliation without filling gaps from memory. Preserve original local values beside normalized values and flag conflicts instead of choosing the convenient record.",
-      "Design adverse controls: test missing identity, stale guidance, contradictory state, inaccessible evidence, late correction, privacy-sensitive content, and failed acknowledgement. Record which control caught each seeded condition.",
-      "Code authority transitions: mark the moment work passes between coordinator and decision owner. Finance approver and support policy owner retain consequential authority; preparation or routing permission does not expand that authority.",
-      "Measure customer acknowledgement: distinguish message delivery from customer receipt and from resolution. Record the approved message, channel result, acknowledgement evidence, open questions, and residual work.",
-      "Audit privacy and minimization: collect only fields needed to answer HCS-R-5. Restrict reviewer access, redact exported examples, document retention, and log any exception to the minimum-necessary rule.",
-      "Run independent review: give a second reviewer the retained record without private context. Compare chronology, evidence classification, authority boundary, and next action; preserve disagreements for owner resolution.",
-      "State limitations and refresh triggers: report counts with denominators, exclusions, unresolved records, and gap concentration rather than outcome claims. Refresh after a system, role, policy, channel, or risk change and require owner acceptance before reuse."
+      "Define required evidence with finance and policy owners: purchase ID, request, identity state, policy version, eligibility facts, exception request, approver, processor reference, notice, and reconciliation state.",
+      "Select chat refund requests including approved, denied, pending, partial, duplicate, reversed, and exception cases. Declare exclusions for tests, fraud investigations, and unavailable records.",
+      "Check evidence available when the decision was made, not fields completed later. Record missing, conflicting, inaccessible, and not-applicable items separately.",
+      "Trace authority from request to decision. Chat staff may collect permitted facts and relay approved status, but only designated owners approve exceptions or characterize settlement.",
+      "Join the decision to the processor event using permitted references. Compare amount, currency, destination, event time, failure, reversal, and duplicate protection without copying payment credentials.",
+      "Compare the customer notice with the decision and processor state, then reconcile pending and reversed items. Report field completeness and unresolved joins with denominators."
     ],
     "findings": [
-      "For refund chat evidence, a closed ticket is weaker than a linked chain containing original wording, versioned evidence, authority decision, delivered message, acknowledgement, and residual work.",
-      "Missing evidence in one refund request from customer wording through approval, processor event, notice, and reconciliation must not be replaced by habit, a likely explanation, or a favorable outcome; doing so hides the process weakness the review should expose.",
-      "Permission to coordinate does not imply permission to disclose, diagnose, credit, restrict, or make regulated judgments. The authority map must name finance approver and support policy owner.",
-      "Adverse review should include wrong identity, stale answer, contradictory state, inaccessible source, late correction, privacy-sensitive content, and failed acknowledgement.",
-      "A reproducible HCS-R-5 record retains original local time and field values beside normalized values so boundary cases remain reviewable.",
-      "Pilot refund chat evidence in a declared cohort, repair gaps, secure owner acceptance, test rollback, and refresh after any system, role, policy, or risk change."
+      "Decision-time evidence prevents later repair from masking an original gap.",
+      "Approval and settlement are separate records.",
+      "Preparation does not grant refund authority.",
+      "A notice should not outrun authorization or processor state.",
+      "Pending and reversed events need explicit states.",
+      "Outcome claims are outside this protocol unless separately measured."
     ],
     "sources": [
       {

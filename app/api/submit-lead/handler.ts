@@ -22,7 +22,8 @@ export async function handleLead(request: Request, requireFull = false) {
     new Uint8Array(bodyBuffer).set(body);
     const boundedRequest = new Request(request.url, { method: 'POST', headers: { 'content-type': contentType }, body: bodyBuffer });
     const form = await boundedRequest.formData();
-    if ([...form.keys()].length > MAX_FIELDS || [...form.values()].some((value) => typeof value !== 'string' || value.length > MAX_FIELD_CHARS)) {
+    const keys = [...form.keys()];
+    if (keys.length > MAX_FIELDS || new Set(keys).size !== keys.length || [...form.values()].some((value) => typeof value !== 'string' || value.length > MAX_FIELD_CHARS)) {
       return response('Please shorten your request.', 400);
     }
     if (form.get('website_url')) return NextResponse.json({ ok: true });

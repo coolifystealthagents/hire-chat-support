@@ -30,11 +30,11 @@ test('readBoundedBody returns the complete body inside the limit', async () => {
   assert.equal(new TextDecoder().decode(await readBoundedBody(request, 100)), 'safe body');
 });
 
-test('media types are normalized exactly and forwarded chains cannot select a limiter key', () => {
+test('media types are normalized exactly and caller headers cannot select a limiter key', () => {
   assert.equal(mediaType(new Request('https://example.test', { headers: { 'content-type': 'application/json; charset=utf-8' } })), 'application/json');
   assert.equal(mediaType(new Request('https://example.test', { headers: { 'content-type': 'application/jsonp' } })), 'application/jsonp');
-  assert.equal(requestClientKey(new Request('https://example.test', { headers: { 'x-forwarded-for': 'spoofed' } })), 'unknown');
-  assert.equal(requestClientKey(new Request('https://example.test', { headers: { 'x-real-ip': '10.0.0.2', 'x-forwarded-for': 'spoofed' } })), '10.0.0.2');
+  assert.equal(requestClientKey(new Request('https://example.test', { headers: { 'x-forwarded-for': 'spoofed' } })), 'shared');
+  assert.equal(requestClientKey(new Request('https://example.test', { headers: { 'cf-connecting-ip': '10.0.0.1', 'x-real-ip': '10.0.0.2' } })), 'shared');
 });
 
 test('fixed-window limiter blocks only after the configured allowance and resets', () => {

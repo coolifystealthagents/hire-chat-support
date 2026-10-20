@@ -126,6 +126,7 @@ test('public endpoints enforce bounded input, content type, timeouts, and basic 
   const trackingRoute = read('app/ingest/track/route.ts');
   assert.match(contactLeadRoute, /handleLead\(request, true\)/);
   assert.match(leadForm, /submit-lead\/contact/);
+  assert.match(leadRoute, /new Set\(keys\)\.size !== keys\.length/);
   for (const source of [leadRoute, trackingRoute]) {
     assert.match(source, /readBoundedBody/);
     assert.match(source, /content-type/i);
