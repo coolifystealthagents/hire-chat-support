@@ -1,15 +1,14 @@
 import { type NextRequest } from 'next/server';
-import { createFixedWindowLimiter, mediaType, readBoundedBody, requestClientKey, RequestLimitError } from '@/lib/request-safety.mjs';
+import { createLayeredLimiter, mediaType, readBoundedBody, requestClientHint, RequestLimitError } from '@/lib/request-safety.mjs';
 
 const TRACKING_API = 'https://acrtracking.stealthagents.us/api/track';
 const MAX_BODY_BYTES = 256_000;
-const trackingLimiter = createFixedWindowLimiter({ limit: 120, windowMs: 60_000 });
+const trackingLimiter = createLayeredLimiter({ clientLimit: 120, globalLimit: 6_000, windowMs: 60_000 });
 
 export const runtime = 'nodejs';
 
 export async function POST(request: NextRequest) {
   try {
-    if (!trackingLimiter.allow(requestClientKey(request))) return Response.json({ status: 'error' }, { status: 429 });
     const contentType = request.headers.get('content-type') || '';
     if (mediaType(request) !== 'application/json') return Response.json({ status: 'error' }, { status: 415 });
     const bytes = await readBoundedBody(request, MAX_BODY_BYTES);
@@ -17,16 +16,17 @@ export async function POST(request: NextRequest) {
     if (!parsed || Array.isArray(parsed) || typeof parsed !== 'object' || Object.keys(parsed).length > 100) {
       return Response.json({ status: 'error' }, { status: 400 });
     }
+    const clientHint = requestClientHint(request);
+    if (!trackingLimiter.allow(clientHint)) return Response.json({ status: 'error' }, { status: 429 });
     const body = JSON.stringify(parsed);
-    const clientIp = requestClientKey(request);
     const upstream = await fetch(TRACKING_API, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'User-Agent': request.headers.get('user-agent') || '',
         'Accept-Language': request.headers.get('accept-language') || '',
-        'X-Forwarded-For': clientIp,
-        'X-ACR-Client-IP': clientIp,
+        'X-Forwarded-For': clientHint,
+        'X-ACR-Client-IP': clientHint,
       },
       body,
       cache: 'no-store',

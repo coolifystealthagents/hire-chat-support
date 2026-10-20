@@ -273,7 +273,7 @@ export const october12ResearchPosts: ResearchPost[] = [
       "Define a message lifecycle from incident-owner approval through publication, replacement, and retirement. Capture incident ID, scope, wording, approver, channels, publish time, next update, and successor version.",
       "Select declared incidents across severity and duration, including false starts, scope changes, partial recovery, and corrections rather than only clean outages.",
       "Build an authoritative incident timeline. Place every customer-message version on it and compare stated scope, workaround, certainty, and next update with what was approved then.",
-      "Measure freshness against each message own update commitment and the communication rule. Mark overdue active messages, conflicting channel copies, reachable retired text, and unapproved updates.",
+      "Measure freshness against each message's own update commitment and the communication rule. Mark overdue active messages, conflicting channel copies, reachable retired text, and unapproved updates.",
       "Check propagation across every included channel. A successful publish in one tool does not establish that chat macros, status pages, email drafts, or agent notices changed.",
       "Report messages superseded on time, overdue commitments, conflicting versions, and unverified delivery with denominators. Test repairs in a tabletop scope expansion before adoption."
     ],

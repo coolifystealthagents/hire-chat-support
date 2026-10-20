@@ -3,9 +3,10 @@ import test from 'node:test';
 import {
   RequestLimitError,
   createFixedWindowLimiter,
+  createLayeredLimiter,
   mediaType,
   readBoundedBody,
-  requestClientKey,
+  requestClientHint,
 } from '../lib/request-safety.mjs';
 
 test('readBoundedBody rejects an oversized declared body before reading it', async () => {
@@ -30,11 +31,20 @@ test('readBoundedBody returns the complete body inside the limit', async () => {
   assert.equal(new TextDecoder().decode(await readBoundedBody(request, 100)), 'safe body');
 });
 
-test('media types are normalized exactly and caller headers cannot select a limiter key', () => {
+test('media types are normalized exactly and forwarding headers are only hints', () => {
   assert.equal(mediaType(new Request('https://example.test', { headers: { 'content-type': 'application/json; charset=utf-8' } })), 'application/json');
   assert.equal(mediaType(new Request('https://example.test', { headers: { 'content-type': 'application/jsonp' } })), 'application/jsonp');
-  assert.equal(requestClientKey(new Request('https://example.test', { headers: { 'x-forwarded-for': 'spoofed' } })), 'shared');
-  assert.equal(requestClientKey(new Request('https://example.test', { headers: { 'cf-connecting-ip': '10.0.0.1', 'x-real-ip': '10.0.0.2' } })), 'shared');
+  assert.equal(requestClientHint(new Request('https://example.test', { headers: { 'x-forwarded-for': 'spoofed' } })), 'unknown');
+  assert.equal(requestClientHint(new Request('https://example.test', { headers: { 'cf-connecting-ip': '10.0.0.1', 'x-real-ip': '10.0.0.2' } })), '10.0.0.1');
+});
+
+test('layered limiter cannot bypass its global ceiling by rotating client hints', () => {
+  const limiter = createLayeredLimiter({ clientLimit: 2, globalLimit: 3, windowMs: 1_000 });
+  assert.equal(limiter.allow('one', 0), true);
+  assert.equal(limiter.allow('two', 0), true);
+  assert.equal(limiter.allow('three', 0), true);
+  assert.equal(limiter.allow('four', 0), false);
+  assert.equal(limiter.allow('one', 1_000), true);
 });
 
 test('fixed-window limiter blocks only after the configured allowance and resets', () => {

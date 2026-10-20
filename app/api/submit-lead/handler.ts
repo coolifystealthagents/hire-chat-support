@@ -1,18 +1,17 @@
 import { NextResponse } from 'next/server';
 import { sendLeadFallbackToMattermost } from '../../../lib/lead-fallback-mattermost';
-import { createFixedWindowLimiter, mediaType, readBoundedBody, requestClientKey, RequestLimitError } from '@/lib/request-safety.mjs';
+import { createLayeredLimiter, mediaType, readBoundedBody, requestClientHint, RequestLimitError } from '@/lib/request-safety.mjs';
 
 const personalDomains = new Set(['gmail.com','yahoo.com','hotmail.com','outlook.com','icloud.com','aol.com','proton.me','protonmail.com']);
 const MAX_BODY_BYTES = 64_000;
 const MAX_FIELDS = 30;
 const MAX_FIELD_CHARS = 4_000;
-const leadLimiter = createFixedWindowLimiter({ limit: 10, windowMs: 60_000 });
+const leadLimiter = createLayeredLimiter({ clientLimit: 10, globalLimit: 300, windowMs: 60_000 });
 
 const response = (message: string, status: number) => NextResponse.json({ ok: false, message }, { status });
 
 export async function handleLead(request: Request, requireFull = false) {
   try {
-    if (!leadLimiter.allow(requestClientKey(request))) return response('Please wait before trying again.', 429);
     const contentType = request.headers.get('content-type') || '';
     if (!['multipart/form-data', 'application/x-www-form-urlencoded'].includes(mediaType(request))) {
       return response('Unsupported request format.', 415);
@@ -41,6 +40,7 @@ export async function handleLead(request: Request, requireFull = false) {
       return response('Please complete every required field.', 400);
     }
     if (full && personalDomains.has(email.split('@')[1])) return response('Please use your business email address.', 400);
+    if (!leadLimiter.allow(requestClientHint(request))) return response('Please wait before trying again.', 429);
     const endpoint = process.env.ACR_LEAD_ENDPOINT;
     if (endpoint) {
       const payload = Object.fromEntries(form.entries());
