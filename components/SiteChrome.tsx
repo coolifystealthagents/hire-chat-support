@@ -18,6 +18,12 @@ export function Header() {
   const buttonRef = useRef<HTMLButtonElement>(null);
   const panelRef = useRef<HTMLElement>(null);
 
+  useEffect(() => {
+    const closeAtDesktop = () => { if (window.innerWidth > 900) setOpen(false); };
+    window.addEventListener('resize', closeAtDesktop);
+    return () => window.removeEventListener('resize', closeAtDesktop);
+  }, []);
+
   useEffect(() => setOpen(false), [pathname]);
   useEffect(() => {
     if (!open) return;

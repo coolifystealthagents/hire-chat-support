@@ -1,5 +1,5 @@
 import { type NextRequest } from 'next/server';
-import { createFixedWindowLimiter, readBoundedBody, requestClientKey, RequestLimitError } from '@/lib/request-safety.mjs';
+import { createFixedWindowLimiter, mediaType, readBoundedBody, requestClientKey, RequestLimitError } from '@/lib/request-safety.mjs';
 
 const TRACKING_API = 'https://acrtracking.stealthagents.us/api/track';
 const MAX_BODY_BYTES = 256_000;
@@ -11,7 +11,7 @@ export async function POST(request: NextRequest) {
   try {
     if (!trackingLimiter.allow(requestClientKey(request))) return Response.json({ status: 'error' }, { status: 429 });
     const contentType = request.headers.get('content-type') || '';
-    if (!contentType.toLowerCase().startsWith('application/json')) return Response.json({ status: 'error' }, { status: 415 });
+    if (mediaType(request) !== 'application/json') return Response.json({ status: 'error' }, { status: 415 });
     const bytes = await readBoundedBody(request, MAX_BODY_BYTES);
     const parsed = JSON.parse(new TextDecoder().decode(bytes));
     if (!parsed || Array.isArray(parsed) || typeof parsed !== 'object' || Object.keys(parsed).length > 100) {

@@ -30,6 +30,8 @@ test('primary chrome follows the three-link and parent-attribution contract', ()
   assert.match(chrome, /Contact Us/);
   assert.match(chrome, /item\.href === '\/' \? pathname === '\/' : pathname === item\.href \|\| pathname\.startsWith\(`\$\{item\.href\}\/`\)/);
   assert.match(chrome, /aria-current=\{isActive\(item\) \? 'page'/);
+  assert.match(chrome, /window\.innerWidth > 900/);
+  assert.match(chrome, /removeEventListener\('resize', closeAtDesktop\)/);
   assert.match(chrome, /Powered by StealthAgents/g);
   assert.doesNotMatch(chrome, /TimedLeadModal/);
 });
@@ -118,8 +120,12 @@ test('contact has an intentional FAQ treatment and compact desktop full-form lay
 });
 
 test('public endpoints enforce bounded input, content type, timeouts, and basic abuse protection', () => {
-  const leadRoute = read('app/api/submit-lead/route.ts');
+  const leadRoute = read('app/api/submit-lead/handler.ts');
+  const contactLeadRoute = read('app/api/submit-lead/contact/route.ts');
+  const leadForm = read('components/LeadForm.tsx');
   const trackingRoute = read('app/ingest/track/route.ts');
+  assert.match(contactLeadRoute, /handleLead\(request, true\)/);
+  assert.match(leadForm, /submit-lead\/contact/);
   for (const source of [leadRoute, trackingRoute]) {
     assert.match(source, /readBoundedBody/);
     assert.match(source, /content-type/i);
@@ -127,6 +133,14 @@ test('public endpoints enforce bounded input, content type, timeouts, and basic 
     assert.match(source, /AbortSignal\.timeout/);
     assert.match(source, /catch/);
   }
+});
+
+test('editorial source avoids the rejected template paragraphs', () => {
+  const blog = read('lib/content.ts');
+  const research = read('lib/october-12/researchPosts.ts');
+  assert.doesNotMatch(blog, /Recurring work becomes fragile when status lives in inboxes/);
+  assert.doesNotMatch(blog, /Use the first review to narrow the role before you expand it/);
+  assert.doesNotMatch(research, /research question HCS-R-\d+-\d+ asks whether[^\n]+Reviewers retain original customer wording[^\n]+Report numerators with denominators/);
 });
 
 test('official assets, subsidiary icon, and security headers are configured', () => {
