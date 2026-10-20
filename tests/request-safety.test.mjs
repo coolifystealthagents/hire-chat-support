@@ -3,7 +3,6 @@ import test from 'node:test';
 import {
   RequestLimitError,
   createFixedWindowLimiter,
-  createLayeredLimiter,
   mediaType,
   readBoundedBody,
   requestClientHint,
@@ -31,20 +30,21 @@ test('readBoundedBody returns the complete body inside the limit', async () => {
   assert.equal(new TextDecoder().decode(await readBoundedBody(request, 100)), 'safe body');
 });
 
-test('media types are normalized exactly and forwarding headers are only hints', () => {
+test('media types are normalized exactly and forwarding headers are attribution hints', () => {
   assert.equal(mediaType(new Request('https://example.test', { headers: { 'content-type': 'application/json; charset=utf-8' } })), 'application/json');
   assert.equal(mediaType(new Request('https://example.test', { headers: { 'content-type': 'application/jsonp' } })), 'application/jsonp');
-  assert.equal(requestClientHint(new Request('https://example.test', { headers: { 'x-forwarded-for': 'spoofed' } })), 'unknown');
+  assert.equal(requestClientHint(new Request('https://example.test', { headers: { 'x-forwarded-for': '203.0.113.10, 10.0.0.1' } })), '203.0.113.10');
   assert.equal(requestClientHint(new Request('https://example.test', { headers: { 'cf-connecting-ip': '10.0.0.1', 'x-real-ip': '10.0.0.2' } })), '10.0.0.1');
 });
 
-test('layered limiter cannot bypass its global ceiling by rotating client hints', () => {
-  const limiter = createLayeredLimiter({ clientLimit: 2, globalLimit: 3, windowMs: 1_000 });
-  assert.equal(limiter.allow('one', 0), true);
-  assert.equal(limiter.allow('two', 0), true);
-  assert.equal(limiter.allow('three', 0), true);
-  assert.equal(limiter.allow('four', 0), false);
-  assert.equal(limiter.allow('one', 1_000), true);
+test('header-independent limiter cannot be bypassed by rotating forwarding hints', () => {
+  const limiter = createFixedWindowLimiter({ limit: 3, windowMs: 1_000, maxKeys: 1 });
+  for (const ignoredHint of ['one', 'two', 'three']) {
+    assert.ok(ignoredHint);
+    assert.equal(limiter.allow('all', 0), true);
+  }
+  assert.equal(limiter.allow('all', 0), false);
+  assert.equal(limiter.allow('all', 1_000), true);
 });
 
 test('fixed-window limiter blocks only after the configured allowance and resets', () => {
