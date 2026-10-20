@@ -1,108 +1,114 @@
 import type { SiteConfig } from './types';
+
 export const site: SiteConfig = {
-  "name": "Hire Chat Support",
-  "domain": "hirechatsupport.com",
-  "siteId": "hire-chat-support",
-  "niche": "customer support teams",
-  "audience": "support leaders and customer experience teams",
-  "design": "conversation",
-  "eyebrow": "Thoughtful chat support, designed around context",
-  "hero": "Make every conversation",
-  "heroAccent": "feel considered.",
-  "heroBody": "Specialist remote chat support staff help manage message queues, use approved knowledge, document context, and escalate the right moments without turning customers into ticket numbers.",
-  "manifesto": "The best support feels calm because the system behind it is clear.",
-  "primary": "#603487",
-  "secondary": "#d7c0ef",
-  "accent": "#d9ec65",
-  "canvas": "#fbf6ec",
-  "ink": "#271a2e",
-  "displayFont": "Cooper Black",
-  "bodyFont": "Verdana",
-  "heroImage": "/hero.png",
-  "heroAlt": "Rounded ceramic speech bubbles connected across a warm lavender studio space",
-  "services": [
+  name: 'Hire Chat Support',
+  domain: 'hirechatsupport.com',
+  siteId: 'hire-chat-support',
+  niche: 'customer support teams',
+  audience: 'support leaders and customer experience teams',
+  design: 'conversation',
+  eyebrow: 'Thoughtful chat support, designed around context',
+  hero: 'Make every conversation',
+  heroAccent: 'feel considered.',
+  heroBody: 'Specialist remote chat support staff help manage message queues, use approved knowledge, document context, and escalate the right moments without turning customers into ticket numbers.',
+  manifesto: 'The best support feels calm because the system behind it is clear.',
+  primary: '#603487', secondary: '#d7c0ef', accent: '#d9ec65', canvas: '#fbf6ec', ink: '#271a2e',
+  displayFont: 'Cooper Black', bodyFont: 'Verdana',
+  heroImage: '/hero.png',
+  heroAlt: 'Rounded ceramic speech bubbles connected across a warm lavender studio space',
+  services: [
     {
-      "slug": "live-chat-support",
-      "name": "Live chat support",
-      "short": "Handle routine conversations from approved guidance and clear escalation rules.",
-      "tasks": [
-        "Respond from approved knowledge",
-        "Document customer context",
-        "Route account-specific issues",
-        "Escalate sensitive requests"
-      ]
+      slug: 'live-chat-support', name: 'Live chat support', short: 'Handle routine conversations from approved guidance and clear escalation rules.',
+      image: '/october-12/chat-queue-ownership-at-shift-change.webp', imageAlt: 'Chat queue ownership and handoff workspace',
+      audience: 'Support leaders with recurring web chat volume who need dependable coverage without giving up policy or account authority.',
+      problem: 'Fast moving queues lose context when agents must search several systems, improvise answers, or wait too long to identify an exception.',
+      inputs: ['Approved knowledge articles and response guidance', 'Queue priorities and service windows', 'Customer verification rules', 'Named escalation owners and triggers'],
+      workflow: ['Review queue state and current notices', 'Confirm intent and collect permitted context', 'Respond from the approved source', 'Document the conversation and route exceptions'],
+      deliverables: ['Complete conversation records', 'Consistent approved replies', 'Escalation summaries with next owner', 'Queue status notes for shift handoff'],
+      boundaries: ['No invented policy or unsupported promise', 'No unapproved refund or account change', 'No bypass of authentication controls', 'Sensitive and novel cases move to an authorized owner'],
+      qualityControls: ['Source and version checks', 'Required field checklist', 'Sampled transcript review', 'Recurring exception log'],
+      scenarios: [{ title: 'Coverage backlog', description: 'A recurring queue needs a clear first response lane and reliable owner routing.' }, { title: 'Product change', description: 'A new release creates repeated questions that must use one current answer.' }],
+      faq: [{ q: 'Can the role use our existing platform?', a: 'Yes. Scope starts with the tools, permissions, and approved sources your team selects.' }, { q: 'Who handles exceptions?', a: 'Your named account, policy, security, or management owner keeps the decision.' }],
+      related: ['helpdesk-triage', 'customer-escalation'],
+      tasks: ['Respond from approved knowledge', 'Document customer context', 'Route account specific issues', 'Escalate sensitive requests']
     },
     {
-      "slug": "helpdesk-triage",
-      "name": "Helpdesk triage",
-      "short": "Sort incoming conversations by intent, urgency, and owner.",
-      "tasks": [
-        "Apply approved categories",
-        "Check required details",
-        "Route to the right queue",
-        "Flag urgent patterns"
-      ]
+      slug: 'helpdesk-triage', name: 'Helpdesk triage', short: 'Sort incoming conversations by intent, urgency, and owner.',
+      image: '/october-12/service-outage-chat-status-board.webp', imageAlt: 'Support status board organizing incoming conversations',
+      audience: 'Helpdesk managers who need cleaner intake, complete records, and visible ownership before specialists begin resolution.',
+      problem: 'Unsorted requests create duplicate work, weak priority decisions, and avoidable delays because required context is missing.',
+      inputs: ['Approved category taxonomy', 'Priority and severity definitions', 'Required intake fields', 'Routing map and team schedules'],
+      workflow: ['Inspect each new request', 'Check for required information and duplicates', 'Apply approved category and priority', 'Assign or escalate to the documented owner'],
+      deliverables: ['Categorized tickets', 'Completed intake records', 'Duplicate request links', 'Urgent issue alerts'],
+      boundaries: ['Triage does not determine root cause', 'Priority follows written definitions', 'Security and safety signals escalate immediately', 'Closure remains with the resolving owner'],
+      qualityControls: ['Category calibration samples', 'Missing field report', 'Misroute review', 'Daily exception reconciliation'],
+      scenarios: [{ title: 'Launch surge', description: 'A release creates mixed billing, access, and technical requests in one queue.' }, { title: 'Shared inbox', description: 'Several teams need one consistent routing method for customer messages.' }],
+      faq: [{ q: 'Can priorities match our current system?', a: 'Yes. The role applies your definitions rather than creating a new severity model.' }, { q: 'Can triage resolve simple tickets?', a: 'Only approved routine responses that are explicitly included in scope.' }],
+      related: ['live-chat-support', 'multichannel-support'],
+      tasks: ['Apply approved categories', 'Check required details', 'Route to the right queue', 'Flag urgent patterns']
     },
     {
-      "slug": "knowledge-base-support",
-      "name": "Knowledge base support",
-      "short": "Keep support guidance organized, current, and easy to use.",
-      "tasks": [
-        "Prepare article updates",
-        "Track review dates",
-        "Organize source records",
-        "Flag conflicting guidance"
-      ]
+      slug: 'knowledge-base-support', name: 'Knowledge base support', short: 'Keep support guidance organized, current, and easy to use.',
+      image: '/october-12/chat-knowledge-answer-expiry.webp', imageAlt: 'Knowledge answer review and expiry workflow',
+      audience: 'Knowledge owners and support managers who need review ready articles, visible source history, and reliable expiry checks.',
+      problem: 'Agents lose confidence when articles conflict, ownership is unclear, or product changes are not reflected in frontline guidance.',
+      inputs: ['Approved source documents', 'Article template and style guide', 'Subject matter owners', 'Review dates and change notices'],
+      workflow: ['Log the requested change and source', 'Compare current guidance with approved material', 'Prepare a traceable draft', 'Route for owner approval and publish only when authorized'],
+      deliverables: ['Review ready article drafts', 'Source and change records', 'Expiry and ownership queue', 'Conflict reports'],
+      boundaries: ['No policy creation', 'No publication without required approval', 'Conflicting sources remain flagged', 'Sensitive material follows access rules'],
+      qualityControls: ['Citation check', 'Version comparison', 'Broken link review', 'Scheduled expiry audit'],
+      scenarios: [{ title: 'Policy update', description: 'A revised return rule must reach several customer facing articles.' }, { title: 'Content drift', description: 'Similar answers disagree and need a documented owner decision.' }],
+      faq: [{ q: 'Does the role decide which guidance is correct?', a: 'No. The role surfaces evidence and routes conflicts to the accountable owner.' }, { q: 'Can it maintain review dates?', a: 'Yes. Review queues and expiry notices are a natural part of the scope.' }],
+      related: ['live-chat-support', 'qa-review-support'],
+      tasks: ['Prepare article updates', 'Track review dates', 'Organize source records', 'Flag conflicting guidance']
     },
     {
-      "slug": "qa-review-support",
-      "name": "Quality review support",
-      "short": "Prepare focused conversation samples for manager review.",
-      "tasks": [
-        "Select approved samples",
-        "Apply review checklists",
-        "Record coaching themes",
-        "Protect sensitive data"
-      ]
+      slug: 'qa-review-support', name: 'Quality review support', short: 'Prepare focused conversation samples for manager review.',
+      image: '/october-12/chat-escalation-reproducibility-study.webp', imageAlt: 'Conversation quality review evidence workspace',
+      audience: 'Quality and support leaders who want a consistent evidence set for coaching without turning review into surveillance.',
+      problem: 'Unstructured sampling hides recurring issues and consumes manager time before a useful coaching conversation can begin.',
+      inputs: ['Approved sampling plan', 'Quality checklist', 'Permitted transcript access', 'Coaching and escalation owners'],
+      workflow: ['Select records using the approved method', 'Redact or limit sensitive data', 'Apply objective checklist items', 'Summarize patterns for manager interpretation'],
+      deliverables: ['Review sample packet', 'Completed checklists', 'Pattern summary', 'Items requiring immediate manager attention'],
+      boundaries: ['The role does not issue discipline', 'Subjective findings remain for managers', 'Samples follow privacy and retention rules', 'No metric is changed without approval'],
+      qualityControls: ['Sampling reproducibility check', 'Reviewer calibration', 'Redaction review', 'Checklist version record'],
+      scenarios: [{ title: 'Coaching preparation', description: 'A manager needs representative conversations and clear evidence before a review.' }, { title: 'New guidance check', description: 'The team needs to see whether a recent answer is being applied consistently.' }],
+      faq: [{ q: 'Who interprets the findings?', a: 'Your quality or support manager retains interpretation and coaching responsibility.' }, { q: 'Can the sample focus on one issue?', a: 'Yes. The approved sampling rule can target a known workflow or exception.' }],
+      related: ['knowledge-base-support', 'customer-escalation'],
+      tasks: ['Select approved samples', 'Apply review checklists', 'Record coaching themes', 'Protect sensitive data']
     },
     {
-      "slug": "customer-escalation",
-      "name": "Escalation coordination",
-      "short": "Keep high-context issues visible until the accountable owner resolves them.",
-      "tasks": [
-        "Prepare escalation summaries",
-        "Track ownership",
-        "Coordinate approved updates",
-        "Record outcomes"
-      ]
+      slug: 'customer-escalation', name: 'Escalation coordination', short: 'Keep high context issues visible until the accountable owner resolves them.',
+      image: '/october-12/vulnerable-customer-chat-escalation.webp', imageAlt: 'Customer escalation context and owner handoff',
+      audience: 'Support teams managing sensitive, urgent, or cross functional cases that need reliable context and follow through.',
+      problem: 'Escalations stall when ownership is implicit, evidence is scattered, or customers receive updates that are not tied to a decision owner.',
+      inputs: ['Escalation matrix', 'Approved customer update language', 'Case records and relevant evidence', 'Owner roster and response expectations'],
+      workflow: ['Confirm the escalation trigger', 'Prepare a concise evidence based summary', 'Assign the documented owner', 'Track approved updates and record the outcome'],
+      deliverables: ['Escalation brief', 'Owner and status record', 'Approved update log', 'Closure evidence'],
+      boundaries: ['No final policy or liability decision', 'No promise outside approved language', 'Emergency paths override routine workflow', 'Only authorized owners close material exceptions'],
+      qualityControls: ['Trigger verification', 'Owner acknowledgement check', 'Status age review', 'Closure completeness audit'],
+      scenarios: [{ title: 'Account risk', description: 'A customer reports suspicious access and the security owner needs complete context.' }, { title: 'Complex refund', description: 'A request exceeds frontline authority and needs policy owner review.' }],
+      faq: [{ q: 'Does the coordinator resolve the escalation?', a: 'The coordinator maintains context and momentum while the authorized owner makes the decision.' }, { q: 'Can customers receive updates?', a: 'Yes, when the update and timing follow your approved communication rules.' }],
+      related: ['live-chat-support', 'qa-review-support'],
+      tasks: ['Prepare escalation summaries', 'Track ownership', 'Coordinate approved updates', 'Record outcomes']
     },
     {
-      "slug": "multichannel-support",
-      "name": "Multichannel support operations",
-      "short": "Maintain consistent records across chat, email, and social queues.",
-      "tasks": [
-        "Normalize conversation tags",
-        "Update customer records",
-        "Track channel handoffs",
-        "Flag duplicate requests"
-      ]
+      slug: 'multichannel-support', name: 'Multichannel support operations', short: 'Maintain consistent records across chat, email, and social queues.',
+      image: '/october-12/delivery-delay-chat-update.webp', imageAlt: 'Customer message handoff across support channels',
+      audience: 'Customer experience teams whose conversations move between channels and need one reliable record and next owner.',
+      problem: 'Channel silos create repeated questions, conflicting replies, duplicate tickets, and incomplete customer histories.',
+      inputs: ['Channel roster and coverage plan', 'System of record rules', 'Approved tone and response guidance', 'Identity and handoff requirements'],
+      workflow: ['Review new channel activity', 'Match permitted records to the customer context', 'Respond or route from approved guidance', 'Update the system of record and document handoffs'],
+      deliverables: ['Normalized conversation records', 'Cross channel handoff notes', 'Duplicate links', 'Coverage and exception summary'],
+      boundaries: ['Identity must be verified under channel rules', 'Private details never move to public replies', 'No unsupported channel promise', 'Material decisions stay with authorized owners'],
+      qualityControls: ['Record matching check', 'Channel tone review', 'Duplicate audit', 'Shift handoff reconciliation'],
+      scenarios: [{ title: 'Channel switch', description: 'A customer begins in social messaging and continues in a secure support channel.' }, { title: 'Duplicate requests', description: 'The same issue arrives through chat and email and needs one clear owner.' }],
+      faq: [{ q: 'Must every channel use the same reply?', a: 'No. Meaning and policy remain consistent while format follows approved channel guidance.' }, { q: 'Where is the final record kept?', a: 'Your team names the system of record and the fields required for completion.' }],
+      related: ['helpdesk-triage', 'live-chat-support'],
+      tasks: ['Normalize conversation tags', 'Update customer records', 'Track channel handoffs', 'Flag duplicate requests']
     }
   ],
-  "categories": [
-    "Chat operations",
-    "Knowledge systems",
-    "Escalations",
-    "Role design"
-  ],
-  "principles": [
-    "Top 1 percent selectivity",
-    "Clear role boundaries",
-    "Reviewable workflows"
-  ],
-  "sources": [
-    {
-      "label": "National Institute of Standards and Technology",
-      "url": "https://www.nist.gov/privacy-framework"
-    }
-  ]
+  categories: ['Chat operations', 'Knowledge systems', 'Escalations', 'Role design'],
+  principles: ['Selective role matching', 'Clear decision boundaries', 'Reviewable workflows'],
+  sources: [{ label: 'National Institute of Standards and Technology', url: 'https://www.nist.gov/privacy-framework' }]
 };

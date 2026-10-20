@@ -1,24 +1,24 @@
 import { type NextRequest } from 'next/server';
+import { createFixedWindowLimiter, readBoundedBody, requestClientKey, RequestLimitError } from '@/lib/request-safety.mjs';
 
 const TRACKING_API = 'https://acrtracking.stealthagents.us/api/track';
 const MAX_BODY_BYTES = 256_000;
+const trackingLimiter = createFixedWindowLimiter({ limit: 120, windowMs: 60_000 });
 
 export const runtime = 'nodejs';
 
 export async function POST(request: NextRequest) {
   try {
-    const declaredLength = Number(request.headers.get('content-length') || '0');
-    if (declaredLength > MAX_BODY_BYTES) {
-      return Response.json({ status: 'error', detail: 'Payload too large' }, { status: 413 });
+    if (!trackingLimiter.allow(requestClientKey(request))) return Response.json({ status: 'error' }, { status: 429 });
+    const contentType = request.headers.get('content-type') || '';
+    if (!contentType.toLowerCase().startsWith('application/json')) return Response.json({ status: 'error' }, { status: 415 });
+    const bytes = await readBoundedBody(request, MAX_BODY_BYTES);
+    const parsed = JSON.parse(new TextDecoder().decode(bytes));
+    if (!parsed || Array.isArray(parsed) || typeof parsed !== 'object' || Object.keys(parsed).length > 100) {
+      return Response.json({ status: 'error' }, { status: 400 });
     }
-    const body = await request.text();
-    if (new TextEncoder().encode(body).byteLength > MAX_BODY_BYTES) {
-      return Response.json({ status: 'error', detail: 'Payload too large' }, { status: 413 });
-    }
-    const clientIp = request.headers.get('cf-connecting-ip') ||
-      request.headers.get('x-real-ip') ||
-      request.headers.get('x-forwarded-for')?.split(',')[0]?.trim() ||
-      '0.0.0.0';
+    const body = JSON.stringify(parsed);
+    const clientIp = requestClientKey(request);
     const upstream = await fetch(TRACKING_API, {
       method: 'POST',
       headers: {
@@ -39,7 +39,9 @@ export async function POST(request: NextRequest) {
         'Cache-Control': 'no-store',
       },
     });
-  } catch {
+  } catch (error) {
+    if (error instanceof RequestLimitError) return Response.json({ status: 'error' }, { status: error.status });
+    if (error instanceof SyntaxError) return Response.json({ status: 'error' }, { status: 400 });
     return Response.json({ status: 'error' }, { status: 502 });
   }
 }
