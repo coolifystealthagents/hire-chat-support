@@ -1,0 +1,159 @@
+import type { ResearchPost } from './types';
+
+export const october22ResearchPosts: ResearchPost[] = [
+  {
+    "slug": "chat-first-response-time-definition",
+    "title": "Defining Chat First-Response Time",
+    "summary": "A source-bounded method for specifying the start event, stop event, waiting states, and exclusions in chat first-response measurement.",
+    "cluster": "Chat operations",
+    "publishedAt": "2026-10-22",
+    "image": "/october-22/chat-first-response-time-definition.webp",
+    "finding": "First-response time is reproducible only when the start event, the qualifying response, the clock, and the exclusions are declared before the population is measured.",
+    "methodology": [
+      "Define the population as conversations that entered the queue during a declared period and met the channel and customer eligibility rules. Record the query, time zone, filters, exclusions, and count before inspecting the result.",
+      "Specify the start event. It may be the customer's first message, the platform's queue assignment, or the first human review. Each produces a different measure. Do not mix events within one comparison.",
+      "Specify what counts as a response. A human reply that addresses the customer is different from an automated acknowledgment, a routing notice, or an internal note. Record the qualifying response type and whether a template counts.",
+      "Define pause and stop rules. If the clock pauses while waiting for customer information, record the request and response times. If it does not pause, state that choice. The stop event should be observable in the retained record.",
+      "Handle business hours and holidays explicitly. A conversation that arrives outside the service window may start on the next business day. State the rule and keep the customer-facing expectation consistent with it.",
+      "Report the number in scope, the number that met the definition, the number excluded, and the number still open at the observation boundary. Pair the measure with a sample review of response quality."
+    ],
+    "findings": [
+      "A start event must be named and applied consistently.",
+      "Automated acknowledgments should not be counted as human first responses unless the definition says so.",
+      "Waiting states should be visible rather than silently excluded.",
+      "Business-hours rules change the meaning of the number.",
+      "Open conversations at the observation boundary are censored, not complete.",
+      "A fast response without an owner does not demonstrate service quality."
+    ],
+    "sources": [
+      { "label": "Privacy Framework", "publisher": "National Institute of Standards and Technology", "url": "https://www.nist.gov/privacy-framework", "checkedAt": "2026-10-22" },
+      { "label": "Cybersecurity Framework", "publisher": "National Institute of Standards and Technology", "url": "https://www.nist.gov/cyberframework", "checkedAt": "2026-10-22" },
+      { "label": "Standards for Internal Control in the Federal Government", "publisher": "U.S. Government Accountability Office", "url": "https://www.gao.gov/products/gao-14-704g", "checkedAt": "2026-10-22" },
+      { "label": "Records Management Policy and Guidance", "publisher": "National Archives and Records Administration", "url": "https://www.archives.gov/records-mgmt/policy", "checkedAt": "2026-10-22" }
+    ]
+  },
+  {
+    "slug": "chat-containment-escalation-measurement",
+    "title": "Measuring Chat Containment and Escalation",
+    "summary": "A method for separating resolved conversations, appropriate escalations, failed containment, and unresolved handoffs.",
+    "cluster": "Chat operations",
+    "publishedAt": "2026-10-22",
+    "image": "/october-22/chat-containment-escalation-measurement.webp",
+    "finding": "Containment is not the same as resolution. A useful measure separates appropriate escalation, failed containment, customer abandonment, and unresolved handoff.",
+    "methodology": [
+      "Define the unit as a conversation with a declared start and end state. Record the channel, queue, customer eligibility, and observation window. Exclude conversations that were test messages or duplicates under a stated rule.",
+      "Define containment as the conversation ending without a transfer to another owner. Define resolution as the customer's request being addressed under the approved outcome definition. A conversation can be contained but unresolved, or escalated and resolved.",
+      "Classify escalations by reason: policy, authority, technical, safety, account access, or customer request. An appropriate escalation is not a failure. The measure should distinguish a correct handoff from an avoidable one.",
+      "Record customer abandonment and no-response states. A conversation that ends because the customer left is not contained in a meaningful sense. Keep it visible rather than counting it as a success.",
+      "Sample contained conversations and check the outcome against the approved source. Look for premature closure, an unsupported answer, or a customer who returned through another channel.",
+      "Report counts by outcome, escalation reason, and queue. Pair the containment measure with resolution quality and customer follow-up. Do not use containment alone as a performance target."
+    ],
+    "findings": [
+      "Containment and resolution are different outcomes.",
+      "An appropriate escalation should not be scored as a failure.",
+      "Customer abandonment belongs in the denominator, not in a success count.",
+      "Premature closure can inflate containment.",
+      "A returned conversation is evidence of an unresolved outcome.",
+      "Containment targets can create pressure to avoid necessary handoffs."
+    ],
+    "sources": [
+      { "label": "Standards for Internal Control in the Federal Government", "publisher": "U.S. Government Accountability Office", "url": "https://www.gao.gov/products/gao-14-704g", "checkedAt": "2026-10-22" },
+      { "label": "Data Security", "publisher": "Federal Trade Commission", "url": "https://www.ftc.gov/business-guidance/privacy-security/data-security", "checkedAt": "2026-10-22" },
+      { "label": "Privacy Framework", "publisher": "National Institute of Standards and Technology", "url": "https://www.nist.gov/privacy-framework", "checkedAt": "2026-10-22" },
+      { "label": "Records Management Policy and Guidance", "publisher": "National Archives and Records Administration", "url": "https://www.archives.gov/records-mgmt/policy", "checkedAt": "2026-10-22" }
+    ]
+  },
+  {
+    "slug": "chat-transcript-quality-sampling",
+    "title": "Sampling Chat Transcripts for Quality Review",
+    "summary": "A reproducible sampling and review design for transcript quality, escalation accuracy, and evidence completeness.",
+    "cluster": "Quality review",
+    "publishedAt": "2026-10-22",
+    "image": "/october-22/chat-transcript-quality-sampling.webp",
+    "finding": "Transcript quality review is useful when the sample, the checklist, the reviewer calibration, and the handling of sensitive data are defined before the review begins.",
+    "methodology": [
+      "Define the review question. A sample designed to test escalation accuracy needs a different population from one designed to test answer clarity. Record the question before selecting records.",
+      "Build the sampling frame from a fixed export. Record the query date, filters, queue, channel, and count. Stratify by topic, outcome, shift, and escalation reason so the sample is not limited to easy conversations.",
+      "Define the checklist with observable items: source use, required fields, identity verification, escalation trigger, customer update, and closure evidence. Separate objective items from judgment items that require a manager.",
+      "Calibrate reviewers on a small set of records. Measure agreement on each item and revise unclear definitions before expanding the sample. Preserve disagreement rather than forcing consensus.",
+      "Redact or limit sensitive content according to policy. Record who accessed the transcript, the purpose, and the retention period. Do not copy full transcripts into an unapproved review file.",
+      "Report the sample size, exclusions, item-level results, and the limits of inference. A sample describes the reviewed records, not the entire queue. Follow-up actions should name an owner and a retest date."
+    ],
+    "findings": [
+      "The review question determines the sampling frame.",
+      "A sample limited to easy conversations hides escalation risk.",
+      "Objective and judgment items should be separated.",
+      "Reviewer calibration is part of the method, not an optional step.",
+      "Sensitive transcript access needs a documented purpose and retention rule.",
+      "A sample cannot certify the whole queue."
+    ],
+    "sources": [
+      { "label": "Standards for Internal Control in the Federal Government", "publisher": "U.S. Government Accountability Office", "url": "https://www.gao.gov/products/gao-14-704g", "checkedAt": "2026-10-22" },
+      { "label": "Privacy Framework", "publisher": "National Institute of Standards and Technology", "url": "https://www.nist.gov/privacy-framework", "checkedAt": "2026-10-22" },
+      { "label": "Data Security", "publisher": "Federal Trade Commission", "url": "https://www.ftc.gov/business-guidance/privacy-security/data-security", "checkedAt": "2026-10-22" },
+      { "label": "Records Management Policy and Guidance", "publisher": "National Archives and Records Administration", "url": "https://www.archives.gov/records-mgmt/policy", "checkedAt": "2026-10-22" }
+    ]
+  },
+  {
+    "slug": "chat-knowledge-usage-evidence",
+    "title": "Tracing Chat Knowledge Usage",
+    "summary": "A method for linking chat answers to approved knowledge versions, review dates, and escalation when guidance is missing.",
+    "cluster": "Knowledge operations",
+    "publishedAt": "2026-10-22",
+    "image": "/october-22/chat-knowledge-usage-evidence.webp",
+    "finding": "Knowledge usage is reviewable when the answer, the article version, the review date, and the escalation for missing guidance are retained with the conversation.",
+    "methodology": [
+      "Define the knowledge population. It may include help center articles, macros, internal runbooks, or approved response templates. Record the owner, version, and review date for each source.",
+      "For a sample of conversations, identify the source used for the answer. Record the article identifier, version, and the date it was consulted. If the agent used memory or an unapproved source, record that as a finding.",
+      "Test whether the answer matches the current approved source. Distinguish a stale source, a misread source, an unsupported improvisation, and a question the source does not cover.",
+      "Record the escalation path when the source is silent or conflicting. A missing answer should produce a content request or an owner decision, not a confident guess.",
+      "Review article usage by topic and by gap. A high usage of an outdated article may indicate a search or navigation problem. A high volume of missing-answer escalations may indicate a content gap.",
+      "Report the sample, the source versions, the match results, and the open content requests. Retain the review date and the owner for each corrective action."
+    ],
+    "findings": [
+      "An answer without a source version cannot be reviewed later.",
+      "A stale source and an unsupported answer are different findings.",
+      "Missing guidance should create a content request, not an improvised answer.",
+      "Search and navigation problems can look like agent errors.",
+      "Article usage patterns can guide content investment.",
+      "A knowledge review is not a substitute for policy ownership."
+    ],
+    "sources": [
+      { "label": "Standards for Internal Control in the Federal Government", "publisher": "U.S. Government Accountability Office", "url": "https://www.gao.gov/products/gao-14-704g", "checkedAt": "2026-10-22" },
+      { "label": "Privacy Framework", "publisher": "National Institute of Standards and Technology", "url": "https://www.nist.gov/privacy-framework", "checkedAt": "2026-10-22" },
+      { "label": "Federal Plain Language Guidelines", "publisher": "PlainLanguage.gov", "url": "https://www.plainlanguage.gov/guidelines/", "checkedAt": "2026-10-22" },
+      { "label": "Records Management Policy and Guidance", "publisher": "National Archives and Records Administration", "url": "https://www.archives.gov/records-mgmt/policy", "checkedAt": "2026-10-22" }
+    ]
+  },
+  {
+    "slug": "chat-customer-effort-signals",
+    "title": "Reading Customer Effort Signals in Chat",
+    "summary": "A cautious method for using repetition, transfers, and clarification requests as operational signals rather than satisfaction scores.",
+    "cluster": "Quality review",
+    "publishedAt": "2026-10-22",
+    "image": "/october-22/chat-customer-effort-signals.webp",
+    "finding": "Customer effort signals are useful for locating friction when they are defined from observable conversation events and not treated as a direct measure of satisfaction.",
+    "methodology": [
+      "Define the signals before reviewing conversations. Examples include repeated information requests, multiple transfers, a return within a short period, a clarification loop, or a customer request to start over. Each signal needs a precise definition.",
+      "Build the population from a fixed conversation export. Record the channel, queue, topic, outcome, and observation window. Include conversations that ended without a resolution if the signal can be observed.",
+      "Code the signals from the transcript and the case record, not from a satisfaction survey. A customer may be polite while repeating the same information. A signal is an event, not an emotion.",
+      "Distinguish agent-caused friction from process-caused friction. A transfer may be required by policy, while a repeated question may indicate a missing field or a poor handoff. Record the likely cause and the evidence.",
+      "Review a sample with the support owner and the knowledge owner. Look for patterns by topic, queue, and channel. Do not use the signals to rank individual agents without context.",
+      "Report the signal counts, the sample, and the limits. A high signal count identifies where to inspect. It does not prove that the customer was dissatisfied or that the agent performed poorly."
+    ],
+    "findings": [
+      "Observable events are more reliable than inferred emotion.",
+      "A required transfer is not the same as avoidable friction.",
+      "Repeated information requests may indicate a missing field or a handoff gap.",
+      "A return conversation is a signal worth inspecting.",
+      "Effort signals should guide review, not serve as a satisfaction score.",
+      "Agent ranking without context can punish correct escalation."
+    ],
+    "sources": [
+      { "label": "Standards for Internal Control in the Federal Government", "publisher": "U.S. Government Accountability Office", "url": "https://www.gao.gov/products/gao-14-704g", "checkedAt": "2026-10-22" },
+      { "label": "Federal Plain Language Guidelines", "publisher": "PlainLanguage.gov", "url": "https://www.plainlanguage.gov/guidelines/", "checkedAt": "2026-10-22" },
+      { "label": "Data Security", "publisher": "Federal Trade Commission", "url": "https://www.ftc.gov/business-guidance/privacy-security/data-security", "checkedAt": "2026-10-22" },
+      { "label": "Privacy Framework", "publisher": "National Institute of Standards and Technology", "url": "https://www.nist.gov/privacy-framework", "checkedAt": "2026-10-22" }
+    ]
+  }
+];
