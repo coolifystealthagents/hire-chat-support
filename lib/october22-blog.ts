@@ -890,42 +890,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Intake Request Triage",
         "paragraphs": [
           "Intake Request Triage gives Chat Support teams a bounded way to coordinate intake request triage. The operating risk is that a request can be marked complete without the source, owner, or a usable next action. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Administrative preparation stays separate from the decision reserved to the accountable owner."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; administrative chat preparation stays separate from decisions reserved to the supervisor."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture request, source, owner, due time, status, exception reason, and completion evidence. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture the chat request, source, agent owner, due time, status, exception reason, and completion evidence; a transcript without a close event is still an open customer case.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for intake request triage by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort open chat intake requests by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Sample new, closed, and reopened records and compare the final state with the source. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; sample new, closed, and reopened conversations and compare the final state with the transcript.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -936,11 +936,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -963,42 +963,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Evidence Capture Standard",
         "paragraphs": [
           "Evidence Capture Standard gives Chat Support teams a bounded way to coordinate evidence capture. The operating risk is that a later summary can replace the original evidence and hide what was actually known. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Staff may preserve and label evidence but may not invent a rationale or approval."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; agents may preserve and label chat evidence but may not invent a rationale or approval."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture request key, source artifact, received time, patient or client reference, owner, decision boundary, and correction history. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture the chat request key, source transcript, received time, customer reference, assigned agent, decision boundary, and correction history; keep the original wording beside any later correction.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for evidence capture by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort open chat evidence-capture items by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Trace a sample from the original message to the recorded outcome. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; trace a sample from the first customer message to the recorded outcome.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -1009,11 +1009,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -1036,42 +1036,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Owner Handoff Map",
         "paragraphs": [
           "Owner Handoff Map gives Chat Support teams a bounded way to coordinate owner handoffs. The operating risk is that two people can each believe the other owns the next step. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. A handoff transfers ownership only when the receiving role acknowledges it."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; a handoff transfers ownership only when the receiving agent acknowledges it."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture record, current owner, receiving owner, handoff reason, acknowledgement, due time, and open question. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture the conversation record, current agent, receiving agent, handoff reason, acknowledgement, due time, and open question; a chat transfer is complete only when the receiving agent acknowledges it.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for owner handoffs by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort open chat handoffs by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Inspect handoffs that crossed shifts, teams, or systems. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; inspect handoffs that crossed shifts, queues, or helpdesk systems.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -1082,11 +1082,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -1109,42 +1109,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Queue Aging Review",
         "paragraphs": [
           "Queue Aging Review gives Chat Support teams a bounded way to coordinate queue aging. The operating risk is that an old item can disappear into an average while a patient or client waits. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Age is an administrative signal and does not determine clinical or commercial priority."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; chat age is an administrative signal, not a customer-priority decision."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture arrival time, priority basis, owner, dependency, last action, age band, and next review time. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture chat arrival time, priority basis, assigned agent, dependency, last action, age band, and next review time; link each customer claim to its transcript or order record and mark missing information rather than guessing.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for queue aging by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort aging chat conversations by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Review the oldest open items and the reasons they remain open. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; review the oldest open conversations and the reasons they remain open.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -1155,11 +1155,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -1182,42 +1182,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Exception Escalation Path",
         "paragraphs": [
           "Exception Escalation Path gives Chat Support teams a bounded way to coordinate exception escalation. The operating risk is that an unanswered escalation can be mistaken for approval. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. The escalation asks for a decision; it does not make the decision."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; the escalation asks for a decision, it does not make the decision."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture exception type, affected record, evidence conflict, action already taken, safe next step, owner, and deadline. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture the chat exception type, affected customer record, conflicting statement, action already taken, safe next step, owner, and deadline; link the transcript and keep missing facts visible.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for exception escalation by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort open chat escalations by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Sample exceptions by reason and check whether the right owner responded. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; sample exceptions by reason and check whether the right supervisor responded.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -1228,11 +1228,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -1255,42 +1255,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Access Permission Review",
         "paragraphs": [
           "Access Permission Review gives Chat Support teams a bounded way to coordinate access and permissions. The operating risk is that temporary or inherited access can outlive the task that justified it. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Access to a system is not authorization to make every decision available in it."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; access to a helpdesk is not authorization to make every decision available in it."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture role, system, permitted action, approval source, last review, temporary access, and removal evidence. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture the agent role, chat system, permitted action, approval source, last review, temporary access, and removal evidence; access to a supervisor macro is not authorization to promise a refund.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for access and permissions by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort open chat access issues by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Compare the current roster with approved roles and remove unexplained access. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; compare the live agent roster with approved chat roles and remove unexplained access.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -1301,11 +1301,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -1328,42 +1328,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Documentation Version Control",
         "paragraphs": [
           "Documentation Version Control gives Chat Support teams a bounded way to coordinate documentation version control. The operating risk is that an older script or form can remain in use after the approved version changes. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Staff follow the approved version and route proposed changes to its owner."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; agents follow the approved macro version and route proposed changes to its owner."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture document name, version, owner, effective date, approval, location, and superseded copy. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture the knowledge-base article name, version, owner, effective date, approval, location, and superseded copy; link every answer to the approved article version so agents do not quote stale policy.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for documentation version control by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort open chat documentation-version issues by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Match live documents to the current approved version. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; match live macros and knowledge articles to the current approved version.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -1374,11 +1374,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -1401,42 +1401,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Vendor Coordination Ledger",
         "paragraphs": [
           "Vendor Coordination Ledger gives Chat Support teams a bounded way to coordinate vendor coordination. The operating risk is that a vendor promise can be treated as a completed service. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. The vendor supplies a service; the accountable owner accepts the result."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; the vendor supplies a chat service, while the accountable owner accepts the result."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture vendor, service, request, commitment, contact, due date, evidence, exception, and closure. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture the vendor, chat service, request, commitment, contact, due date, evidence, exception, and closure; a vendor promise is not a resolved customer issue until the record shows the outcome.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for vendor coordination by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort open chat vendor items by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Compare vendor confirmations with the evidence held by the business. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; compare vendor confirmations with the transcript and ticket held by the support team.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -1447,11 +1447,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -1474,42 +1474,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Reporting Cadence Review",
         "paragraphs": [
           "Reporting Cadence Review gives Chat Support teams a bounded way to coordinate reporting cadence. The operating risk is that a recurring report can become a ritual that no one uses to change a decision. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. The report informs an owner; it does not replace judgment."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; the weekly chat report informs a supervisor but does not replace judgment."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture metric, definition, source, owner, review date, denominator, exclusion, and action. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture the chat metric name, definition, source, owner, review date, denominator, exclusions, and action; a response-time or CSAT number without its denominator is not a support measure.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for reporting cadence by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort open chat reporting items by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Trace one metric from source to decision and remove unused fields. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; trace one metric from transcript to decision and remove fields nobody uses.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -1520,11 +1520,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -1547,42 +1547,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Client Onboarding Brief",
         "paragraphs": [
           "Client Onboarding Brief gives Chat Support teams a bounded way to coordinate client onboarding. The operating risk is that a new client can begin work before ownership, access, and boundaries are confirmed. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Onboarding prepares the relationship; authorized leaders approve scope and exceptions."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; onboarding prepares coverage, while authorized leaders approve scope and exceptions."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture client, service scope, hours, contacts, escalation path, systems, permissions, and first review. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture the client, chat channels covered, service hours, contacts, escalation path, helpdesk systems, permissions, and first review; link each consequential value to its source and keep missing details visible.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for client onboarding by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort open chat onboarding items by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Compare the first week of work with the signed onboarding record. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; compare the first week of chat coverage with the signed onboarding record and correct gaps.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -1593,11 +1593,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -1620,42 +1620,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Quality Sample Review",
         "paragraphs": [
           "Quality Sample Review gives Chat Support teams a bounded way to coordinate quality sampling. The operating risk is that a convenient sample can make a queue look better than it is. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Reviewers classify against written criteria and escalate professional questions."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; reviewers classify against written chat criteria and escalate policy questions."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture sample frame, record, reviewer, criteria, result, correction, and retest date. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture the chat sample frame, conversation record, reviewer, criteria, result, correction, and retest date; the sample must be reproducible from the transcript and ticket.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for quality sampling by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort open chat quality samples by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Include routine, difficult, reopened, and unresolved records. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; include routine, difficult, reopened, and unresolved conversations in the QA sample.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -1666,11 +1666,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -1693,42 +1693,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Closeout Audit",
         "paragraphs": [
           "Closeout Audit gives Chat Support teams a bounded way to coordinate closeout audits. The operating risk is that a closed status can be recorded before the evidence or communication is complete. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Closure confirms the administrative record; it does not certify a professional outcome."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; closure confirms the support record, not a professional or commercial outcome."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture record, required evidence, final owner, completion event, communication, exception, and audit date. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture the conversation record, required evidence, final owner, completion event, customer communication, exception, and audit date; do not close a chat because the window went quiet.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for closeout audits by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort open chat closeout items by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Sample closed records and verify the completion event and source. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; sample closed conversations and verify the completion event against the ticket source.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -1739,11 +1739,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -1766,42 +1766,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Intake Request Triage",
         "paragraphs": [
           "Intake Request Triage gives Chat Support teams a bounded way to coordinate intake request triage. The operating risk is that a request can be marked complete without the source, owner, or a usable next action. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Administrative preparation stays separate from the decision reserved to the accountable owner."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; administrative chat preparation stays separate from decisions reserved to the supervisor."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture request, source, owner, due time, status, exception reason, and completion evidence. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture the chat request, source, agent owner, due time, status, exception reason, and completion evidence; a transcript without a close event is still an open customer case.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for intake request triage by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort open chat intake requests by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Sample new, closed, and reopened records and compare the final state with the source. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; sample new, closed, and reopened conversations and compare the final state with the transcript.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -1812,11 +1812,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -1839,42 +1839,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Evidence Capture Standard",
         "paragraphs": [
           "Evidence Capture Standard gives Chat Support teams a bounded way to coordinate evidence capture. The operating risk is that a later summary can replace the original evidence and hide what was actually known. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Staff may preserve and label evidence but may not invent a rationale or approval."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; agents may preserve and label chat evidence but may not invent a rationale or approval."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture request key, source artifact, received time, patient or client reference, owner, decision boundary, and correction history. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture the chat request key, source transcript, received time, customer reference, assigned agent, decision boundary, and correction history; keep the original wording beside any later correction.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for evidence capture by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort open chat evidence-capture items by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Trace a sample from the original message to the recorded outcome. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; trace a sample from the first customer message to the recorded outcome.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -1885,11 +1885,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -1912,42 +1912,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Owner Handoff Map",
         "paragraphs": [
           "Owner Handoff Map gives Chat Support teams a bounded way to coordinate owner handoffs. The operating risk is that two people can each believe the other owns the next step. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. A handoff transfers ownership only when the receiving role acknowledges it."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; a handoff transfers ownership only when the receiving agent acknowledges it."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture record, current owner, receiving owner, handoff reason, acknowledgement, due time, and open question. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture the conversation record, current agent, receiving agent, handoff reason, acknowledgement, due time, and open question; a chat transfer is complete only when the receiving agent acknowledges it.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for owner handoffs by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort open chat handoffs by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Inspect handoffs that crossed shifts, teams, or systems. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; inspect handoffs that crossed shifts, queues, or helpdesk systems.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -1958,11 +1958,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -1985,42 +1985,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Queue Aging Review",
         "paragraphs": [
           "Queue Aging Review gives Chat Support teams a bounded way to coordinate queue aging. The operating risk is that an old item can disappear into an average while a patient or client waits. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Age is an administrative signal and does not determine clinical or commercial priority."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; chat age is an administrative signal, not a customer-priority decision."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture arrival time, priority basis, owner, dependency, last action, age band, and next review time. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture chat arrival time, priority basis, assigned agent, dependency, last action, age band, and next review time; link each customer claim to its transcript or order record and mark missing information rather than guessing.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for queue aging by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort aging chat conversations by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Review the oldest open items and the reasons they remain open. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; review the oldest open conversations and the reasons they remain open.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -2031,11 +2031,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -2058,42 +2058,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Exception Escalation Path",
         "paragraphs": [
           "Exception Escalation Path gives Chat Support teams a bounded way to coordinate exception escalation. The operating risk is that an unanswered escalation can be mistaken for approval. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. The escalation asks for a decision; it does not make the decision."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; the escalation asks for a decision, it does not make the decision."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture exception type, affected record, evidence conflict, action already taken, safe next step, owner, and deadline. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture the chat exception type, affected customer record, conflicting statement, action already taken, safe next step, owner, and deadline; link the transcript and keep missing facts visible.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for exception escalation by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort open chat escalations by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Sample exceptions by reason and check whether the right owner responded. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; sample exceptions by reason and check whether the right supervisor responded.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -2104,11 +2104,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -2131,42 +2131,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Access Permission Review",
         "paragraphs": [
           "Access Permission Review gives Chat Support teams a bounded way to coordinate access and permissions. The operating risk is that temporary or inherited access can outlive the task that justified it. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Access to a system is not authorization to make every decision available in it."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; access to a helpdesk is not authorization to make every decision available in it."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture role, system, permitted action, approval source, last review, temporary access, and removal evidence. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture the agent role, chat system, permitted action, approval source, last review, temporary access, and removal evidence; access to a supervisor macro is not authorization to promise a refund.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for access and permissions by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort open chat access issues by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Compare the current roster with approved roles and remove unexplained access. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; compare the live agent roster with approved chat roles and remove unexplained access.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -2177,11 +2177,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -2204,42 +2204,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Documentation Version Control",
         "paragraphs": [
           "Documentation Version Control gives Chat Support teams a bounded way to coordinate documentation version control. The operating risk is that an older script or form can remain in use after the approved version changes. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Staff follow the approved version and route proposed changes to its owner."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; agents follow the approved macro version and route proposed changes to its owner."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture document name, version, owner, effective date, approval, location, and superseded copy. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture the knowledge-base article name, version, owner, effective date, approval, location, and superseded copy; link every answer to the approved article version so agents do not quote stale policy.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for documentation version control by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort open chat documentation-version issues by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Match live documents to the current approved version. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; match live macros and knowledge articles to the current approved version.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -2250,11 +2250,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -2277,42 +2277,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Vendor Coordination Ledger",
         "paragraphs": [
           "Vendor Coordination Ledger gives Chat Support teams a bounded way to coordinate vendor coordination. The operating risk is that a vendor promise can be treated as a completed service. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. The vendor supplies a service; the accountable owner accepts the result."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; the vendor supplies a chat service, while the accountable owner accepts the result."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture vendor, service, request, commitment, contact, due date, evidence, exception, and closure. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture the vendor, chat service, request, commitment, contact, due date, evidence, exception, and closure; a vendor promise is not a resolved customer issue until the record shows the outcome.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for vendor coordination by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort open chat vendor items by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Compare vendor confirmations with the evidence held by the business. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; compare vendor confirmations with the transcript and ticket held by the support team.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -2323,11 +2323,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -2350,42 +2350,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Reporting Cadence Review",
         "paragraphs": [
           "Reporting Cadence Review gives Chat Support teams a bounded way to coordinate reporting cadence. The operating risk is that a recurring report can become a ritual that no one uses to change a decision. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. The report informs an owner; it does not replace judgment."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; the weekly chat report informs a supervisor but does not replace judgment."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture metric, definition, source, owner, review date, denominator, exclusion, and action. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture the chat metric name, definition, source, owner, review date, denominator, exclusions, and action; a response-time or CSAT number without its denominator is not a support measure.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for reporting cadence by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort open chat reporting items by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Trace one metric from source to decision and remove unused fields. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; trace one metric from transcript to decision and remove fields nobody uses.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -2396,11 +2396,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -2423,42 +2423,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Client Onboarding Brief",
         "paragraphs": [
           "Client Onboarding Brief gives Chat Support teams a bounded way to coordinate client onboarding. The operating risk is that a new client can begin work before ownership, access, and boundaries are confirmed. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Onboarding prepares the relationship; authorized leaders approve scope and exceptions."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; onboarding prepares coverage, while authorized leaders approve scope and exceptions."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture client, service scope, hours, contacts, escalation path, systems, permissions, and first review. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture the client, chat channels covered, service hours, contacts, escalation path, helpdesk systems, permissions, and first review; link each consequential value to its source and keep missing details visible.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for client onboarding by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort open chat onboarding items by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Compare the first week of work with the signed onboarding record. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; compare the first week of chat coverage with the signed onboarding record and correct gaps.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -2469,11 +2469,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -2496,42 +2496,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Quality Sample Review",
         "paragraphs": [
           "Quality Sample Review gives Chat Support teams a bounded way to coordinate quality sampling. The operating risk is that a convenient sample can make a queue look better than it is. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Reviewers classify against written criteria and escalate professional questions."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; reviewers classify against written chat criteria and escalate policy questions."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture sample frame, record, reviewer, criteria, result, correction, and retest date. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture the chat sample frame, conversation record, reviewer, criteria, result, correction, and retest date; the sample must be reproducible from the transcript and ticket.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for quality sampling by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort open chat quality samples by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Include routine, difficult, reopened, and unresolved records. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; include routine, difficult, reopened, and unresolved conversations in the QA sample.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -2542,11 +2542,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",
@@ -2569,42 +2569,42 @@ export const october22BlogPosts: BlogPost[] = [
         "heading": "Define the outcome for Closeout Audit",
         "paragraphs": [
           "Closeout Audit gives Chat Support teams a bounded way to coordinate closeout audits. The operating risk is that a closed status can be recorded before the evidence or communication is complete. A useful record keeps the request, source, owner, due time, exception state, and completion evidence together.",
-          "Name the event that creates a record, the source system, the minimum evidence, the accountable owner, and the clock start before the queue opens. Closure confirms the administrative record; it does not certify a professional outcome."
+          "Name the event that creates a chat record, the source system, the minimum evidence, the accountable supervisor, and the clock start; closure confirms the support record, not a professional or commercial outcome."
         ]
       },
       {
         "heading": "Map the inputs and the record",
         "paragraphs": [
-          "Capture record, required evidence, final owner, completion event, communication, exception, and audit date. Link each consequential value to its source and record when it was observed. Missing information must remain visible rather than being replaced by a plausible assumption.",
-          "Use a small set of named states such as received, incomplete, ready for review, exception, and closed. Every exception needs a reason code, the role that must resolve it, and a dated next action."
+          "Capture the conversation record, required evidence, final owner, completion event, customer communication, exception, and audit date; do not close a chat because the window went quiet.",
+          "Use a small set of named chat states such as received, incomplete, ready for review, exception, and closed; every exception needs a reason code, the role that must resolve it, and a dated next action."
         ]
       },
       {
         "heading": "Separate preparation from judgment",
         "paragraphs": [
-          "The support role may collect, label, route, and draft within approved language. It may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized owner.",
-          "Use proceed, pause for review, and escalate now as operational states. Preserve the original question when the answer depends on a professional or commercial decision."
+          "Chat support agents may collect, label, route, and draft within approved language; they may not invent a rationale, infer an approval, or make a commitment that belongs to an authorized supervisor.",
+          "Use proceed, pause for review, and escalate now as chat operational states; preserve the original customer question when the answer depends on a professional or commercial decision."
         ]
       },
       {
         "heading": "Run the daily queue",
         "paragraphs": [
-          "Sort open items for closeout audits by client impact, external deadline, dependency, and age. Update status only from a verifiable event, not from a conversation or an assumption.",
-          "Before handoff, give every open item a named owner, a dated next action, and a link to the evidence. A shared inbox may receive work, but it cannot own an outcome."
+          "Sort open chat closeout items by customer impact, external deadline, dependency, and age; update status only from a verifiable event, not from a conversation or assumption.",
+          "Before a chat handoff, give every open conversation a named agent, a dated next action, and a link to the transcript; a shared chat inbox can receive work but cannot own the customer outcome."
         ]
       },
       {
         "heading": "Escalate with a bounded packet",
         "paragraphs": [
-          "An escalation should include the record link, verified facts, the unresolved decision, the deadline, actions already taken, and the safest permitted next step. Use distinct reason codes for missing source, conflicting source, wrong record, expired evidence, unavailable approver, and system outage.",
-          "Do not convert silence into approval. Keep the work paused when the next action depends on authority or evidence that has not arrived."
+          "A chat escalation should include the conversation link, verified facts, the unresolved decision, the response deadline, actions already taken, and the safest permitted next step; use separate codes for missing transcript, conflicting customer statement, wrong account, expired policy, unavailable supervisor, and chat outage.",
+          "Do not convert chat silence into approval; keep the conversation paused when the next step depends on authority or evidence that has not arrived."
         ]
       },
       {
         "heading": "Close, review, and improve",
         "paragraphs": [
-          "Close only when the completion event, communication, and evidence are present. Sample closed records and verify the completion event and source. When the same exception recurs, change the intake field, evidence rule, ownership map, or approval gate.",
-          "Test the revision on a bounded sample and keep the prior version for audit. Review quality with denominators and inspect routine, adverse, and unresolved records."
+          "Close a chat case only when the completion event, customer communication, and evidence are present; sample closed conversations and verify the completion event against the ticket source.",
+          "Test a revised chat macro on a bounded sample and keep the prior version for audit; review quality with denominators and inspect routine, adverse, and unresolved conversations."
         ]
       }
     ],
@@ -2615,11 +2615,11 @@ export const october22BlogPosts: BlogPost[] = [
       },
       {
         "q": "What proves the workflow is complete?",
-        "a": "The completion event, communication, source evidence, named owner, and closure state must all be present."
+        "a": "The chat completion event, customer communication, source evidence, named agent, and closure state must all be present before a conversation leaves the open queue."
       },
       {
         "q": "What happens when evidence conflicts?",
-        "a": "Preserve both values, pause the dependent action, and route a concise comparison to the authorized owner."
+        "a": "When a customer statement and ticket record conflict, preserve both values, pause the dependent chat action, and route a concise comparison to the authorized supervisor."
       }
     ],
     "internalService": "/services/live-chat-support",

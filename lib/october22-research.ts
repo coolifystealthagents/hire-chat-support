@@ -263,7 +263,7 @@ export const october22ResearchPosts: ResearchPost[] = [
     "cluster": "Chat Support Research",
     "publishedAt": "2026-10-25",
     "image": "/october-22/hirechatsupport-intake-completeness-study.svg",
-    "finding": "The reviewable signal is the source, owner, timestamp, exception, and completion evidence for which required fields and source artifacts are present at the point of assignment.",
+    "finding": "The reviewable chat signal is the source, agent, timestamp, exception, and completion evidence for which required fields and transcript artifacts are present at the point of assignment.",
     "methodology": [
       "Define the population as conversations that entered the queue during a declared period and met the channel and customer eligibility rules. Record the query, time zone, filters, exclusions, and count before inspecting the result.",
       "Specify the start event. It may be the customer's first message, the platform's queue assignment, or the first human review. Each produces a different measure. Do not mix events within one comparison.",
@@ -314,7 +314,7 @@ export const october22ResearchPosts: ResearchPost[] = [
     "cluster": "Chat Support Research",
     "publishedAt": "2026-10-25",
     "image": "/october-22/hirechatsupport-handoff-latency-study.svg",
-    "finding": "The reviewable signal is the source, owner, timestamp, exception, and completion evidence for how long each handoff takes and where acknowledgement or context is lost.",
+    "finding": "The reviewable chat signal is the source, agent, timestamp, exception, and completion evidence for how long each handoff takes and where acknowledgement or context is lost.",
     "methodology": [
       "Define the population as conversations that entered the queue during a declared period and met the channel and customer eligibility rules. Record the query, time zone, filters, exclusions, and count before inspecting the result.",
       "Specify the start event. It may be the customer's first message, the platform's queue assignment, or the first human review. Each produces a different measure. Do not mix events within one comparison.",
@@ -365,7 +365,7 @@ export const october22ResearchPosts: ResearchPost[] = [
     "cluster": "Chat Support Research",
     "publishedAt": "2026-10-25",
     "image": "/october-22/hirechatsupport-exception-pattern-audit.svg",
-    "finding": "The reviewable signal is the source, owner, timestamp, exception, and completion evidence for which exception reasons recur and whether they receive a consistent owner and disposition.",
+    "finding": "The reviewable chat signal is the source, agent, timestamp, exception, and completion evidence for which exception reasons recur and whether they receive a consistent supervisor and disposition.",
     "methodology": [
       "Define the population as conversations that entered the queue during a declared period and met the channel and customer eligibility rules. Record the query, time zone, filters, exclusions, and count before inspecting the result.",
       "Specify the start event. It may be the customer's first message, the platform's queue assignment, or the first human review. Each produces a different measure. Do not mix events within one comparison.",
@@ -416,7 +416,7 @@ export const october22ResearchPosts: ResearchPost[] = [
     "cluster": "Chat Support Research",
     "publishedAt": "2026-10-25",
     "image": "/october-22/hirechatsupport-evidence-reliability-study.svg",
-    "finding": "The reviewable signal is the source, owner, timestamp, exception, and completion evidence for whether the source is reconstructable and consistent with the recorded final state.",
+    "finding": "The reviewable chat signal is the source, agent, timestamp, exception, and completion evidence for whether the transcript is reconstructable and consistent with the ticket's final state.",
     "methodology": [
       "Define the population as conversations that entered the queue during a declared period and met the channel and customer eligibility rules. Record the query, time zone, filters, exclusions, and count before inspecting the result.",
       "Specify the start event. It may be the customer's first message, the platform's queue assignment, or the first human review. Each produces a different measure. Do not mix events within one comparison.",
@@ -467,7 +467,7 @@ export const october22ResearchPosts: ResearchPost[] = [
     "cluster": "Chat Support Research",
     "publishedAt": "2026-10-25",
     "image": "/october-22/hirechatsupport-access-recertification-study.svg",
-    "finding": "The reviewable signal is the source, owner, timestamp, exception, and completion evidence for whether current access matches the approved role and whether removals are evidenced.",
+    "finding": "The reviewable chat signal is the source, agent, timestamp, exception, and completion evidence for whether current access matches the approved support role and whether removals are documented.",
     "methodology": [
       "Define the population as conversations that entered the queue during a declared period and met the channel and customer eligibility rules. Record the query, time zone, filters, exclusions, and count before inspecting the result.",
       "Specify the start event. It may be the customer's first message, the platform's queue assignment, or the first human review. Each produces a different measure. Do not mix events within one comparison.",
@@ -518,7 +518,7 @@ export const october22ResearchPosts: ResearchPost[] = [
     "cluster": "Chat Support Research",
     "publishedAt": "2026-10-26",
     "image": "/october-22/hirechatsupport-intake-completeness-study-2.svg",
-    "finding": "The reviewable signal is the source, owner, timestamp, exception, and completion evidence for which required fields and source artifacts are present at the point of assignment.",
+    "finding": "The reviewable chat signal is the source, agent, timestamp, exception, and completion evidence for which required fields and transcript artifacts are present at the point of assignment.",
     "methodology": [
       "Define the population as conversations that entered the queue during a declared period and met the channel and customer eligibility rules. Record the query, time zone, filters, exclusions, and count before inspecting the result.",
       "Specify the start event. It may be the customer's first message, the platform's queue assignment, or the first human review. Each produces a different measure. Do not mix events within one comparison.",
@@ -569,7 +569,7 @@ export const october22ResearchPosts: ResearchPost[] = [
     "cluster": "Chat Support Research",
     "publishedAt": "2026-10-26",
     "image": "/october-22/hirechatsupport-handoff-latency-study-2.svg",
-    "finding": "The reviewable signal is the source, owner, timestamp, exception, and completion evidence for how long each handoff takes and where acknowledgement or context is lost.",
+    "finding": "The reviewable chat signal is the source, agent, timestamp, exception, and completion evidence for how long each handoff takes and where acknowledgement or context is lost.",
     "methodology": [
       "Define the population as conversations that entered the queue during a declared period and met the channel and customer eligibility rules. Record the query, time zone, filters, exclusions, and count before inspecting the result.",
       "Specify the start event. It may be the customer's first message, the platform's queue assignment, or the first human review. Each produces a different measure. Do not mix events within one comparison.",
@@ -620,7 +620,7 @@ export const october22ResearchPosts: ResearchPost[] = [
     "cluster": "Chat Support Research",
     "publishedAt": "2026-10-26",
     "image": "/october-22/hirechatsupport-exception-pattern-audit-2.svg",
-    "finding": "The reviewable signal is the source, owner, timestamp, exception, and completion evidence for which exception reasons recur and whether they receive a consistent owner and disposition.",
+    "finding": "The reviewable chat signal is the source, agent, timestamp, exception, and completion evidence for which exception reasons recur and whether they receive a consistent supervisor and disposition.",
     "methodology": [
       "Define the population as conversations that entered the queue during a declared period and met the channel and customer eligibility rules. Record the query, time zone, filters, exclusions, and count before inspecting the result.",
       "Specify the start event. It may be the customer's first message, the platform's queue assignment, or the first human review. Each produces a different measure. Do not mix events within one comparison.",
@@ -671,7 +671,7 @@ export const october22ResearchPosts: ResearchPost[] = [
     "cluster": "Chat Support Research",
     "publishedAt": "2026-10-26",
     "image": "/october-22/hirechatsupport-evidence-reliability-study-2.svg",
-    "finding": "The reviewable signal is the source, owner, timestamp, exception, and completion evidence for whether the source is reconstructable and consistent with the recorded final state.",
+    "finding": "The reviewable chat signal is the source, agent, timestamp, exception, and completion evidence for whether the transcript is reconstructable and consistent with the ticket's final state.",
     "methodology": [
       "Define the population as conversations that entered the queue during a declared period and met the channel and customer eligibility rules. Record the query, time zone, filters, exclusions, and count before inspecting the result.",
       "Specify the start event. It may be the customer's first message, the platform's queue assignment, or the first human review. Each produces a different measure. Do not mix events within one comparison.",
@@ -722,7 +722,7 @@ export const october22ResearchPosts: ResearchPost[] = [
     "cluster": "Chat Support Research",
     "publishedAt": "2026-10-26",
     "image": "/october-22/hirechatsupport-access-recertification-study-2.svg",
-    "finding": "The reviewable signal is the source, owner, timestamp, exception, and completion evidence for whether current access matches the approved role and whether removals are evidenced.",
+    "finding": "The reviewable chat signal is the source, agent, timestamp, exception, and completion evidence for whether current access matches the approved support role and whether removals are documented.",
     "methodology": [
       "Define the population as conversations that entered the queue during a declared period and met the channel and customer eligibility rules. Record the query, time zone, filters, exclusions, and count before inspecting the result.",
       "Specify the start event. It may be the customer's first message, the platform's queue assignment, or the first human review. Each produces a different measure. Do not mix events within one comparison.",
