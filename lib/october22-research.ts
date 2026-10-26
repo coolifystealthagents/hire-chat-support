@@ -510,5 +510,480 @@ export const october22ResearchPosts: ResearchPost[] = [
         "checkedAt": "2026-10-22"
       }
     ]
+  },
+  {
+    "slug": "hirechatsupport-intake-completeness-study-2",
+    "title": "Chat Support Intake Completeness Study",
+    "summary": "A reproducible review of which required fields and source artifacts are present at the point of assignment in Chat Support operations.",
+    "cluster": "Chat Support Research",
+    "publishedAt": "2026-10-26",
+    "image": "/october-22/hirechatsupport-intake-completeness-study-2.svg",
+    "finding": "The reviewable signal is the source, owner, timestamp, exception, and completion evidence for which required fields and source artifacts are present at the point of assignment.",
+    "methodology": [
+      "Define the population as conversations that entered the queue during a declared period and met the channel and customer eligibility rules. Record the query, time zone, filters, exclusions, and count before inspecting the result.",
+      "Specify the start event. It may be the customer's first message, the platform's queue assignment, or the first human review. Each produces a different measure. Do not mix events within one comparison.",
+      "Specify what counts as a response. A human reply that addresses the customer is different from an automated acknowledgment, a routing notice, or an internal note. Record the qualifying response type and whether a template counts.",
+      "Define pause and stop rules. If the clock pauses while waiting for customer information, record the request and response times. If it does not pause, state that choice. The stop event should be observable in the retained record.",
+      "Handle business hours and holidays explicitly. A conversation that arrives outside the service window may start on the next business day. State the rule and keep the customer-facing expectation consistent with it.",
+      "Report the number in scope, the number that met the definition, the number excluded, and the number still open at the observation boundary. Pair the measure with a sample review of response quality."
+    ],
+    "findings": [
+      "A start event must be named and applied consistently.",
+      "Automated acknowledgments should not be counted as human first responses unless the definition says so.",
+      "Waiting states should be visible rather than silently excluded.",
+      "Business-hours rules change the meaning of the number.",
+      "Open conversations at the observation boundary are censored, not complete.",
+      "A fast response without an owner does not demonstrate service quality."
+    ],
+    "sources": [
+      {
+        "label": "Privacy Framework",
+        "publisher": "National Institute of Standards and Technology",
+        "url": "https://www.nist.gov/privacy-framework",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "label": "Cybersecurity Framework",
+        "publisher": "National Institute of Standards and Technology",
+        "url": "https://www.nist.gov/cyberframework",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "label": "Standards for Internal Control in the Federal Government",
+        "publisher": "U.S. Government Accountability Office",
+        "url": "https://www.gao.gov/products/gao-14-704g",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "label": "Records Management Policy and Guidance",
+        "publisher": "National Archives and Records Administration",
+        "url": "https://www.archives.gov/records-mgmt/policy",
+        "checkedAt": "2026-10-22"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Research question and scope",
+        "paragraphs": [
+          "This protocol examines which required fields and source artifacts are present at the point of assignment across intake records for the defined service in Chat Support operations. It evaluates the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+          "Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not rank people, clients, patients, or teams."
+        ]
+      },
+      {
+        "heading": "Population and evidence",
+        "paragraphs": [
+          "Define intake records for the defined service from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count.",
+          "A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged."
+        ]
+      },
+      {
+        "heading": "Measurement method",
+        "paragraphs": [
+          "Capture the fields used for field completeness, missing evidence, owner assignment, exception state, and correction time. Define allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable.",
+          "Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than selecting the cleaner result."
+        ]
+      },
+      {
+        "heading": "Sampling and reviewer agreement",
+        "paragraphs": [
+          "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement.",
+          "Train two reviewers on a calibration set, preserve first-pass ratings, and adjudicate disagreements. Escalate professional questions rather than answering them to complete a classification."
+        ]
+      },
+      {
+        "heading": "Analysis and limitations",
+        "paragraphs": [
+          "Report counts, rates, medians, aging bands, denominators, and missingness for field completeness, missing evidence, owner assignment, exception state, and correction time. Inspect case narratives behind important differences before assigning a cause.",
+          "The study cannot determine service quality, legal compliance, or the correctness of a professional decision. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings."
+        ]
+      },
+      {
+        "heading": "Privacy, reporting, and replication",
+        "paragraphs": [
+          "Use the minimum information needed for intake records for the defined service, limit access, log exports, and apply retention rules. Do not turn population patterns into assumptions about an individual.",
+          "Retain the query, exclusion log, sample seed, codebook, reviewer notes, classifications, adjudications, and calculations so a qualified reviewer can rebuild the sample and results."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "hirechatsupport-handoff-latency-study-2",
+    "title": "Chat Support Handoff Latency Study",
+    "summary": "A reproducible review of how long each handoff takes and where acknowledgement or context is lost in Chat Support operations.",
+    "cluster": "Chat Support Research",
+    "publishedAt": "2026-10-26",
+    "image": "/october-22/hirechatsupport-handoff-latency-study-2.svg",
+    "finding": "The reviewable signal is the source, owner, timestamp, exception, and completion evidence for how long each handoff takes and where acknowledgement or context is lost.",
+    "methodology": [
+      "Define the population as conversations that entered the queue during a declared period and met the channel and customer eligibility rules. Record the query, time zone, filters, exclusions, and count before inspecting the result.",
+      "Specify the start event. It may be the customer's first message, the platform's queue assignment, or the first human review. Each produces a different measure. Do not mix events within one comparison.",
+      "Specify what counts as a response. A human reply that addresses the customer is different from an automated acknowledgment, a routing notice, or an internal note. Record the qualifying response type and whether a template counts.",
+      "Define pause and stop rules. If the clock pauses while waiting for customer information, record the request and response times. If it does not pause, state that choice. The stop event should be observable in the retained record.",
+      "Handle business hours and holidays explicitly. A conversation that arrives outside the service window may start on the next business day. State the rule and keep the customer-facing expectation consistent with it.",
+      "Report the number in scope, the number that met the definition, the number excluded, and the number still open at the observation boundary. Pair the measure with a sample review of response quality."
+    ],
+    "findings": [
+      "A start event must be named and applied consistently.",
+      "Automated acknowledgments should not be counted as human first responses unless the definition says so.",
+      "Waiting states should be visible rather than silently excluded.",
+      "Business-hours rules change the meaning of the number.",
+      "Open conversations at the observation boundary are censored, not complete.",
+      "A fast response without an owner does not demonstrate service quality."
+    ],
+    "sources": [
+      {
+        "label": "Privacy Framework",
+        "publisher": "National Institute of Standards and Technology",
+        "url": "https://www.nist.gov/privacy-framework",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "label": "Cybersecurity Framework",
+        "publisher": "National Institute of Standards and Technology",
+        "url": "https://www.nist.gov/cyberframework",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "label": "Standards for Internal Control in the Federal Government",
+        "publisher": "U.S. Government Accountability Office",
+        "url": "https://www.gao.gov/products/gao-14-704g",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "label": "Records Management Policy and Guidance",
+        "publisher": "National Archives and Records Administration",
+        "url": "https://www.archives.gov/records-mgmt/policy",
+        "checkedAt": "2026-10-22"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Research question and scope",
+        "paragraphs": [
+          "This protocol examines how long each handoff takes and where acknowledgement or context is lost across records that move between two named owners in Chat Support operations. It evaluates the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+          "Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not rank people, clients, patients, or teams."
+        ]
+      },
+      {
+        "heading": "Population and evidence",
+        "paragraphs": [
+          "Define records that move between two named owners from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count.",
+          "A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged."
+        ]
+      },
+      {
+        "heading": "Measurement method",
+        "paragraphs": [
+          "Capture the fields used for handoff time, acknowledgement, missing context, rework, and unresolved records. Define allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable.",
+          "Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than selecting the cleaner result."
+        ]
+      },
+      {
+        "heading": "Sampling and reviewer agreement",
+        "paragraphs": [
+          "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement.",
+          "Train two reviewers on a calibration set, preserve first-pass ratings, and adjudicate disagreements. Escalate professional questions rather than answering them to complete a classification."
+        ]
+      },
+      {
+        "heading": "Analysis and limitations",
+        "paragraphs": [
+          "Report counts, rates, medians, aging bands, denominators, and missingness for handoff time, acknowledgement, missing context, rework, and unresolved records. Inspect case narratives behind important differences before assigning a cause.",
+          "The study cannot establish causation or whether a shorter handoff produced a better outcome. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings."
+        ]
+      },
+      {
+        "heading": "Privacy, reporting, and replication",
+        "paragraphs": [
+          "Use the minimum information needed for records that move between two named owners, limit access, log exports, and apply retention rules. Do not turn population patterns into assumptions about an individual.",
+          "Retain the query, exclusion log, sample seed, codebook, reviewer notes, classifications, adjudications, and calculations so a qualified reviewer can rebuild the sample and results."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "hirechatsupport-exception-pattern-audit-2",
+    "title": "Chat Support Exception Pattern Audit",
+    "summary": "A reproducible review of which exception reasons recur and whether they receive a consistent owner and disposition in Chat Support operations.",
+    "cluster": "Chat Support Research",
+    "publishedAt": "2026-10-26",
+    "image": "/october-22/hirechatsupport-exception-pattern-audit-2.svg",
+    "finding": "The reviewable signal is the source, owner, timestamp, exception, and completion evidence for which exception reasons recur and whether they receive a consistent owner and disposition.",
+    "methodology": [
+      "Define the population as conversations that entered the queue during a declared period and met the channel and customer eligibility rules. Record the query, time zone, filters, exclusions, and count before inspecting the result.",
+      "Specify the start event. It may be the customer's first message, the platform's queue assignment, or the first human review. Each produces a different measure. Do not mix events within one comparison.",
+      "Specify what counts as a response. A human reply that addresses the customer is different from an automated acknowledgment, a routing notice, or an internal note. Record the qualifying response type and whether a template counts.",
+      "Define pause and stop rules. If the clock pauses while waiting for customer information, record the request and response times. If it does not pause, state that choice. The stop event should be observable in the retained record.",
+      "Handle business hours and holidays explicitly. A conversation that arrives outside the service window may start on the next business day. State the rule and keep the customer-facing expectation consistent with it.",
+      "Report the number in scope, the number that met the definition, the number excluded, and the number still open at the observation boundary. Pair the measure with a sample review of response quality."
+    ],
+    "findings": [
+      "A start event must be named and applied consistently.",
+      "Automated acknowledgments should not be counted as human first responses unless the definition says so.",
+      "Waiting states should be visible rather than silently excluded.",
+      "Business-hours rules change the meaning of the number.",
+      "Open conversations at the observation boundary are censored, not complete.",
+      "A fast response without an owner does not demonstrate service quality."
+    ],
+    "sources": [
+      {
+        "label": "Privacy Framework",
+        "publisher": "National Institute of Standards and Technology",
+        "url": "https://www.nist.gov/privacy-framework",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "label": "Cybersecurity Framework",
+        "publisher": "National Institute of Standards and Technology",
+        "url": "https://www.nist.gov/cyberframework",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "label": "Standards for Internal Control in the Federal Government",
+        "publisher": "U.S. Government Accountability Office",
+        "url": "https://www.gao.gov/products/gao-14-704g",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "label": "Records Management Policy and Guidance",
+        "publisher": "National Archives and Records Administration",
+        "url": "https://www.archives.gov/records-mgmt/policy",
+        "checkedAt": "2026-10-22"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Research question and scope",
+        "paragraphs": [
+          "This protocol examines which exception reasons recur and whether they receive a consistent owner and disposition across exception records from the review window in Chat Support operations. It evaluates the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+          "Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not rank people, clients, patients, or teams."
+        ]
+      },
+      {
+        "heading": "Population and evidence",
+        "paragraphs": [
+          "Define exception records from the review window from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count.",
+          "A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged."
+        ]
+      },
+      {
+        "heading": "Measurement method",
+        "paragraphs": [
+          "Capture the fields used for reason mix, repeat rate, age, owner, resolution, and reopened exceptions. Define allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable.",
+          "Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than selecting the cleaner result."
+        ]
+      },
+      {
+        "heading": "Sampling and reviewer agreement",
+        "paragraphs": [
+          "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement.",
+          "Train two reviewers on a calibration set, preserve first-pass ratings, and adjudicate disagreements. Escalate professional questions rather than answering them to complete a classification."
+        ]
+      },
+      {
+        "heading": "Analysis and limitations",
+        "paragraphs": [
+          "Report counts, rates, medians, aging bands, denominators, and missingness for reason mix, repeat rate, age, owner, resolution, and reopened exceptions. Inspect case narratives behind important differences before assigning a cause.",
+          "The audit describes documented exceptions and cannot infer undocumented causes. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings."
+        ]
+      },
+      {
+        "heading": "Privacy, reporting, and replication",
+        "paragraphs": [
+          "Use the minimum information needed for exception records from the review window, limit access, log exports, and apply retention rules. Do not turn population patterns into assumptions about an individual.",
+          "Retain the query, exclusion log, sample seed, codebook, reviewer notes, classifications, adjudications, and calculations so a qualified reviewer can rebuild the sample and results."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "hirechatsupport-evidence-reliability-study-2",
+    "title": "Chat Support Evidence Reliability Study",
+    "summary": "A reproducible review of whether the source is reconstructable and consistent with the recorded final state in Chat Support operations.",
+    "cluster": "Chat Support Research",
+    "publishedAt": "2026-10-26",
+    "image": "/october-22/hirechatsupport-evidence-reliability-study-2.svg",
+    "finding": "The reviewable signal is the source, owner, timestamp, exception, and completion evidence for whether the source is reconstructable and consistent with the recorded final state.",
+    "methodology": [
+      "Define the population as conversations that entered the queue during a declared period and met the channel and customer eligibility rules. Record the query, time zone, filters, exclusions, and count before inspecting the result.",
+      "Specify the start event. It may be the customer's first message, the platform's queue assignment, or the first human review. Each produces a different measure. Do not mix events within one comparison.",
+      "Specify what counts as a response. A human reply that addresses the customer is different from an automated acknowledgment, a routing notice, or an internal note. Record the qualifying response type and whether a template counts.",
+      "Define pause and stop rules. If the clock pauses while waiting for customer information, record the request and response times. If it does not pause, state that choice. The stop event should be observable in the retained record.",
+      "Handle business hours and holidays explicitly. A conversation that arrives outside the service window may start on the next business day. State the rule and keep the customer-facing expectation consistent with it.",
+      "Report the number in scope, the number that met the definition, the number excluded, and the number still open at the observation boundary. Pair the measure with a sample review of response quality."
+    ],
+    "findings": [
+      "A start event must be named and applied consistently.",
+      "Automated acknowledgments should not be counted as human first responses unless the definition says so.",
+      "Waiting states should be visible rather than silently excluded.",
+      "Business-hours rules change the meaning of the number.",
+      "Open conversations at the observation boundary are censored, not complete.",
+      "A fast response without an owner does not demonstrate service quality."
+    ],
+    "sources": [
+      {
+        "label": "Privacy Framework",
+        "publisher": "National Institute of Standards and Technology",
+        "url": "https://www.nist.gov/privacy-framework",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "label": "Cybersecurity Framework",
+        "publisher": "National Institute of Standards and Technology",
+        "url": "https://www.nist.gov/cyberframework",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "label": "Standards for Internal Control in the Federal Government",
+        "publisher": "U.S. Government Accountability Office",
+        "url": "https://www.gao.gov/products/gao-14-704g",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "label": "Records Management Policy and Guidance",
+        "publisher": "National Archives and Records Administration",
+        "url": "https://www.archives.gov/records-mgmt/policy",
+        "checkedAt": "2026-10-22"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Research question and scope",
+        "paragraphs": [
+          "This protocol examines whether the source is reconstructable and consistent with the recorded final state across records with a source artifact and a later outcome in Chat Support operations. It evaluates the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+          "Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not rank people, clients, patients, or teams."
+        ]
+      },
+      {
+        "heading": "Population and evidence",
+        "paragraphs": [
+          "Define records with a source artifact and a later outcome from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count.",
+          "A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged."
+        ]
+      },
+      {
+        "heading": "Measurement method",
+        "paragraphs": [
+          "Capture the fields used for source presence, match, missing state, correction, reviewer agreement, and time. Define allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable.",
+          "Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than selecting the cleaner result."
+        ]
+      },
+      {
+        "heading": "Sampling and reviewer agreement",
+        "paragraphs": [
+          "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement.",
+          "Train two reviewers on a calibration set, preserve first-pass ratings, and adjudicate disagreements. Escalate professional questions rather than answering them to complete a classification."
+        ]
+      },
+      {
+        "heading": "Analysis and limitations",
+        "paragraphs": [
+          "Report counts, rates, medians, aging bands, denominators, and missingness for source presence, match, missing state, correction, reviewer agreement, and time. Inspect case narratives behind important differences before assigning a cause.",
+          "The study cannot prove that the source is truthful or that the final decision was correct. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings."
+        ]
+      },
+      {
+        "heading": "Privacy, reporting, and replication",
+        "paragraphs": [
+          "Use the minimum information needed for records with a source artifact and a later outcome, limit access, log exports, and apply retention rules. Do not turn population patterns into assumptions about an individual.",
+          "Retain the query, exclusion log, sample seed, codebook, reviewer notes, classifications, adjudications, and calculations so a qualified reviewer can rebuild the sample and results."
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "hirechatsupport-access-recertification-study-2",
+    "title": "Chat Support Access Recertification Study",
+    "summary": "A reproducible review of whether current access matches the approved role and whether removals are evidenced in Chat Support operations.",
+    "cluster": "Chat Support Research",
+    "publishedAt": "2026-10-26",
+    "image": "/october-22/hirechatsupport-access-recertification-study-2.svg",
+    "finding": "The reviewable signal is the source, owner, timestamp, exception, and completion evidence for whether current access matches the approved role and whether removals are evidenced.",
+    "methodology": [
+      "Define the population as conversations that entered the queue during a declared period and met the channel and customer eligibility rules. Record the query, time zone, filters, exclusions, and count before inspecting the result.",
+      "Specify the start event. It may be the customer's first message, the platform's queue assignment, or the first human review. Each produces a different measure. Do not mix events within one comparison.",
+      "Specify what counts as a response. A human reply that addresses the customer is different from an automated acknowledgment, a routing notice, or an internal note. Record the qualifying response type and whether a template counts.",
+      "Define pause and stop rules. If the clock pauses while waiting for customer information, record the request and response times. If it does not pause, state that choice. The stop event should be observable in the retained record.",
+      "Handle business hours and holidays explicitly. A conversation that arrives outside the service window may start on the next business day. State the rule and keep the customer-facing expectation consistent with it.",
+      "Report the number in scope, the number that met the definition, the number excluded, and the number still open at the observation boundary. Pair the measure with a sample review of response quality."
+    ],
+    "findings": [
+      "A start event must be named and applied consistently.",
+      "Automated acknowledgments should not be counted as human first responses unless the definition says so.",
+      "Waiting states should be visible rather than silently excluded.",
+      "Business-hours rules change the meaning of the number.",
+      "Open conversations at the observation boundary are censored, not complete.",
+      "A fast response without an owner does not demonstrate service quality."
+    ],
+    "sources": [
+      {
+        "label": "Privacy Framework",
+        "publisher": "National Institute of Standards and Technology",
+        "url": "https://www.nist.gov/privacy-framework",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "label": "Cybersecurity Framework",
+        "publisher": "National Institute of Standards and Technology",
+        "url": "https://www.nist.gov/cyberframework",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "label": "Standards for Internal Control in the Federal Government",
+        "publisher": "U.S. Government Accountability Office",
+        "url": "https://www.gao.gov/products/gao-14-704g",
+        "checkedAt": "2026-10-22"
+      },
+      {
+        "label": "Records Management Policy and Guidance",
+        "publisher": "National Archives and Records Administration",
+        "url": "https://www.archives.gov/records-mgmt/policy",
+        "checkedAt": "2026-10-22"
+      }
+    ],
+    "sections": [
+      {
+        "heading": "Research question and scope",
+        "paragraphs": [
+          "This protocol examines whether current access matches the approved role and whether removals are evidenced across role-based access records for the service in Chat Support operations. It evaluates the administrative record, not the quality of a professional judgment or the truth of an underlying claim.",
+          "Leadership may use the result to improve forms, ownership, system configuration, reviewer coverage, or escalation rules. It should not rank people, clients, patients, or teams."
+        ]
+      },
+      {
+        "heading": "Population and evidence",
+        "paragraphs": [
+          "Define role-based access records for the service from a fixed export. Record the query time, systems, date boundaries, statuses, exclusions, deduplication rule, and resulting count.",
+          "A record belongs because it meets the written rule, not because it appears easy or unusual. Preserve excluded counts by reason so the denominator can be challenged."
+        ]
+      },
+      {
+        "heading": "Measurement method",
+        "paragraphs": [
+          "Capture the fields used for role match, excess access, temporary access age, removal evidence, and reviewer sign-off. Define allowed values, source system, timestamp rule, and treatment of missing, unknown, and not applicable.",
+          "Retain a restricted crosswalk to source identifiers. When sources conflict, keep both values and create a conflict flag rather than selecting the cleaner result."
+        ]
+      },
+      {
+        "heading": "Sampling and reviewer agreement",
+        "paragraphs": [
+          "Draw a stratified sample across age, state, owner group, channel, exception type, and final disposition. Include completed and unresolved work. Record the random seed and every replacement.",
+          "Train two reviewers on a calibration set, preserve first-pass ratings, and adjudicate disagreements. Escalate professional questions rather than answering them to complete a classification."
+        ]
+      },
+      {
+        "heading": "Analysis and limitations",
+        "paragraphs": [
+          "Report counts, rates, medians, aging bands, denominators, and missingness for role match, excess access, temporary access age, removal evidence, and reviewer sign-off. Inspect case narratives behind important differences before assigning a cause.",
+          "The study cannot determine legal sufficiency or whether a specific access decision was appropriate. System migrations, policy changes, staffing shifts, missing off-system contacts, and reviewer error may influence findings."
+        ]
+      },
+      {
+        "heading": "Privacy, reporting, and replication",
+        "paragraphs": [
+          "Use the minimum information needed for role-based access records for the service, limit access, log exports, and apply retention rules. Do not turn population patterns into assumptions about an individual.",
+          "Retain the query, exclusion log, sample seed, codebook, reviewer notes, classifications, adjudications, and calculations so a qualified reviewer can rebuild the sample and results."
+        ]
+      }
+    ]
   }
 ];
