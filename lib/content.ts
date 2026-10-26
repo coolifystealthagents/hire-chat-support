@@ -333,7 +333,7 @@ export const blogPosts: BlogPost[] = [
       "url": "https://www.nist.gov/privacy-framework"
     }
   }
-];
+].sort((a,b)=>String(b.publishedAt).localeCompare(String(a.publishedAt)));
 export const researchPosts: ResearchPost[] = [
   ...october22ResearchPosts,
   ...october12ResearchPosts,
@@ -777,7 +777,7 @@ export const researchPosts: ResearchPost[] = [
       }
     ]
   }
-];
+].sort((a,b)=>String(b.publishedAt).localeCompare(String(a.publishedAt)));
 
 export const nav = [
   { href: '/', label: 'Home' },
