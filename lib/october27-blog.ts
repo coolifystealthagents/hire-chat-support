@@ -71,7 +71,8 @@ export const october27BlogPosts: BlogPost[] = [
     "source": {
       "label": "U.S. Department of Labor work hours",
       "url": "https://www.dol.gov/general/topic/workhours"
-    }
+    },
+    "image": "/october-27/hirechatsupport-concurrency-capacity-plan-3.svg"
   },
   {
     "slug": "hirechatsupport-macro-drift-review-3",
@@ -143,7 +144,8 @@ export const october27BlogPosts: BlogPost[] = [
     "source": {
       "label": "ISO 30401 knowledge management systems",
       "url": "https://www.iso.org/standard/68683.html"
-    }
+    },
+    "image": "/october-27/hirechatsupport-macro-drift-review-3.svg"
   },
   {
     "slug": "hirechatsupport-chat-redaction-spot-check-3",
@@ -215,7 +217,8 @@ export const october27BlogPosts: BlogPost[] = [
     "source": {
       "label": "NIST Privacy Framework",
       "url": "https://www.nist.gov/privacy-framework"
-    }
+    },
+    "image": "/october-27/hirechatsupport-chat-redaction-spot-check-3.svg"
   },
   {
     "slug": "hirechatsupport-cart-abandonment-chat-recovery-3",
@@ -287,7 +290,8 @@ export const october27BlogPosts: BlogPost[] = [
     "source": {
       "label": "FTC advertising and marketing guidance",
       "url": "https://www.ftc.gov/business-guidance/advertising-marketing"
-    }
+    },
+    "image": "/october-27/hirechatsupport-cart-abandonment-chat-recovery-3.svg"
   },
   {
     "slug": "hirechatsupport-after-hours-bot-handoff-3",
@@ -359,7 +363,8 @@ export const october27BlogPosts: BlogPost[] = [
     "source": {
       "label": "GOV.UK Service Manual: helping people to use your service",
       "url": "https://www.gov.uk/service-manual/helping-people-to-use-your-service"
-    }
+    },
+    "image": "/october-27/hirechatsupport-after-hours-bot-handoff-3.svg"
   },
   {
     "slug": "hirechatsupport-csat-nonresponse-bias-3",
@@ -431,7 +436,8 @@ export const october27BlogPosts: BlogPost[] = [
     "source": {
       "label": "AAPOR standards and ethics",
       "url": "https://aapor.org/standards-and-ethics/"
-    }
+    },
+    "image": "/october-27/hirechatsupport-csat-nonresponse-bias-3.svg"
   },
   {
     "slug": "hirechatsupport-peak-season-surge-roster-3",
@@ -503,7 +509,8 @@ export const october27BlogPosts: BlogPost[] = [
     "source": {
       "label": "U.S. Department of Labor work hours",
       "url": "https://www.dol.gov/general/topic/workhours"
-    }
+    },
+    "image": "/october-27/hirechatsupport-peak-season-surge-roster-3.svg"
   },
   {
     "slug": "hirechatsupport-repeat-contact-linking-3",
@@ -575,7 +582,8 @@ export const october27BlogPosts: BlogPost[] = [
     "source": {
       "label": "NIST SP 800-63B digital identity guidelines",
       "url": "https://pages.nist.gov/800-63-3/sp800-63b.html"
-    }
+    },
+    "image": "/october-27/hirechatsupport-repeat-contact-linking-3.svg"
   },
   {
     "slug": "hirechatsupport-payment-link-chat-safety-3",
@@ -647,7 +655,8 @@ export const october27BlogPosts: BlogPost[] = [
     "source": {
       "label": "PCI Security Standards Council",
       "url": "https://www.pcisecuritystandards.org/standards/pci-dss/"
-    }
+    },
+    "image": "/october-27/hirechatsupport-payment-link-chat-safety-3.svg"
   },
   {
     "slug": "hirechatsupport-shift-handover-brief-3",
@@ -719,7 +728,8 @@ export const october27BlogPosts: BlogPost[] = [
     "source": {
       "label": "U.S. Department of Labor work hours",
       "url": "https://www.dol.gov/general/topic/workhours"
-    }
+    },
+    "image": "/october-27/hirechatsupport-shift-handover-brief-3.svg"
   },
   {
     "slug": "hirechatsupport-chatbot-intent-gap-review-3",
@@ -791,7 +801,8 @@ export const october27BlogPosts: BlogPost[] = [
     "source": {
       "label": "GOV.UK Service Manual: helping people to use your service",
       "url": "https://www.gov.uk/service-manual/helping-people-to-use-your-service"
-    }
+    },
+    "image": "/october-27/hirechatsupport-chatbot-intent-gap-review-3.svg"
   },
   {
     "slug": "hirechatsupport-warranty-claim-chat-triage-3",
@@ -863,6 +874,7 @@ export const october27BlogPosts: BlogPost[] = [
     "source": {
       "label": "FTC business guide to federal warranty law",
       "url": "https://www.ftc.gov/business-guidance/resources/businesspersons-guide-federal-warranty-law"
-    }
+    },
+    "image": "/october-27/hirechatsupport-warranty-claim-chat-triage-3.svg"
   }
 ];
