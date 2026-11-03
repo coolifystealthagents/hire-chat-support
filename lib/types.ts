@@ -20,7 +20,7 @@ export type Service = {
 };
 
 export type BlogPost = { slug: string; title: string; description: string; category: string; publishedAt: string; readTime: string; image?: string; sections: { heading: string; paragraphs: string[] }[]; faq: { q: string; a: string }[]; internalService: string; internalSibling: string; source: { label: string; url: string } };
-export type ResearchPost = { slug: string; title: string; summary: string; cluster: string; publishedAt: string; image?: string; finding: string; methodology?: string[]; findings?: string[]; sources: { label: string; publisher?: string; url: string; checkedAt?: string }[] };
+export type ResearchPost = { slug: string; title: string; summary: string; cluster: string; publishedAt: string; image?: string; finding: string; methodology?: string[]; findings?: string[]; sections?: { heading: string; paragraphs: string[] }[]; sources: { label: string; publisher?: string; url: string; checkedAt?: string }[] };
 export type SiteConfig = {
   name: string; domain: string; siteId: string; niche: string; audience: string; design: string;
   eyebrow: string; hero: string; heroAccent: string; heroBody: string; manifesto: string;
