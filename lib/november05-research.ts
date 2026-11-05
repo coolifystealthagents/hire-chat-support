@@ -1,12 +1,12 @@
 import type { ResearchPost } from './types';
 export const november05ResearchPosts: ResearchPost[] = [
  {
-  "slug": "chat-refund-exception-rate-study",
+  "slug": "refund-exception-rate-in-chat-support",
   "title": "Refund exception rate in chat support",
   "summary": "A measurement protocol for chat refund exception rate in live chat support, with a frozen population, an evidence sample, and a dated review.",
   "cluster": "Remedy control",
   "publishedAt": "2026-11-05",
-  "image": "/thumbnails/november-05/chat-refund-exception-rate-study.webp",
+  "image": "/thumbnails/november-05/refund-exception-rate-in-chat-support.webp",
   "finding": "A reproducible count of chat refund exception rate records missing a required field, reported with its window and exclusions.",
   "methodology": [
    "Define the chat refund exception rate population and observation window before sampling; use one chat case and one owner as the unit.",
@@ -44,12 +44,12 @@ export const november05ResearchPosts: ResearchPost[] = [
   ]
  },
  {
-  "slug": "chat-canned-response-staleness-study",
+  "slug": "canned-response-staleness-after-a-policy-change",
   "title": "Canned response staleness after a policy change",
   "summary": "A measurement protocol for canned response staleness in live chat support, with a frozen population, an evidence sample, and a dated review.",
   "cluster": "Quality control",
   "publishedAt": "2026-11-05",
-  "image": "/thumbnails/november-05/chat-canned-response-staleness-study.webp",
+  "image": "/thumbnails/november-05/canned-response-staleness-after-a-policy-change.webp",
   "finding": "A reproducible count of canned response staleness records missing a required field, reported with its window and exclusions.",
   "methodology": [
    "Define the canned response staleness population and observation window before sampling; use one chat case and one owner as the unit.",
@@ -87,12 +87,12 @@ export const november05ResearchPosts: ResearchPost[] = [
   ]
  },
  {
-  "slug": "chat-qa-dispute-reversal-study",
+  "slug": "qa-score-reversals-and-the-evidence-left-behind",
   "title": "QA score reversals and the evidence left behind",
   "summary": "A measurement protocol for chat QA reversal evidence in live chat support, with a frozen population, an evidence sample, and a dated review.",
   "cluster": "Quality control",
   "publishedAt": "2026-11-05",
-  "image": "/thumbnails/november-05/chat-qa-dispute-reversal-study.webp",
+  "image": "/thumbnails/november-05/qa-score-reversals-and-the-evidence-left-behind.webp",
   "finding": "A reproducible count of chat QA reversal evidence records missing a required field, reported with its window and exclusions.",
   "methodology": [
    "Define the chat QA reversal evidence population and observation window before sampling; use one chat case and one owner as the unit.",
@@ -130,12 +130,12 @@ export const november05ResearchPosts: ResearchPost[] = [
   ]
  },
  {
-  "slug": "chat-order-lookup-error-study",
+  "slug": "order-lookup-errors-in-chat-identity-checks",
   "title": "Order lookup errors in chat identity checks",
   "summary": "A measurement protocol for chat order lookup error in live chat support, with a frozen population, an evidence sample, and a dated review.",
   "cluster": "Identity safety",
   "publishedAt": "2026-11-05",
-  "image": "/thumbnails/november-05/chat-order-lookup-error-study.webp",
+  "image": "/thumbnails/november-05/order-lookup-errors-in-chat-identity-checks.webp",
   "finding": "A reproducible count of chat order lookup error records missing a required field, reported with its window and exclusions.",
   "methodology": [
    "Define the chat order lookup error population and observation window before sampling; use one chat case and one owner as the unit.",
@@ -173,12 +173,12 @@ export const november05ResearchPosts: ResearchPost[] = [
   ]
  },
  {
-  "slug": "chat-shift-swap-coverage-gap-study",
+  "slug": "coverage-gaps-created-by-chat-shift-swaps",
   "title": "Coverage gaps created by chat shift swaps",
   "summary": "A measurement protocol for chat shift swap coverage in live chat support, with a frozen population, an evidence sample, and a dated review.",
   "cluster": "Queue design",
   "publishedAt": "2026-11-05",
-  "image": "/thumbnails/november-05/chat-shift-swap-coverage-gap-study.webp",
+  "image": "/thumbnails/november-05/coverage-gaps-created-by-chat-shift-swaps.webp",
   "finding": "A reproducible count of chat shift swap coverage records missing a required field, reported with its window and exclusions.",
   "methodology": [
    "Define the chat shift swap coverage population and observation window before sampling; use one chat case and one owner as the unit.",
@@ -216,12 +216,12 @@ export const november05ResearchPosts: ResearchPost[] = [
   ]
  },
  {
-  "slug": "chat-spam-raid-recovery-study",
+  "slug": "queue-recovery-time-after-a-chat-spam-raid",
   "title": "Queue recovery time after a chat spam raid",
   "summary": "A measurement protocol for chat spam raid recovery in live chat support, with a frozen population, an evidence sample, and a dated review.",
   "cluster": "Queue design",
   "publishedAt": "2026-11-05",
-  "image": "/thumbnails/november-05/chat-spam-raid-recovery-study.webp",
+  "image": "/thumbnails/november-05/queue-recovery-time-after-a-chat-spam-raid.webp",
   "finding": "A reproducible count of chat spam raid recovery records missing a required field, reported with its window and exclusions.",
   "methodology": [
    "Define the chat spam raid recovery population and observation window before sampling; use one chat case and one owner as the unit.",
@@ -259,12 +259,12 @@ export const november05ResearchPosts: ResearchPost[] = [
   ]
  },
  {
-  "slug": "chat-warranty-evidence-completeness-study",
+  "slug": "warranty-claim-evidence-completeness-in-chat",
   "title": "Warranty claim evidence completeness in chat",
   "summary": "A measurement protocol for chat warranty evidence in live chat support, with a frozen population, an evidence sample, and a dated review.",
   "cluster": "Remedy control",
   "publishedAt": "2026-11-05",
-  "image": "/thumbnails/november-05/chat-warranty-evidence-completeness-study.webp",
+  "image": "/thumbnails/november-05/warranty-claim-evidence-completeness-in-chat.webp",
   "finding": "A reproducible count of chat warranty evidence records missing a required field, reported with its window and exclusions.",
   "methodology": [
    "Define the chat warranty evidence population and observation window before sampling; use one chat case and one owner as the unit.",

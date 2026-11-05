@@ -1,13 +1,13 @@
 import type { BlogPost } from './types';
 export const november05BlogPosts: BlogPost[] = [
  {
-  "slug": "chat-refund-policy-exception-review",
+  "slug": "review-a-chat-refund-exception-without-bypassing-the-written-policy",
   "title": "Review a chat refund exception without bypassing the written policy",
   "description": "A bounded live chat support guide to chat refund exception, with explicit evidence, decision rights, and a verified close.",
   "category": "Remedy control",
   "publishedAt": "2026-11-05",
   "readTime": "9 min read",
-  "image": "/thumbnails/november-05/chat-refund-policy-exception-review.webp",
+  "image": "/thumbnails/november-05/review-a-chat-refund-exception-without-bypassing-the-written-policy.webp",
   "sections": [
    {
     "heading": "Name the decision and the queue owner",
@@ -69,20 +69,20 @@ export const november05BlogPosts: BlogPost[] = [
    }
   ],
   "internalService": "/services",
-  "internalSibling": "/blog/chat-canned-response-drift-audit",
+  "internalSibling": "/blog/audit-canned-chat-responses-for-policy-drift",
   "source": {
    "label": "U.S. Small Business Administration",
    "url": "https://www.sba.gov/business-guide/manage-your-business"
   }
  },
  {
-  "slug": "chat-canned-response-drift-audit",
+  "slug": "audit-canned-chat-responses-for-policy-drift",
   "title": "Audit canned chat responses for policy drift",
   "description": "A bounded live chat support guide to canned response drift, with explicit evidence, decision rights, and a verified close.",
   "category": "Quality control",
   "publishedAt": "2026-11-05",
   "readTime": "9 min read",
-  "image": "/thumbnails/november-05/chat-canned-response-drift-audit.webp",
+  "image": "/thumbnails/november-05/audit-canned-chat-responses-for-policy-drift.webp",
   "sections": [
    {
     "heading": "Name the decision and the queue owner",
@@ -144,20 +144,20 @@ export const november05BlogPosts: BlogPost[] = [
    }
   ],
   "internalService": "/services",
-  "internalSibling": "/blog/chat-qa-score-dispute-trail",
+  "internalSibling": "/blog/keep-a-chat-qa-score-dispute-that-a-reviewer-can-follow",
   "source": {
    "label": "Federal Trade Commission — data security guidance",
    "url": "https://www.ftc.gov/business-guidance/privacy-security/data-security"
   }
  },
  {
-  "slug": "chat-qa-score-dispute-trail",
+  "slug": "keep-a-chat-qa-score-dispute-that-a-reviewer-can-follow",
   "title": "Keep a chat QA score dispute that a reviewer can follow",
   "description": "A bounded live chat support guide to chat QA score dispute, with explicit evidence, decision rights, and a verified close.",
   "category": "Quality control",
   "publishedAt": "2026-11-05",
   "readTime": "9 min read",
-  "image": "/thumbnails/november-05/chat-qa-score-dispute-trail.webp",
+  "image": "/thumbnails/november-05/keep-a-chat-qa-score-dispute-that-a-reviewer-can-follow.webp",
   "sections": [
    {
     "heading": "Name the decision and the queue owner",
@@ -219,20 +219,20 @@ export const november05BlogPosts: BlogPost[] = [
    }
   ],
   "internalService": "/services",
-  "internalSibling": "/blog/chat-order-lookup-mismatch",
+  "internalSibling": "/blog/resolve-a-chat-order-lookup-that-returns-the-wrong-customer",
   "source": {
    "label": "GAO — internal control standards",
    "url": "https://www.gao.gov/greenbook"
   }
  },
  {
-  "slug": "chat-order-lookup-mismatch",
+  "slug": "resolve-a-chat-order-lookup-that-returns-the-wrong-customer",
   "title": "Resolve a chat order lookup that returns the wrong customer",
   "description": "A bounded live chat support guide to chat order lookup mismatch, with explicit evidence, decision rights, and a verified close.",
   "category": "Identity safety",
   "publishedAt": "2026-11-05",
   "readTime": "9 min read",
-  "image": "/thumbnails/november-05/chat-order-lookup-mismatch.webp",
+  "image": "/thumbnails/november-05/resolve-a-chat-order-lookup-that-returns-the-wrong-customer.webp",
   "sections": [
    {
     "heading": "Name the decision and the queue owner",
@@ -294,20 +294,20 @@ export const november05BlogPosts: BlogPost[] = [
    }
   ],
   "internalService": "/services",
-  "internalSibling": "/blog/chat-shift-swap-coverage-note",
+  "internalSibling": "/blog/control-a-chat-shift-swap-so-coverage-stays-visible",
   "source": {
    "label": "Federal Trade Commission — data security guidance",
    "url": "https://www.ftc.gov/business-guidance/privacy-security/data-security"
   }
  },
  {
-  "slug": "chat-shift-swap-coverage-note",
+  "slug": "control-a-chat-shift-swap-so-coverage-stays-visible",
   "title": "Control a chat shift swap so coverage stays visible",
   "description": "A bounded live chat support guide to chat shift swap, with explicit evidence, decision rights, and a verified close.",
   "category": "Queue design",
   "publishedAt": "2026-11-05",
   "readTime": "9 min read",
-  "image": "/thumbnails/november-05/chat-shift-swap-coverage-note.webp",
+  "image": "/thumbnails/november-05/control-a-chat-shift-swap-so-coverage-stays-visible.webp",
   "sections": [
    {
     "heading": "Name the decision and the queue owner",
@@ -369,20 +369,20 @@ export const november05BlogPosts: BlogPost[] = [
    }
   ],
   "internalService": "/services",
-  "internalSibling": "/blog/chat-spam-bot-raid-response",
+  "internalSibling": "/blog/handle-a-chat-spam-bot-raid-without-losing-real-customers",
   "source": {
    "label": "U.S. Department of Labor — wage and hour",
    "url": "https://www.dol.gov/agencies/whd"
   }
  },
  {
-  "slug": "chat-spam-bot-raid-response",
+  "slug": "handle-a-chat-spam-bot-raid-without-losing-real-customers",
   "title": "Handle a chat spam bot raid without losing real customers",
   "description": "A bounded live chat support guide to chat spam bot raid, with explicit evidence, decision rights, and a verified close.",
   "category": "Queue design",
   "publishedAt": "2026-11-05",
   "readTime": "9 min read",
-  "image": "/thumbnails/november-05/chat-spam-bot-raid-response.webp",
+  "image": "/thumbnails/november-05/handle-a-chat-spam-bot-raid-without-losing-real-customers.webp",
   "sections": [
    {
     "heading": "Name the decision and the queue owner",
@@ -444,20 +444,20 @@ export const november05BlogPosts: BlogPost[] = [
    }
   ],
   "internalService": "/services",
-  "internalSibling": "/blog/chat-multilingual-handoff-context",
+  "internalSibling": "/blog/keep-context-in-a-multilingual-chat-handoff",
   "source": {
    "label": "CISA — recognize and report phishing",
    "url": "https://www.cisa.gov/secure-our-world/recognize-and-report-phishing"
   }
  },
  {
-  "slug": "chat-multilingual-handoff-context",
+  "slug": "keep-context-in-a-multilingual-chat-handoff",
   "title": "Keep context in a multilingual chat handoff",
   "description": "A bounded live chat support guide to multilingual chat handoff, with explicit evidence, decision rights, and a verified close.",
   "category": "Handoff control",
   "publishedAt": "2026-11-05",
   "readTime": "9 min read",
-  "image": "/thumbnails/november-05/chat-multilingual-handoff-context.webp",
+  "image": "/thumbnails/november-05/keep-context-in-a-multilingual-chat-handoff.webp",
   "sections": [
    {
     "heading": "Name the decision and the queue owner",
@@ -519,20 +519,20 @@ export const november05BlogPosts: BlogPost[] = [
    }
   ],
   "internalService": "/services",
-  "internalSibling": "/blog/chat-warranty-claim-evidence-close",
+  "internalSibling": "/blog/close-a-chat-warranty-claim-with-photo-evidence-intact",
   "source": {
    "label": "NIST Privacy Framework",
    "url": "https://www.nist.gov/privacy-framework"
   }
  },
  {
-  "slug": "chat-warranty-claim-evidence-close",
+  "slug": "close-a-chat-warranty-claim-with-photo-evidence-intact",
   "title": "Close a chat warranty claim with photo evidence intact",
   "description": "A bounded live chat support guide to chat warranty claim, with explicit evidence, decision rights, and a verified close.",
   "category": "Remedy control",
   "publishedAt": "2026-11-05",
   "readTime": "9 min read",
-  "image": "/thumbnails/november-05/chat-warranty-claim-evidence-close.webp",
+  "image": "/thumbnails/november-05/close-a-chat-warranty-claim-with-photo-evidence-intact.webp",
   "sections": [
    {
     "heading": "Name the decision and the queue owner",
@@ -594,7 +594,7 @@ export const november05BlogPosts: BlogPost[] = [
    }
   ],
   "internalService": "/services",
-  "internalSibling": "/blog/chat-refund-policy-exception-review",
+  "internalSibling": "/blog/review-a-chat-refund-exception-without-bypassing-the-written-policy",
   "source": {
    "label": "U.S. Small Business Administration",
    "url": "https://www.sba.gov/business-guide/manage-your-business"
