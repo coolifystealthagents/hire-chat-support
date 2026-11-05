@@ -49,3 +49,6 @@ footer{align-items:start}.footer-parent{display:grid;justify-items:end;gap:1rem}
   .article-body{order:1}
   .article-sidebar .article-toc{display:none}
 }
+@media (max-width:900px){.mobile-toc{position:static;box-shadow:none}}
+.article-card h2,.content-card h2{font-size:1.5rem;line-height:1.22;letter-spacing:0;margin:.6rem 0 .5rem}
+.article-card img,.content-card img{width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
