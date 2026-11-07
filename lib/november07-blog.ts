@@ -73,8 +73,7 @@ export const november07BlogPosts: BlogPost[] = [
     "source": {
       "label": "Federal Trade Commission — data security guidance",
       "url": "https://www.ftc.gov/business-guidance/privacy-security/data-security"
-    },
-    "thumbnail": ""
+    }
   },
   {
     "slug": "chat-control-a-chat-session-transfer-between-departments",
@@ -149,8 +148,7 @@ export const november07BlogPosts: BlogPost[] = [
     "source": {
       "label": "GAO — internal control standards",
       "url": "https://www.gao.gov/greenbook"
-    },
-    "thumbnail": ""
+    }
   },
   {
     "slug": "chat-handle-a-chat-chargeback-threat-with-a-written-remedy",
@@ -225,8 +223,7 @@ export const november07BlogPosts: BlogPost[] = [
     "source": {
       "label": "U.S. Small Business Administration",
       "url": "https://www.sba.gov/business-guide/manage-your-business"
-    },
-    "thumbnail": ""
+    }
   },
   {
     "slug": "chat-review-a-saved-reply-after-a-tone-complaint",
@@ -301,8 +298,7 @@ export const november07BlogPosts: BlogPost[] = [
     "source": {
       "label": "GAO — internal control standards",
       "url": "https://www.gao.gov/greenbook"
-    },
-    "thumbnail": ""
+    }
   },
   {
     "slug": "chat-verify-a-chat-promo-code-application-before-checkout",
@@ -377,8 +373,7 @@ export const november07BlogPosts: BlogPost[] = [
     "source": {
       "label": "U.S. Small Business Administration",
       "url": "https://www.sba.gov/business-guide/manage-your-business"
-    },
-    "thumbnail": ""
+    }
   },
   {
     "slug": "chat-control-a-chat-address-change-after-label-creation",
@@ -453,8 +448,7 @@ export const november07BlogPosts: BlogPost[] = [
     "source": {
       "label": "U.S. Small Business Administration",
       "url": "https://www.sba.gov/business-guide/manage-your-business"
-    },
-    "thumbnail": ""
+    }
   },
   {
     "slug": "chat-route-a-chat-accessibility-request-to-the-right-channel",
@@ -529,8 +523,7 @@ export const november07BlogPosts: BlogPost[] = [
     "source": {
       "label": "NIST Privacy Framework",
       "url": "https://www.nist.gov/privacy-framework"
-    },
-    "thumbnail": ""
+    }
   },
   {
     "slug": "chat-audit-a-chat-queue-priority-change",
@@ -605,7 +598,6 @@ export const november07BlogPosts: BlogPost[] = [
     "source": {
       "label": "GAO — internal control standards",
       "url": "https://www.gao.gov/greenbook"
-    },
-    "thumbnail": ""
+    }
   }
 ];

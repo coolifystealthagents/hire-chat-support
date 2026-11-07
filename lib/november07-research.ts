@@ -41,8 +41,7 @@ export const november07ResearchPosts: ResearchPost[] = [
         "publisher": "GAO",
         "url": "https://www.gao.gov/greenbook"
       }
-    ],
-    "thumbnail": ""
+    ]
   },
   {
     "slug": "chat-department-transfer-context-completeness",
@@ -85,8 +84,7 @@ export const november07ResearchPosts: ResearchPost[] = [
         "publisher": "GAO",
         "url": "https://www.gao.gov/greenbook"
       }
-    ],
-    "thumbnail": ""
+    ]
   },
   {
     "slug": "chat-chargeback-threat-remedy-compliance",
@@ -129,8 +127,7 @@ export const november07ResearchPosts: ResearchPost[] = [
         "publisher": "GAO",
         "url": "https://www.gao.gov/greenbook"
       }
-    ],
-    "thumbnail": ""
+    ]
   },
   {
     "slug": "chat-saved-reply-tone-review-cycle-time",
@@ -173,8 +170,7 @@ export const november07ResearchPosts: ResearchPost[] = [
         "publisher": "GAO",
         "url": "https://www.gao.gov/greenbook"
       }
-    ],
-    "thumbnail": ""
+    ]
   },
   {
     "slug": "chat-promo-code-eligibility-error-rate",
@@ -217,8 +213,7 @@ export const november07ResearchPosts: ResearchPost[] = [
         "publisher": "GAO",
         "url": "https://www.gao.gov/greenbook"
       }
-    ],
-    "thumbnail": ""
+    ]
   },
   {
     "slug": "chat-address-change-label-rework-rate",
@@ -261,8 +256,7 @@ export const november07ResearchPosts: ResearchPost[] = [
         "publisher": "GAO",
         "url": "https://www.gao.gov/greenbook"
       }
-    ],
-    "thumbnail": ""
+    ]
   },
   {
     "slug": "chat-accessibility-request-routing-accuracy",
@@ -305,7 +299,6 @@ export const november07ResearchPosts: ResearchPost[] = [
         "publisher": "GAO",
         "url": "https://www.gao.gov/greenbook"
       }
-    ],
-    "thumbnail": ""
+    ]
   }
 ];
