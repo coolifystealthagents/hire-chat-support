@@ -4,3 +4,8 @@
 @media(max-width:600px){.contact-fold{padding:2.5rem 5vw}.contact-intro h1{font-size:3rem}.review-stage{height:auto;display:block;overflow:visible;mask-image:none}.review-track{display:grid;width:auto;transform:none!important;gap:.7rem}.review-card{width:auto;min-height:0}.parent-copy{padding:4rem 5vw}.team-photo{min-height:360px}.contact-depth{padding:4rem 5vw}}
 @media(prefers-reduced-motion:reduce){.review-stage{height:auto;display:block;overflow:visible;mask-image:none}.review-track{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:auto;transform:none!important;gap:.75rem}.review-card{width:auto;min-height:0}}
 @media(prefers-reduced-motion:reduce) and (max-width:600px){.review-track{grid-template-columns:1fr}}
+
+/* Editorial contact imagery and balanced section rhythm */
+.parent-evidence{min-height:640px}.team-photo{min-height:560px;overflow:hidden}.team-photo img{object-position:center}.contact-faq summary{min-height:44px}.contact-depth,.contact-faq{padding-block:var(--chapter-space)}
+@media(max-width:900px){.parent-evidence{min-height:0}.team-photo{min-height:440px}}
+@media(max-width:600px){.team-photo{min-height:330px}.contact-depth,.contact-faq{padding-block:4.25rem}}

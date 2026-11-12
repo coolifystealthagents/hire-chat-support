@@ -14,12 +14,12 @@ export const site: SiteConfig = {
   manifesto: 'The best support feels calm because the system behind it is clear.',
   primary: '#603487', secondary: '#d7c0ef', accent: '#d9ec65', canvas: '#fbf6ec', ink: '#271a2e',
   displayFont: 'Cooper Black', bodyFont: 'Verdana',
-  heroImage: '/hero.png',
-  heroAlt: 'Rounded ceramic speech bubbles connected across a warm lavender studio space',
+  heroImage: '/editorial/chat-support-home-hero.jpg',
+  heroAlt: 'Customer support specialist reviewing a conversation at a laptop while a colleague coordinates nearby',
   services: [
     {
       slug: 'live-chat-support', name: 'Live chat support', short: 'Handle routine conversations from approved guidance and clear escalation rules.',
-      image: '/october-12/chat-queue-ownership-at-shift-change.webp', imageAlt: 'Chat queue ownership and handoff workspace',
+      image: '/editorial/service-live-chat-support.jpg', imageAlt: 'Support specialist handling a live conversation from a focused workspace',
       audience: 'Support leaders with recurring web chat volume who need dependable coverage without giving up policy or account authority.',
       problem: 'Fast moving queues lose context when agents must search several systems, improvise answers, or wait too long to identify an exception.',
       inputs: ['Approved knowledge articles and response guidance', 'Queue priorities and service windows', 'Customer verification rules', 'Named escalation owners and triggers'],
@@ -34,7 +34,7 @@ export const site: SiteConfig = {
     },
     {
       slug: 'helpdesk-triage', name: 'Helpdesk triage', short: 'Sort incoming conversations by intent, urgency, and owner.',
-      image: '/october-12/service-outage-chat-status-board.webp', imageAlt: 'Support status board organizing incoming conversations',
+      image: '/editorial/service-helpdesk-triage.jpg', imageAlt: 'Support operations colleagues sorting intake categories during a triage review',
       audience: 'Helpdesk managers who need cleaner intake, complete records, and visible ownership before specialists begin resolution.',
       problem: 'Unsorted requests create duplicate work, weak priority decisions, and avoidable delays because required context is missing.',
       inputs: ['Approved category taxonomy', 'Priority and severity definitions', 'Required intake fields', 'Routing map and team schedules'],
@@ -49,7 +49,7 @@ export const site: SiteConfig = {
     },
     {
       slug: 'knowledge-base-support', name: 'Knowledge base support', short: 'Keep support guidance organized, current, and easy to use.',
-      image: '/october-12/chat-knowledge-answer-expiry.webp', imageAlt: 'Knowledge answer review and expiry workflow',
+      image: '/editorial/service-knowledge-base-support.jpg', imageAlt: 'Knowledge operations editor comparing an approved source with a draft article',
       audience: 'Knowledge owners and support managers who need review ready articles, visible source history, and reliable expiry checks.',
       problem: 'Agents lose confidence when articles conflict, ownership is unclear, or product changes are not reflected in frontline guidance.',
       inputs: ['Approved source documents', 'Article template and style guide', 'Subject matter owners', 'Review dates and change notices'],
@@ -64,7 +64,7 @@ export const site: SiteConfig = {
     },
     {
       slug: 'qa-review-support', name: 'Quality review support', short: 'Prepare focused conversation samples for manager review.',
-      image: '/october-12/chat-escalation-reproducibility-study.webp', imageAlt: 'Conversation quality review evidence workspace',
+      image: '/editorial/service-qa-review-support.jpg', imageAlt: 'Quality reviewers checking a conversation sample against an approved checklist',
       audience: 'Quality and support leaders who want a consistent evidence set for coaching without turning review into surveillance.',
       problem: 'Unstructured sampling hides recurring issues and consumes manager time before a useful coaching conversation can begin.',
       inputs: ['Approved sampling plan', 'Quality checklist', 'Permitted transcript access', 'Coaching and escalation owners'],
@@ -79,7 +79,7 @@ export const site: SiteConfig = {
     },
     {
       slug: 'customer-escalation', name: 'Escalation coordination', short: 'Keep high context issues visible until the accountable owner resolves them.',
-      image: '/october-12/vulnerable-customer-chat-escalation.webp', imageAlt: 'Customer escalation context and owner handoff',
+      image: '/editorial/service-customer-escalation.jpg', imageAlt: 'Support coordinator briefing an accountable manager during an escalation handoff',
       audience: 'Support teams managing sensitive, urgent, or cross functional cases that need reliable context and follow through.',
       problem: 'Escalations stall when ownership is implicit, evidence is scattered, or customers receive updates that are not tied to a decision owner.',
       inputs: ['Escalation matrix', 'Approved customer update language', 'Case records and relevant evidence', 'Owner roster and response expectations'],
@@ -94,7 +94,7 @@ export const site: SiteConfig = {
     },
     {
       slug: 'multichannel-support', name: 'Multichannel support operations', short: 'Maintain consistent records across chat, email, and social queues.',
-      image: '/october-12/delivery-delay-chat-update.webp', imageAlt: 'Customer message handoff across support channels',
+      image: '/editorial/service-multichannel-support.jpg', imageAlt: 'Support specialists coordinating a customer handoff across phone, laptop, and written notes',
       audience: 'Customer experience teams whose conversations move between channels and need one reliable record and next owner.',
       problem: 'Channel silos create repeated questions, conflicting replies, duplicate tickets, and incomplete customer histories.',
       inputs: ['Channel roster and coverage plan', 'System of record rules', 'Approved tone and response guidance', 'Identity and handoff requirements'],

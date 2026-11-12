@@ -34,9 +34,10 @@ test('primary chrome follows the three-link and parent-attribution contract', ()
   assert.match(chrome, /removeEventListener\('resize', closeAtDesktop\)/);
   assert.match(chrome, /Powered by StealthAgents/g);
   assert.doesNotMatch(chrome, /TimedLeadModal/);
+  assert.match(chrome, /href="\/research" aria-label="Research library">Research/);
 });
 
-test('contact uses ten unique approved reviews and the required parent-brand evidence', () => {
+test('contact uses ten unique approved reviews, relevant imagery, and parent-brand evidence', () => {
   const reviewPath = new URL('lib/stealthAgentsReviews.json', root);
   assert.ok(existsSync(reviewPath), 'approved review data is missing');
   const reviews = JSON.parse(read('lib/stealthAgentsReviews.json'));
@@ -44,9 +45,9 @@ test('contact uses ten unique approved reviews and the required parent-brand evi
   assert.equal(new Set(reviews.map((review) => review.evidenceId)).size, reviews.length);
   assert.ok(reviews.every((review) => review.sourceUrl === 'https://stealthagents.com'));
   assert.match(reviewRail, /StealthAgents reviews/);
-  assert.match(contact, /stealth-agents-team\.webp[\s\S]*?loading="eager"/);
-  assert.match(contact, /Official team, Bacolod/);
-  assert.match(contact, /stealth-agents-team\.webp/);
+  assert.match(contact, /chat-support-contact\.jpg/);
+  assert.match(contact, /Illustrative consultation workflow scene/);
+  assert.match(contact, /Staffing and managed operations partner/);
   assert.match(contact, /stealth-agents-logo-black\.png/);
   assert.doesNotMatch(contact, /<iframe/);
 });
@@ -78,8 +79,8 @@ test('role visuals and research presentation do not mislabel evidence', () => {
   const about = read('app/about/page.tsx');
   const research = read('app/research/[slug]/page.tsx');
   assert.match(serviceIndex, /ServiceVisual/);
-  assert.match(services, /ServiceVisual/);
-  assert.doesNotMatch(services, /service\.image/);
+  assert.match(services, /src=\{service\.image\}/);
+  assert.match(services, /alt=\{service\.imageAlt\}/);
   assert.match(about, /src=\{site\.heroImage\}/);
   assert.match(research, /No original results are claimed/);
   assert.match(research, /Proposed protocol/);
@@ -93,7 +94,7 @@ test('all six service records expose the long-form content contract', () => {
     const matches = site.match(new RegExp(`"?${key}"?\\s*:`, 'g')) || [];
     assert.ok(matches.length >= 6, `${key} must exist for all six services`);
   }
-  for (const heading of ['Who this role is for', 'Inputs and approved sources', 'Workflow and deliverables', 'Quality controls', 'Decision boundaries', 'Frequently asked questions']) {
+  for (const heading of ['Who this role is for', 'Inputs and approved sources', 'Workflow and deliverables', 'Quality checks', 'Decision boundaries', 'Frequently asked questions']) {
     assert.match(services, new RegExp(heading));
   }
 });
