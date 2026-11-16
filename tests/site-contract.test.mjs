@@ -89,6 +89,13 @@ test('role visuals and research presentation do not mislabel evidence', () => {
   assert.match(globals, /\.editorial-research \.article-hero-image img\{object-fit:contain\}/);
 });
 
+test('services index hero keeps readable copy and media tracks across breakpoints', () => {
+  assert.match(globals, /\.service-index-hero\{width:min\(calc\(100% - 10vw\),var\(--content-max\)\);padding-inline:0;grid-template-columns:minmax\(0,1\.1fr\) minmax\(360px,\.9fr\)/);
+  assert.match(globals, /\.service-index-hero h1\{max-width:11ch;font-size:clamp\(3\.1rem,4\.8vw,5\.35rem\)\}/);
+  assert.match(globals, /@media\(max-width:1050px\)\{\.service-index-hero\{grid-template-columns:1fr\}/);
+  assert.match(globals, /@media\(max-width:700px\)\{\.service-index-hero\{width:100%;padding-inline:5vw\}/);
+});
+
 test('all six service records expose the long-form content contract', () => {
   for (const key of ['image', 'audience', 'problem', 'inputs', 'workflow', 'deliverables', 'boundaries', 'qualityControls', 'scenarios', 'faq', 'related']) {
     const matches = site.match(new RegExp(`"?${key}"?\\s*:`, 'g')) || [];
