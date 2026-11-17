@@ -7,7 +7,7 @@ export const november17ResearchPosts: ResearchPost[] = [
     "cluster": "Queue operations",
     "publishedAt": "2026-11-17",
     "finding": "A reproducible count of queue assignment skill match records missing a required field, reported with its window and exclusions.",
-    "thumbnail": "/thumbnails/november-17/hirechatsupport-queue-assignment-skill-match-rate.png",
+    "image": "/thumbnails/november-17/hirechatsupport-queue-assignment-skill-match-rate.png",
     "sections": [
       {
         "heading": "Question and decision scope",
@@ -88,7 +88,7 @@ export const november17ResearchPosts: ResearchPost[] = [
     "cluster": "Service level operations",
     "publishedAt": "2026-11-17",
     "finding": "A reproducible count of response target change approval records missing a required field, reported with its window and exclusions.",
-    "thumbnail": "/thumbnails/november-17/hirechatsupport-response-time-target-change-approval-coverage.png",
+    "image": "/thumbnails/november-17/hirechatsupport-response-time-target-change-approval-coverage.png",
     "sections": [
       {
         "heading": "Question and decision scope",
@@ -169,7 +169,7 @@ export const november17ResearchPosts: ResearchPost[] = [
     "cluster": "Knowledge operations",
     "publishedAt": "2026-11-17",
     "finding": "A reproducible count of conversation tagging coverage records missing a required field, reported with its window and exclusions.",
-    "thumbnail": "/thumbnails/november-17/hirechatsupport-conversation-tagging-coverage.png",
+    "image": "/thumbnails/november-17/hirechatsupport-conversation-tagging-coverage.png",
     "sections": [
       {
         "heading": "Question and decision scope",
@@ -250,7 +250,7 @@ export const november17ResearchPosts: ResearchPost[] = [
     "cluster": "Shift operations",
     "publishedAt": "2026-11-17",
     "finding": "A reproducible count of shift handover priority completeness records missing a required field, reported with its window and exclusions.",
-    "thumbnail": "/thumbnails/november-17/hirechatsupport-shift-handover-priority-completeness.png",
+    "image": "/thumbnails/november-17/hirechatsupport-shift-handover-priority-completeness.png",
     "sections": [
       {
         "heading": "Question and decision scope",
@@ -331,7 +331,7 @@ export const november17ResearchPosts: ResearchPost[] = [
     "cluster": "Identity operations",
     "publishedAt": "2026-11-17",
     "finding": "A reproducible count of identity verification adherence records missing a required field, reported with its window and exclusions.",
-    "thumbnail": "/thumbnails/november-17/hirechatsupport-identity-verification-step-adherence.png",
+    "image": "/thumbnails/november-17/hirechatsupport-identity-verification-step-adherence.png",
     "sections": [
       {
         "heading": "Question and decision scope",
@@ -412,7 +412,7 @@ export const november17ResearchPosts: ResearchPost[] = [
     "cluster": "Automation operations",
     "publishedAt": "2026-11-17",
     "finding": "A reproducible count of bot fallback test coverage records missing a required field, reported with its window and exclusions.",
-    "thumbnail": "/thumbnails/november-17/hirechatsupport-bot-fallback-test-coverage.png",
+    "image": "/thumbnails/november-17/hirechatsupport-bot-fallback-test-coverage.png",
     "sections": [
       {
         "heading": "Question and decision scope",
@@ -493,7 +493,7 @@ export const november17ResearchPosts: ResearchPost[] = [
     "cluster": "Escalation operations",
     "publishedAt": "2026-11-17",
     "finding": "A reproducible count of refund escalation approval records missing a required field, reported with its window and exclusions.",
-    "thumbnail": "/thumbnails/november-17/hirechatsupport-refund-escalation-approval-coverage.png",
+    "image": "/thumbnails/november-17/hirechatsupport-refund-escalation-approval-coverage.png",
     "sections": [
       {
         "heading": "Question and decision scope",

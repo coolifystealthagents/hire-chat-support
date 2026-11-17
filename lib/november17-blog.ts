@@ -7,7 +7,7 @@ export const november17BlogPosts: BlogPost[] = [
     "category": "Queue control",
     "publishedAt": "2026-11-17",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-17/hirechatsupport-reconcile-a-chat-queue-assignment-rule.png",
+    "image": "/thumbnails/november-17/hirechatsupport-reconcile-a-chat-queue-assignment-rule.png",
     "sections": [
       {
         "heading": "Name the decision and the queue owner",
@@ -98,7 +98,7 @@ export const november17BlogPosts: BlogPost[] = [
     "category": "Service level control",
     "publishedAt": "2026-11-17",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-17/hirechatsupport-control-a-chat-response-time-target-change.png",
+    "image": "/thumbnails/november-17/hirechatsupport-control-a-chat-response-time-target-change.png",
     "sections": [
       {
         "heading": "Name the decision and the queue owner",
@@ -189,7 +189,7 @@ export const november17BlogPosts: BlogPost[] = [
     "category": "Knowledge control",
     "publishedAt": "2026-11-17",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-17/hirechatsupport-audit-a-chat-conversation-tagging-scheme.png",
+    "image": "/thumbnails/november-17/hirechatsupport-audit-a-chat-conversation-tagging-scheme.png",
     "sections": [
       {
         "heading": "Name the decision and the queue owner",
@@ -280,7 +280,7 @@ export const november17BlogPosts: BlogPost[] = [
     "category": "Shift control",
     "publishedAt": "2026-11-17",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-17/hirechatsupport-verify-a-chat-agent-shift-handover-note.png",
+    "image": "/thumbnails/november-17/hirechatsupport-verify-a-chat-agent-shift-handover-note.png",
     "sections": [
       {
         "heading": "Name the decision and the queue owner",
@@ -371,7 +371,7 @@ export const november17BlogPosts: BlogPost[] = [
     "category": "Identity control",
     "publishedAt": "2026-11-17",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-17/hirechatsupport-reconcile-a-chat-customer-identity-verification-step.png",
+    "image": "/thumbnails/november-17/hirechatsupport-reconcile-a-chat-customer-identity-verification-step.png",
     "sections": [
       {
         "heading": "Name the decision and the queue owner",
@@ -462,7 +462,7 @@ export const november17BlogPosts: BlogPost[] = [
     "category": "Automation control",
     "publishedAt": "2026-11-17",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-17/hirechatsupport-control-a-chat-bot-fallback-message-update.png",
+    "image": "/thumbnails/november-17/hirechatsupport-control-a-chat-bot-fallback-message-update.png",
     "sections": [
       {
         "heading": "Name the decision and the queue owner",
@@ -553,7 +553,7 @@ export const november17BlogPosts: BlogPost[] = [
     "category": "Escalation control",
     "publishedAt": "2026-11-17",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-17/hirechatsupport-audit-a-chat-refund-request-escalation-path.png",
+    "image": "/thumbnails/november-17/hirechatsupport-audit-a-chat-refund-request-escalation-path.png",
     "sections": [
       {
         "heading": "Name the decision and the queue owner",
@@ -644,7 +644,7 @@ export const november17BlogPosts: BlogPost[] = [
     "category": "Records administration",
     "publishedAt": "2026-11-17",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-17/hirechatsupport-verify-a-chat-transcript-retention-rule.png",
+    "image": "/thumbnails/november-17/hirechatsupport-verify-a-chat-transcript-retention-rule.png",
     "sections": [
       {
         "heading": "Name the decision and the queue owner",
