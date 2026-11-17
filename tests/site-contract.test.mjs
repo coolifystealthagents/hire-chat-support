@@ -13,6 +13,10 @@ const reviewRail = read('components/ReviewRail.tsx');
 const globals = read('app/globals.css');
 const services = read('app/services/[slug]/page.tsx');
 const home = read('components/Marketing.tsx');
+const servicesIndex = read('app/services/page.tsx');
+const blogIndex = read('app/blog/page.tsx');
+const researchIndex = read('app/research/page.tsx');
+const categoryFilter = read('components/CategoryFilter.tsx');
 const site = read('lib/site.ts');
 const nextConfig = read('next.config.mjs');
 
@@ -118,6 +122,30 @@ test('homepage hero and service detail layouts follow the scoped review contract
   assert.match(globals, /\.service-hero\{grid-template-columns:minmax\(0,1\.02fr\) minmax\(380px,\.98fr\)/);
   assert.match(globals, /@media\(max-width:1100px\)\{\.service-hero\{grid-template-columns:1fr/);
   assert.match(globals, /@media\(max-width:700px\).*?\.service-hero-copy h1\{max-width:none/s);
+});
+
+test('wide service and editorial heroes retain useful tracks without nested viewport padding', () => {
+  assert.doesNotMatch(servicesIndex, /<figcaption>|Illustrative support operations scene/);
+  assert.doesNotMatch(services, /<figcaption>|Illustrative .* workflow scene/);
+  assert.doesNotMatch(blogIndex, /<figcaption>|Editorial illustration/);
+  assert.doesNotMatch(researchIndex, /<figcaption>|Editorial illustration/);
+  assert.match(globals, /\.service-hero,\.editorial-index-hero\{width:min\(calc\(100% - 10vw\),var\(--content-max\)\);padding-inline:0/);
+  assert.match(globals, /\.service-hero-copy h1\{[^}]*overflow-wrap:normal;word-break:normal;hyphens:none/);
+  assert.match(globals, /@media\(max-width:1100px\)\{\.service-hero,\.editorial-index-hero\{grid-template-columns:1fr/);
+});
+
+test('blog and research category controls filter published cards with history and reset support', () => {
+  for (const source of [blogIndex, researchIndex]) {
+    assert.match(source, /CategoryFilter/);
+    assert.match(source, /data-editorial-card data-category=/);
+    assert.match(source, /editorial-empty/);
+  }
+  assert.match(categoryFilter, /aria-pressed=\{active === option\.name\}/);
+  assert.match(categoryFilter, /window\.history\.pushState/);
+  assert.match(categoryFilter, /addEventListener\('popstate'/);
+  assert.match(categoryFilter, /category === 'All'.*searchParams\.delete\('category'\)/s);
+  assert.match(categoryFilter, /card\.hidden = !matchesCategory/);
+  assert.match(globals, /\.category-button\{min-height:44px/);
 });
 
 test('footer exposes grouped navigation and a readable mobile flow', () => {
