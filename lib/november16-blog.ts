@@ -7,7 +7,7 @@ export const november16BlogPosts: BlogPost[] = [
     "category": "Coverage control",
     "publishedAt": "2026-11-16",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-16/hirechatsupport-reconcile-a-chat-support-coverage-schedule.png",
+    "image": "/thumbnails/november-16/hirechatsupport-reconcile-a-chat-support-coverage-schedule.png",
     "sections": [
       {
         "heading": "Name the decision and the queue owner",
@@ -98,7 +98,7 @@ export const november16BlogPosts: BlogPost[] = [
     "category": "Knowledge control",
     "publishedAt": "2026-11-16",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-16/hirechatsupport-control-a-chat-macro-change-request.png",
+    "image": "/thumbnails/november-16/hirechatsupport-control-a-chat-macro-change-request.png",
     "sections": [
       {
         "heading": "Name the decision and the queue owner",
@@ -189,7 +189,7 @@ export const november16BlogPosts: BlogPost[] = [
     "category": "Escalation control",
     "publishedAt": "2026-11-16",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-16/hirechatsupport-audit-a-chat-escalation-handoff-note.png",
+    "image": "/thumbnails/november-16/hirechatsupport-audit-a-chat-escalation-handoff-note.png",
     "sections": [
       {
         "heading": "Name the decision and the queue owner",
@@ -280,7 +280,7 @@ export const november16BlogPosts: BlogPost[] = [
     "category": "Access administration",
     "publishedAt": "2026-11-16",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-16/hirechatsupport-verify-a-chat-agent-access-setup.png",
+    "image": "/thumbnails/november-16/hirechatsupport-verify-a-chat-agent-access-setup.png",
     "sections": [
       {
         "heading": "Name the decision and the queue owner",
@@ -371,7 +371,7 @@ export const november16BlogPosts: BlogPost[] = [
     "category": "Quality control",
     "publishedAt": "2026-11-16",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-16/hirechatsupport-reconcile-a-chat-transcript-quality-sample.png",
+    "image": "/thumbnails/november-16/hirechatsupport-reconcile-a-chat-transcript-quality-sample.png",
     "sections": [
       {
         "heading": "Name the decision and the queue owner",
@@ -462,7 +462,7 @@ export const november16BlogPosts: BlogPost[] = [
     "category": "Payment safety",
     "publishedAt": "2026-11-16",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-16/hirechatsupport-control-a-customer-payment-link-use-in-chat.png",
+    "image": "/thumbnails/november-16/hirechatsupport-control-a-customer-payment-link-use-in-chat.png",
     "sections": [
       {
         "heading": "Name the decision and the queue owner",
@@ -553,7 +553,7 @@ export const november16BlogPosts: BlogPost[] = [
     "category": "Automation control",
     "publishedAt": "2026-11-16",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-16/hirechatsupport-audit-a-chat-bot-handoff-trigger.png",
+    "image": "/thumbnails/november-16/hirechatsupport-audit-a-chat-bot-handoff-trigger.png",
     "sections": [
       {
         "heading": "Name the decision and the queue owner",
@@ -644,7 +644,7 @@ export const november16BlogPosts: BlogPost[] = [
     "category": "Offboarding control",
     "publishedAt": "2026-11-16",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-16/hirechatsupport-verify-a-chat-support-offboarding-handover.png",
+    "image": "/thumbnails/november-16/hirechatsupport-verify-a-chat-support-offboarding-handover.png",
     "sections": [
       {
         "heading": "Name the decision and the queue owner",

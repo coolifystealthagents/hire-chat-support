@@ -7,7 +7,7 @@ export const november16ResearchPosts: ResearchPost[] = [
     "cluster": "Coverage operations",
     "publishedAt": "2026-11-16",
     "finding": "A reproducible count of chat coverage schedule gap records missing a required field, reported with its window and exclusions.",
-    "thumbnail": "/thumbnails/november-16/hirechatsupport-chat-coverage-schedule-gap-rate.png",
+    "image": "/thumbnails/november-16/hirechatsupport-chat-coverage-schedule-gap-rate.png",
     "sections": [
       {
         "heading": "Question and decision scope",
@@ -88,7 +88,7 @@ export const november16ResearchPosts: ResearchPost[] = [
     "cluster": "Knowledge operations",
     "publishedAt": "2026-11-16",
     "finding": "A reproducible count of chat macro approval coverage records missing a required field, reported with its window and exclusions.",
-    "thumbnail": "/thumbnails/november-16/hirechatsupport-chat-macro-approval-coverage.png",
+    "image": "/thumbnails/november-16/hirechatsupport-chat-macro-approval-coverage.png",
     "sections": [
       {
         "heading": "Question and decision scope",
@@ -169,7 +169,7 @@ export const november16ResearchPosts: ResearchPost[] = [
     "cluster": "Escalation operations",
     "publishedAt": "2026-11-16",
     "finding": "A reproducible count of escalation handoff context completeness records missing a required field, reported with its window and exclusions.",
-    "thumbnail": "/thumbnails/november-16/hirechatsupport-escalation-handoff-context-completeness.png",
+    "image": "/thumbnails/november-16/hirechatsupport-escalation-handoff-context-completeness.png",
     "sections": [
       {
         "heading": "Question and decision scope",
@@ -250,7 +250,7 @@ export const november16ResearchPosts: ResearchPost[] = [
     "cluster": "Access operations",
     "publishedAt": "2026-11-16",
     "finding": "A reproducible count of agent access approval coverage records missing a required field, reported with its window and exclusions.",
-    "thumbnail": "/thumbnails/november-16/hirechatsupport-agent-access-approval-coverage.png",
+    "image": "/thumbnails/november-16/hirechatsupport-agent-access-approval-coverage.png",
     "sections": [
       {
         "heading": "Question and decision scope",
@@ -331,7 +331,7 @@ export const november16ResearchPosts: ResearchPost[] = [
     "cluster": "Quality operations",
     "publishedAt": "2026-11-16",
     "finding": "A reproducible count of transcript quality sample coverage records missing a required field, reported with its window and exclusions.",
-    "thumbnail": "/thumbnails/november-16/hirechatsupport-transcript-quality-sample-coverage.png",
+    "image": "/thumbnails/november-16/hirechatsupport-transcript-quality-sample-coverage.png",
     "sections": [
       {
         "heading": "Question and decision scope",
@@ -412,7 +412,7 @@ export const november16ResearchPosts: ResearchPost[] = [
     "cluster": "Payment operations",
     "publishedAt": "2026-11-16",
     "finding": "A reproducible count of payment link process adherence records missing a required field, reported with its window and exclusions.",
-    "thumbnail": "/thumbnails/november-16/hirechatsupport-payment-link-process-adherence.png",
+    "image": "/thumbnails/november-16/hirechatsupport-payment-link-process-adherence.png",
     "sections": [
       {
         "heading": "Question and decision scope",
@@ -493,7 +493,7 @@ export const november16ResearchPosts: ResearchPost[] = [
     "cluster": "Automation operations",
     "publishedAt": "2026-11-16",
     "finding": "A reproducible count of bot handoff trigger accuracy records missing a required field, reported with its window and exclusions.",
-    "thumbnail": "/thumbnails/november-16/hirechatsupport-bot-handoff-trigger-accuracy.png",
+    "image": "/thumbnails/november-16/hirechatsupport-bot-handoff-trigger-accuracy.png",
     "sections": [
       {
         "heading": "Question and decision scope",
