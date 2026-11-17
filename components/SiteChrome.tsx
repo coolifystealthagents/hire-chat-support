@@ -63,9 +63,12 @@ export function Header() {
 }
 
 export function Footer() {
-  return <footer>
-    <div><Link className="brand inverse" href="/"><Image src="/logo.svg" alt="" width={44} height={44} /><span>{site.name}</span></Link><p>Context aware chat support built around approved knowledge and clear ownership.</p></div>
-    <nav className="footer-links" aria-label="Footer navigation"><Link href="/about">About</Link><Link href="/blog">Blog</Link><Link href="/research" aria-label="Research library">Research</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link></nav>
-    <div className="footer-parent"><a className="parent-mark" href="https://stealthagents.com" rel="noopener noreferrer"><span>Powered by StealthAgents</span><Image src="/stealth-agents-logo-black.png" alt="StealthAgents" width={124} height={34} /></a><p className="copyright">© {new Date().getFullYear()} {site.name}</p></div>
+  return <footer className="site-footer">
+    <div className="footer-main">
+      <div className="footer-intro"><Link className="brand inverse" href="/"><Image src="/logo.svg" alt="" width={44} height={44} /><span>{site.name}</span></Link><p>Context aware chat support built around approved knowledge and clear ownership.</p><Link className="button footer-cta" href="/contact-us">Discuss a support role</Link></div>
+      <nav className="footer-group" aria-label="Explore"><p>Explore</p><Link href="/">Home</Link><Link href="/about">About</Link><Link href="/services">Services</Link><Link href="/blog">Blog</Link><Link href="/research" aria-label="Research library">Research</Link></nav>
+      <nav className="footer-group footer-services" aria-label="Support services"><p>Support services</p>{site.services.map((service) => <Link key={service.slug} href={`/services/${service.slug}`}>{service.name}</Link>)}</nav>
+    </div>
+    <div className="footer-closing"><div className="footer-legal"><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><span>© {new Date().getFullYear()} {site.name}</span></div><a className="parent-mark" href="https://stealthagents.com" rel="noopener noreferrer"><span>Powered by StealthAgents</span><Image src="/stealth-agents-logo-black.png" alt="StealthAgents" width={124} height={34} /></a></div>
   </footer>;
 }

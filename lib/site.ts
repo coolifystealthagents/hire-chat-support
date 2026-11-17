@@ -14,8 +14,8 @@ export const site: SiteConfig = {
   manifesto: 'The best support feels calm because the system behind it is clear.',
   primary: '#603487', secondary: '#d7c0ef', accent: '#d9ec65', canvas: '#fbf6ec', ink: '#271a2e',
   displayFont: 'Cooper Black', bodyFont: 'Verdana',
-  heroImage: '/editorial/chat-support-home-hero.jpg',
-  heroAlt: 'Customer support specialist reviewing a conversation at a laptop while a colleague coordinates nearby',
+  heroImage: '/editorial/chat-support-home-hero-v2.jpg',
+  heroAlt: 'Remote chat support specialist wearing a headset while reviewing a customer conversation at her workstation',
   services: [
     {
       slug: 'live-chat-support', name: 'Live chat support', short: 'Handle routine conversations from approved guidance and clear escalation rules.',

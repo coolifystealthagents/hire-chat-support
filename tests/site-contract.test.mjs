@@ -12,6 +12,7 @@ const contactCss = read('app/contact-us/contact.css');
 const reviewRail = read('components/ReviewRail.tsx');
 const globals = read('app/globals.css');
 const services = read('app/services/[slug]/page.tsx');
+const home = read('components/Marketing.tsx');
 const site = read('lib/site.ts');
 const nextConfig = read('next.config.mjs');
 
@@ -104,6 +105,29 @@ test('all six service records expose the long-form content contract', () => {
   for (const heading of ['Who this role is for', 'Inputs and approved sources', 'Workflow and deliverables', 'Quality checks', 'Decision boundaries', 'Frequently asked questions']) {
     assert.match(services, new RegExp(heading));
   }
+});
+
+test('homepage hero and service detail layouts follow the scoped review contract', () => {
+  assert.match(site, /chat-support-home-hero-v2\.jpg/);
+  assert.match(layout, /chat-support-home-hero-v2\.jpg/);
+  assert.doesNotMatch(layout, /chat-support-home-hero\.jpg/);
+  assert.match(site, /Remote chat support specialist wearing a headset/);
+  assert.doesNotMatch(home, /Illustrative chat support workflow scene|<figcaption>/);
+  assert.doesNotMatch(services, /service-summary|Role at a glance|Review the inputs/);
+  assert.match(services, /className="service-hero-copy"/);
+  assert.match(globals, /\.service-hero\{grid-template-columns:minmax\(0,1\.02fr\) minmax\(380px,\.98fr\)/);
+  assert.match(globals, /@media\(max-width:1100px\)\{\.service-hero\{grid-template-columns:1fr/);
+  assert.match(globals, /@media\(max-width:700px\).*?\.service-hero-copy h1\{max-width:none/s);
+});
+
+test('footer exposes grouped navigation and a readable mobile flow', () => {
+  assert.match(chrome, /className="site-footer"/);
+  assert.match(chrome, /aria-label="Explore"/);
+  assert.match(chrome, /aria-label="Support services"/);
+  assert.match(chrome, /site\.services\.map/);
+  assert.match(chrome, /href="\/contact-us">Discuss a support role/);
+  assert.match(globals, /\.footer-main\{[^}]*grid-template-columns:minmax\(260px,1\.15fr\) minmax\(150px,\.55fr\) minmax\(300px,1fr\)/);
+  assert.match(globals, /@media\(max-width:700px\).*?\.footer-main\{grid-template-columns:1fr/s);
 });
 
 test('editorial routes use the shared article system with TOC and supporting sidebar', () => {
