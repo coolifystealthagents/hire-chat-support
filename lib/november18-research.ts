@@ -325,13 +325,13 @@ export const november18ResearchPosts: ResearchPost[] = [
     ]
   },
   {
-    "slug": "hirechatsupport-shift-handover-priority-completeness",
-    "title": "Shift handover priority completeness",
+    "slug": "hirechatsupport-chat-shift-handover-priority-evidence",
+    "title": "Chat shift handover priority evidence",
     "summary": "A measurement protocol for shift handover priority completeness, with a frozen population, an evidence sample, and a dated review.",
     "cluster": "Shift operations",
     "publishedAt": "2026-11-18",
     "finding": "A reproducible count of shift handover priority completeness records missing a required field, reported with its window and exclusions.",
-    "image": "/thumbnails/november-18/hirechatsupport-shift-handover-priority-completeness.png",
+    "image": "/thumbnails/november-18/hirechatsupport-chat-shift-handover-priority-evidence.png",
     "sections": [
       {
         "heading": "Question and decision scope",
