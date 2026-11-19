@@ -7,7 +7,7 @@ export const november19BlogPosts: BlogPost[] = [
     "category": "Knowledge control",
     "publishedAt": "2026-11-19",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-19/hirechatsupport-reconcile-a-chat-canned-response-library.png",
+    "image": "/thumbnails/november-19/hirechatsupport-reconcile-a-chat-canned-response-library.png",
     "sections": [
       {
         "heading": "Start with the request and the queue owner",
@@ -76,7 +76,7 @@ export const november19BlogPosts: BlogPost[] = [
     "category": "Privacy control",
     "publishedAt": "2026-11-19",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-19/hirechatsupport-control-a-chat-customer-consent-record.png",
+    "image": "/thumbnails/november-19/hirechatsupport-control-a-chat-customer-consent-record.png",
     "sections": [
       {
         "heading": "Start with the request and the queue owner",
@@ -145,7 +145,7 @@ export const november19BlogPosts: BlogPost[] = [
     "category": "Escalation control",
     "publishedAt": "2026-11-19",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-19/hirechatsupport-audit-a-chat-escalation-ownership-handoff.png",
+    "image": "/thumbnails/november-19/hirechatsupport-audit-a-chat-escalation-ownership-handoff.png",
     "sections": [
       {
         "heading": "Start with the request and the queue owner",
@@ -214,7 +214,7 @@ export const november19BlogPosts: BlogPost[] = [
     "category": "Workforce control",
     "publishedAt": "2026-11-19",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-19/hirechatsupport-verify-a-chat-agent-onboarding-checklist.png",
+    "image": "/thumbnails/november-19/hirechatsupport-verify-a-chat-agent-onboarding-checklist.png",
     "sections": [
       {
         "heading": "Start with the request and the queue owner",
@@ -283,7 +283,7 @@ export const november19BlogPosts: BlogPost[] = [
     "category": "Security control",
     "publishedAt": "2026-11-19",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-19/hirechatsupport-reconcile-a-chat-attachment-handling-rule.png",
+    "image": "/thumbnails/november-19/hirechatsupport-reconcile-a-chat-attachment-handling-rule.png",
     "sections": [
       {
         "heading": "Start with the request and the queue owner",
@@ -352,7 +352,7 @@ export const november19BlogPosts: BlogPost[] = [
     "category": "Coverage control",
     "publishedAt": "2026-11-19",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-19/hirechatsupport-control-a-chat-availability-schedule-change.png",
+    "image": "/thumbnails/november-19/hirechatsupport-control-a-chat-availability-schedule-change.png",
     "sections": [
       {
         "heading": "Start with the request and the queue owner",
@@ -421,7 +421,7 @@ export const november19BlogPosts: BlogPost[] = [
     "category": "Quality control",
     "publishedAt": "2026-11-19",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-19/hirechatsupport-audit-a-chat-satisfaction-survey-trigger.png",
+    "image": "/thumbnails/november-19/hirechatsupport-audit-a-chat-satisfaction-survey-trigger.png",
     "sections": [
       {
         "heading": "Start with the request and the queue owner",
@@ -490,7 +490,7 @@ export const november19BlogPosts: BlogPost[] = [
     "category": "Automation control",
     "publishedAt": "2026-11-19",
     "readTime": "9 min read",
-    "thumbnail": "/thumbnails/november-19/hirechatsupport-verify-a-chat-bot-intent-handoff-rule.png",
+    "image": "/thumbnails/november-19/hirechatsupport-verify-a-chat-bot-intent-handoff-rule.png",
     "sections": [
       {
         "heading": "Start with the request and the queue owner",

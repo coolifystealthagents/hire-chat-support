@@ -7,7 +7,7 @@ export const november19ResearchPosts: ResearchPost[] = [
     "cluster": "research",
     "publishedAt": "2026-11-19",
     "finding": "A reproducible count of canned response currency records missing a required field, reported with its window and exclusions.",
-    "thumbnail": "/thumbnails/november-19/hirechatsupport-canned-response-currency.png",
+    "image": "/thumbnails/november-19/hirechatsupport-canned-response-currency.png",
     "sections": [
       {
         "heading": "Question and decision scope",
@@ -78,7 +78,7 @@ export const november19ResearchPosts: ResearchPost[] = [
     "cluster": "research",
     "publishedAt": "2026-11-19",
     "finding": "A reproducible count of consent record coverage records missing a required field, reported with its window and exclusions.",
-    "thumbnail": "/thumbnails/november-19/hirechatsupport-consent-record-coverage.png",
+    "image": "/thumbnails/november-19/hirechatsupport-consent-record-coverage.png",
     "sections": [
       {
         "heading": "Question and decision scope",
@@ -149,7 +149,7 @@ export const november19ResearchPosts: ResearchPost[] = [
     "cluster": "research",
     "publishedAt": "2026-11-19",
     "finding": "A reproducible count of escalation acceptance coverage records missing a required field, reported with its window and exclusions.",
-    "thumbnail": "/thumbnails/november-19/hirechatsupport-escalation-acceptance-coverage.png",
+    "image": "/thumbnails/november-19/hirechatsupport-escalation-acceptance-coverage.png",
     "sections": [
       {
         "heading": "Question and decision scope",
@@ -220,7 +220,7 @@ export const november19ResearchPosts: ResearchPost[] = [
     "cluster": "research",
     "publishedAt": "2026-11-19",
     "finding": "A reproducible count of agent onboarding access coverage records missing a required field, reported with its window and exclusions.",
-    "thumbnail": "/thumbnails/november-19/hirechatsupport-agent-onboarding-access-coverage.png",
+    "image": "/thumbnails/november-19/hirechatsupport-agent-onboarding-access-coverage.png",
     "sections": [
       {
         "heading": "Question and decision scope",
@@ -291,7 +291,7 @@ export const november19ResearchPosts: ResearchPost[] = [
     "cluster": "research",
     "publishedAt": "2026-11-19",
     "finding": "A reproducible count of attachment scan compliance records missing a required field, reported with its window and exclusions.",
-    "thumbnail": "/thumbnails/november-19/hirechatsupport-attachment-scan-compliance.png",
+    "image": "/thumbnails/november-19/hirechatsupport-attachment-scan-compliance.png",
     "sections": [
       {
         "heading": "Question and decision scope",
@@ -362,7 +362,7 @@ export const november19ResearchPosts: ResearchPost[] = [
     "cluster": "research",
     "publishedAt": "2026-11-19",
     "finding": "A reproducible count of availability coverage accuracy records missing a required field, reported with its window and exclusions.",
-    "thumbnail": "/thumbnails/november-19/hirechatsupport-availability-coverage-accuracy.png",
+    "image": "/thumbnails/november-19/hirechatsupport-availability-coverage-accuracy.png",
     "sections": [
       {
         "heading": "Question and decision scope",
@@ -433,7 +433,7 @@ export const november19ResearchPosts: ResearchPost[] = [
     "cluster": "research",
     "publishedAt": "2026-11-19",
     "finding": "A reproducible count of survey trigger exclusion accuracy records missing a required field, reported with its window and exclusions.",
-    "thumbnail": "/thumbnails/november-19/hirechatsupport-survey-trigger-exclusion-accuracy.png",
+    "image": "/thumbnails/november-19/hirechatsupport-survey-trigger-exclusion-accuracy.png",
     "sections": [
       {
         "heading": "Question and decision scope",
