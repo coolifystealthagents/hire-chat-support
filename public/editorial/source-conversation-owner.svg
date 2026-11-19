@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" fill="none">
+  <title>Source, conversation, and accountable owner workflow</title>
+  <desc>A connected three-part diagram showing approved guidance moving through a customer conversation to a named next owner.</desc>
+  <rect width="1200" height="1000" rx="42" fill="#F3EAF7"/>
+  <circle cx="1038" cy="144" r="120" fill="#D9EC65" opacity=".62"/>
+  <circle cx="136" cy="882" r="174" fill="#D7C0EF" opacity=".56"/>
+  <rect x="48" y="48" width="1104" height="904" rx="34" fill="#FBF6EC" stroke="#D7C0EF" stroke-width="3"/>
+  <text x="92" y="124" fill="#603487" font-family="Arial,sans-serif" font-size="22" font-weight="700" letter-spacing="4">THE CONTEXT THREAD</text>
+  <path d="M344 514H418M782 514H856" stroke="#603487" stroke-width="8" stroke-linecap="round"/>
+  <path d="m397 493 22 21-22 21M835 493l22 21-22 21" stroke="#603487" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="88" y="236" width="256" height="526" rx="26" fill="#FFFDF8" stroke="#D7C0EF" stroke-width="3"/>
+  <rect x="116" y="272" width="72" height="82" rx="12" fill="#D7C0EF"/>
+  <path d="M136 294h32M136 311h32M136 328h21" stroke="#603487" stroke-width="5" stroke-linecap="round"/>
+  <text x="116" y="408" fill="#65596B" font-family="Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="2">SOURCE</text>
+  <text x="116" y="452" fill="#271A2E" font-family="Arial,sans-serif" font-size="30" font-weight="700">Approved</text>
+  <text x="116" y="489" fill="#271A2E" font-family="Arial,sans-serif" font-size="30" font-weight="700">guidance</text>
+  <rect x="116" y="534" width="198" height="2" rx="1" fill="#D7C0EF"/>
+  <circle cx="129" cy="580" r="9" fill="#603487"/><path d="M153 580h132" stroke="#C7B8D0" stroke-width="7" stroke-linecap="round"/>
+  <circle cx="129" cy="618" r="9" fill="#603487"/><path d="M153 618h103" stroke="#C7B8D0" stroke-width="7" stroke-linecap="round"/>
+  <text x="116" y="704" fill="#65596B" font-family="Arial,sans-serif" font-size="18">Current and traceable</text>
+  <rect x="422" y="198" width="360" height="632" rx="30" fill="#271A2E"/>
+  <text x="462" y="266" fill="#D9EC65" font-family="Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="2">CONVERSATION</text>
+  <rect x="460" y="312" width="264" height="126" rx="24" fill="#FBF6EC"/>
+  <circle cx="490" cy="347" r="10" fill="#D7C0EF"/><path d="M516 347h162M490 382h188M490 408h132" stroke="#BDB0C5" stroke-width="8" stroke-linecap="round"/>
+  <rect x="500" y="466" width="246" height="136" rx="24" fill="#D9EC65"/>
+  <path d="M532 505h168M532 535h186M532 565h132" stroke="#7B8043" stroke-width="8" stroke-linecap="round"/>
+  <rect x="460" y="630" width="264" height="2" rx="1" fill="#6B5B73"/>
+  <path d="M462 684h212M462 713h173" stroke="#8E8194" stroke-width="8" stroke-linecap="round"/>
+  <text x="462" y="780" fill="#E5DDEA" font-family="Arial,sans-serif" font-size="18">Context carried forward</text>
+  <rect x="856" y="236" width="256" height="526" rx="26" fill="#FFFDF8" stroke="#D7C0EF" stroke-width="3"/>
+  <circle cx="984" cy="318" r="38" fill="#D9EC65"/>
+  <circle cx="984" cy="309" r="12" fill="#603487"/>
+  <path d="M962 340c4-16 12-23 22-23s18 7 22 23" stroke="#603487" stroke-width="6" stroke-linecap="round"/>
+  <text x="884" y="408" fill="#65596B" font-family="Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="2">OWNER</text>
+  <text x="884" y="454" fill="#271A2E" font-family="Arial,sans-serif" font-size="30" font-weight="700">Named next</text>
+  <text x="884" y="491" fill="#271A2E" font-family="Arial,sans-serif" font-size="30" font-weight="700">decision</text>
+  <rect x="884" y="534" width="198" height="2" rx="1" fill="#D7C0EF"/>
+  <rect x="884" y="572" width="198" height="92" rx="18" fill="#F3EAF7"/>
+  <circle cx="915" cy="618" r="13" fill="#603487"/>
+  <path d="m909 618 5 5 10-12" stroke="#FFFDF8" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="941" y="612" fill="#271A2E" font-family="Arial,sans-serif" font-size="18" font-weight="700">Handoff</text>
+  <text x="941" y="638" fill="#65596B" font-family="Arial,sans-serif" font-size="16">accepted</text>
+  <text x="884" y="704" fill="#65596B" font-family="Arial,sans-serif" font-size="18">Clear next action</text>
+</svg>

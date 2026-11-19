@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" fill="none">
+  <title>Multichannel support operations workflow</title>
+  <desc>Chat, email, and social conversations converge into one shared customer record and a clearly assigned next owner.</desc>
+  <rect width="1600" height="1000" rx="42" fill="#F3EAF7"/>
+  <circle cx="1440" cy="200" r="175" fill="#D9EC65" opacity=".55"/>
+  <rect x="64" y="64" width="1472" height="872" rx="34" fill="#FBF6EC" stroke="#D7C0EF" stroke-width="4"/>
+  <text x="120" y="145" fill="#603487" font-family="Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="4">MULTICHANNEL SUPPORT</text>
+  <text x="120" y="204" fill="#271A2E" font-family="Arial,sans-serif" font-size="44" font-weight="700">One record. A consistent next step.</text>
+  <rect x="120" y="296" width="300" height="132" rx="24" fill="#D7C0EF"/>
+  <circle cx="172" cy="362" r="25" fill="#603487"/>
+  <path d="M160 357h24M160 366h17" stroke="#FFFDF8" stroke-width="4" stroke-linecap="round"/>
+  <text x="216" y="355" fill="#271A2E" font-family="Arial,sans-serif" font-size="22" font-weight="700">Live chat</text>
+  <text x="216" y="386" fill="#51465A" font-family="Arial,sans-serif" font-size="16">Verified channel</text>
+  <rect x="120" y="468" width="300" height="132" rx="24" fill="#D9EC65"/>
+  <rect x="149" y="508" width="47" height="37" rx="5" stroke="#603487" stroke-width="5"/>
+  <path d="m151 512 21 17 22-17" stroke="#603487" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="216" y="527" fill="#271A2E" font-family="Arial,sans-serif" font-size="22" font-weight="700">Email</text>
+  <text x="216" y="558" fill="#51465A" font-family="Arial,sans-serif" font-size="16">History retained</text>
+  <rect x="120" y="640" width="300" height="132" rx="24" fill="#FFFDF8" stroke="#D7C0EF" stroke-width="3"/>
+  <circle cx="172" cy="706" r="24" fill="#D7C0EF"/><circle cx="164" cy="699" r="3" fill="#603487"/><circle cx="172" cy="699" r="3" fill="#603487"/><circle cx="180" cy="699" r="3" fill="#603487"/><path d="M162 712h20" stroke="#603487" stroke-width="4" stroke-linecap="round"/>
+  <text x="216" y="699" fill="#271A2E" font-family="Arial,sans-serif" font-size="22" font-weight="700">Social</text>
+  <text x="216" y="730" fill="#51465A" font-family="Arial,sans-serif" font-size="16">Privacy boundary</text>
+  <path d="M440 362h122M440 534h122M440 706h122M562 362v344" stroke="#8D72A1" stroke-width="6" stroke-linecap="round"/>
+  <path d="M562 534h82" stroke="#603487" stroke-width="8" stroke-linecap="round"/><path d="m622 510 25 24-25 24" stroke="#603487" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="666" y="346" width="470" height="376" rx="28" fill="#271A2E"/>
+  <text x="710" y="410" fill="#D9EC65" font-family="Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="2">SHARED CUSTOMER RECORD</text>
+  <rect x="710" y="452" width="382" height="82" rx="18" fill="#FBF6EC"/>
+  <circle cx="748" cy="493" r="12" fill="#D7C0EF"/><path d="M776 480h270M776 506h198" stroke="#B8ABBf" stroke-width="8" stroke-linecap="round"/>
+  <rect x="710" y="552" width="382" height="82" rx="18" fill="#46364F"/>
+  <circle cx="748" cy="593" r="12" fill="#D9EC65"/><path d="M776 580h234M776 606h276" stroke="#B8ABBf" stroke-width="8" stroke-linecap="round"/>
+  <path d="M710 666h292" stroke="#8E8194" stroke-width="8" stroke-linecap="round"/>
+  <path d="M1156 534h78" stroke="#603487" stroke-width="8" stroke-linecap="round"/><path d="m1212 510 25 24-25 24" stroke="#603487" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1254" y="408" width="192" height="252" rx="25" fill="#D9EC65"/>
+  <circle cx="1350" cy="470" r="30" fill="#603487"/><path d="M1350 456v28M1336 470h28" stroke="#FFFDF8" stroke-width="4" stroke-linecap="round"/>
+  <text x="1284" y="540" fill="#271A2E" font-family="Arial,sans-serif" font-size="20" font-weight="700">Next owner</text>
+  <text x="1284" y="574" fill="#51465A" font-family="Arial,sans-serif" font-size="15">Visible handoff</text>
+</svg>

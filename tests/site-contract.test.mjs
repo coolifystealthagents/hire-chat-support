@@ -1,4 +1,5 @@
 import assert from 'node:assert/strict';
+import { createHash } from 'node:crypto';
 import { existsSync, readFileSync } from 'node:fs';
 import test from 'node:test';
 
@@ -51,7 +52,8 @@ test('contact uses ten unique approved reviews, relevant imagery, and parent-bra
   assert.ok(reviews.every((review) => review.sourceUrl === 'https://stealthagents.com'));
   assert.match(reviewRail, /StealthAgents reviews/);
   assert.match(contact, /chat-support-contact\.jpg/);
-  assert.match(contact, /Illustrative consultation workflow scene/);
+  assert.doesNotMatch(contact, /illustrative consultation workflow (?:scene|access)/i);
+  assert.doesNotMatch(contact, /<figcaption>/);
   assert.match(contact, /Staffing and managed operations partner/);
   assert.match(contact, /stealth-agents-logo-black\.png/);
   assert.doesNotMatch(contact, /<iframe/);
@@ -112,16 +114,32 @@ test('all six service records expose the long-form content contract', () => {
 });
 
 test('homepage hero and service detail layouts follow the scoped review contract', () => {
-  assert.match(site, /chat-support-home-hero-v2\.jpg/);
-  assert.match(layout, /chat-support-home-hero-v2\.jpg/);
-  assert.doesNotMatch(layout, /chat-support-home-hero\.jpg/);
-  assert.match(site, /Remote chat support specialist wearing a headset/);
+  const homePhoto = new URL('public/editorial/chat-support-home-photo.jpg', root);
+  assert.ok(existsSync(homePhoto));
+  assert.equal(createHash('sha256').update(readFileSync(homePhoto)).digest('hex'), '9f94343f9edcd8f9f113019001c6e9081987890eb7d60233cdf7cac31e15e521');
+  assert.match(site, /chat-support-home-photo\.jpg/);
+  assert.match(layout, /chat-support-home-photo\.jpg/);
+  assert.doesNotMatch(layout, /chat-support-home-hero-v2\.jpg/);
+  assert.match(site, /Customer support professional wearing a headset while working at a laptop/);
   assert.doesNotMatch(home, /Illustrative chat support workflow scene|<figcaption>/);
   assert.doesNotMatch(services, /service-summary|Role at a glance|Review the inputs/);
   assert.match(services, /className="service-hero-copy"/);
   assert.match(globals, /\.service-hero\{grid-template-columns:minmax\(0,1\.02fr\) minmax\(380px,\.98fr\)/);
   assert.match(globals, /@media\(max-width:1100px\)\{\.service-hero\{grid-template-columns:1fr/);
   assert.match(globals, /@media\(max-width:700px\).*?\.service-hero-copy h1\{max-width:none/s);
+});
+
+test('Context Thread and six service pages use distinct responsive workflow illustrations', () => {
+  assert.match(home, /src="\/editorial\/source-conversation-owner\.svg"/);
+  assert.match(home, /workflow-image/);
+  const serviceImages = [...site.matchAll(/image: '(\/editorial\/service-[^']+\.svg)'/g)].map((match) => match[1]);
+  assert.equal(serviceImages.length, 6);
+  assert.equal(new Set(serviceImages).size, 6);
+  for (const image of serviceImages) {
+    assert.ok(existsSync(new URL(`public${image}`, root)), `${image} must exist`);
+  }
+  assert.match(globals, /\.workflow-image img\{object-fit:contain\}/);
+  assert.match(globals, /\.service-detail-photo img\{object-fit:contain\}/);
 });
 
 test('wide service and editorial heroes retain useful tracks without nested viewport padding', () => {
@@ -132,6 +150,13 @@ test('wide service and editorial heroes retain useful tracks without nested view
   assert.match(globals, /\.service-hero,\.editorial-index-hero\{width:min\(calc\(100% - 10vw\),var\(--content-max\)\);padding-inline:0/);
   assert.match(globals, /\.service-hero-copy h1\{[^}]*overflow-wrap:normal;word-break:normal;hyphens:none/);
   assert.match(globals, /@media\(max-width:1100px\)\{\.service-hero,\.editorial-index-hero\{grid-template-columns:1fr/);
+});
+
+test('service detail chapters share the hero gutter and stay left aligned at every breakpoint', () => {
+  assert.match(globals, /\.service-manual\{width:min\(calc\(100% - 10vw\),var\(--content-max\)\);margin-inline:auto;padding-inline:0;text-align:left\}/);
+  assert.match(globals, /\.service-prose\{width:min\(100%,1020px\);margin:0;text-align:left\}/);
+  assert.match(globals, /\.service-prose :is\(h2,h3,p,ul,ol,details,\.button\)\{text-align:left\}/);
+  assert.match(globals, /@media\(max-width:700px\)\{\.service-manual\{width:100%;padding-inline:5vw\}\}/);
 });
 
 test('blog and research category controls filter published cards with history and reset support', () => {

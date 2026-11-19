@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" fill="none">
+  <title>Helpdesk triage workflow</title>
+  <desc>Incoming support requests are checked for required information, sorted by approved category, and routed to the correct queue.</desc>
+  <rect width="1600" height="1000" rx="42" fill="#F3EAF7"/>
+  <circle cx="180" cy="900" r="210" fill="#D9EC65" opacity=".52"/>
+  <rect x="64" y="64" width="1472" height="872" rx="34" fill="#FBF6EC" stroke="#D7C0EF" stroke-width="4"/>
+  <text x="120" y="145" fill="#603487" font-family="Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="4">HELPDESK TRIAGE</text>
+  <text x="120" y="204" fill="#271A2E" font-family="Arial,sans-serif" font-size="44" font-weight="700">Sort first. Route with ownership.</text>
+  <text x="120" y="266" fill="#65596B" font-family="Arial,sans-serif" font-size="22">A consistent intake path keeps the right work moving.</text>
+  <rect x="120" y="330" width="380" height="480" rx="26" fill="#FFFDF8" stroke="#D7C0EF" stroke-width="3"/>
+  <text x="160" y="392" fill="#271A2E" font-family="Arial,sans-serif" font-size="25" font-weight="700">New requests</text>
+  <rect x="160" y="430" width="300" height="92" rx="18" fill="#F3EAF7"/>
+  <circle cx="194" cy="476" r="13" fill="#603487"/><path d="M225 462h190M225 489h150" stroke="#9A88A5" stroke-width="8" stroke-linecap="round"/>
+  <rect x="160" y="544" width="300" height="92" rx="18" fill="#F3EAF7"/>
+  <circle cx="194" cy="590" r="13" fill="#D9EC65"/><path d="M225 576h190M225 603h150" stroke="#9A88A5" stroke-width="8" stroke-linecap="round"/>
+  <rect x="160" y="658" width="300" height="92" rx="18" fill="#F3EAF7"/>
+  <circle cx="194" cy="704" r="13" fill="#603487"/><path d="M225 690h190M225 717h150" stroke="#9A88A5" stroke-width="8" stroke-linecap="round"/>
+  <path d="M520 566h100" stroke="#603487" stroke-width="8" stroke-linecap="round"/><path d="m596 542 25 24-25 24" stroke="#603487" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="630" y="330" width="370" height="480" rx="26" fill="#271A2E"/>
+  <text x="674" y="392" fill="#D9EC65" font-family="Arial,sans-serif" font-size="22" font-weight="700" letter-spacing="2">APPROVED ROUTING</text>
+  <rect x="674" y="438" width="282" height="132" rx="20" fill="#FBF6EC"/>
+  <rect x="704" y="470" width="46" height="46" rx="13" fill="#D9EC65"/>
+  <path d="M727 482v22M716 493h22" stroke="#603487" stroke-width="5" stroke-linecap="round"/>
+  <text x="770" y="486" fill="#271A2E" font-family="Arial,sans-serif" font-size="22" font-weight="700">Routine queue</text>
+  <text x="770" y="520" fill="#65596B" font-family="Arial,sans-serif" font-size="17">Known request type</text>
+  <rect x="674" y="594" width="282" height="132" rx="20" fill="#D7C0EF"/>
+  <circle cx="727" cy="660" r="23" fill="#603487"/><path d="m727 646 1 18M728 674v2" stroke="#FFFDF8" stroke-width="5" stroke-linecap="round"/>
+  <text x="770" y="642" fill="#271A2E" font-family="Arial,sans-serif" font-size="22" font-weight="700">Owner review</text>
+  <text x="770" y="676" fill="#51465A" font-family="Arial,sans-serif" font-size="17">Urgent or unclear</text>
+  <path d="M1020 566h100" stroke="#603487" stroke-width="8" stroke-linecap="round"/><path d="m1096 542 25 24-25 24" stroke="#603487" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1130" y="380" width="310" height="372" rx="26" fill="#FFFDF8" stroke="#D7C0EF" stroke-width="3"/>
+  <circle cx="1182" cy="446" r="20" fill="#603487"/><path d="M1172 446h20M1182 436v20" stroke="#FFFDF8" stroke-width="4" stroke-linecap="round"/>
+  <text x="1220" y="440" fill="#65596B" font-family="Arial,sans-serif" font-size="18" font-weight="700" letter-spacing="1">NEXT STEP</text>
+  <text x="1170" y="520" fill="#271A2E" font-family="Arial,sans-serif" font-size="25" font-weight="700">Named queue</text>
+  <path d="M1170 562h225M1170 590h182" stroke="#C9BECF" stroke-width="8" stroke-linecap="round"/>
+  <rect x="1170" y="638" width="218" height="56" rx="28" fill="#D9EC65"/>
+  <text x="1194" y="674" fill="#271A2E" font-family="Arial,sans-serif" font-size="18" font-weight="700">Owner visible</text>
+</svg>

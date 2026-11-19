@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" fill="none">
+  <title>Knowledge base maintenance workflow</title>
+  <desc>An approved source is compared with a draft support article, then sent to its named knowledge owner for review.</desc>
+  <rect width="1600" height="1000" rx="42" fill="#F3EAF7"/>
+  <circle cx="1390" cy="860" r="200" fill="#D9EC65" opacity=".58"/>
+  <rect x="64" y="64" width="1472" height="872" rx="34" fill="#FBF6EC" stroke="#D7C0EF" stroke-width="4"/>
+  <text x="120" y="145" fill="#603487" font-family="Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="4">KNOWLEDGE BASE SUPPORT</text>
+  <text x="120" y="204" fill="#271A2E" font-family="Arial,sans-serif" font-size="44" font-weight="700">Keep guidance current and reviewable.</text>
+  <rect x="120" y="300" width="380" height="490" rx="26" fill="#FFFDF8" stroke="#D7C0EF" stroke-width="3"/>
+  <rect x="164" y="346" width="76" height="90" rx="16" fill="#D7C0EF"/>
+  <path d="M184 372h36M184 394h36M184 416h25" stroke="#603487" stroke-width="5" stroke-linecap="round"/>
+  <text x="164" y="488" fill="#65596B" font-family="Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="1">APPROVED SOURCE</text>
+  <path d="M164 530h286M164 562h250M164 594h286M164 626h205" stroke="#C9BECF" stroke-width="9" stroke-linecap="round"/>
+  <rect x="164" y="686" width="188" height="54" rx="27" fill="#D9EC65"/>
+  <text x="187" y="721" fill="#271A2E" font-family="Arial,sans-serif" font-size="17" font-weight="700">Current version</text>
+  <path d="M520 546h94" stroke="#603487" stroke-width="8" stroke-linecap="round"/><path d="m590 522 25 24-25 24" stroke="#603487" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="626" y="300" width="468" height="490" rx="26" fill="#271A2E"/>
+  <text x="670" y="362" fill="#D9EC65" font-family="Arial,sans-serif" font-size="20" font-weight="700" letter-spacing="2">ARTICLE DRAFT</text>
+  <rect x="670" y="402" width="380" height="108" rx="18" fill="#FBF6EC"/>
+  <path d="M700 440h252M700 472h310" stroke="#A99BAF" stroke-width="9" stroke-linecap="round"/>
+  <text x="670" y="568" fill="#E8DFEB" font-family="Arial,sans-serif" font-size="18">Review against source</text>
+  <rect x="670" y="600" width="380" height="50" rx="14" fill="#46364F"/>
+  <circle cx="700" cy="625" r="10" fill="#D9EC65"/><path d="M724 625h286" stroke="#AC9DB3" stroke-width="8" stroke-linecap="round"/>
+  <rect x="670" y="668" width="380" height="50" rx="14" fill="#46364F"/>
+  <circle cx="700" cy="693" r="10" fill="#D7C0EF"/><path d="M724 693h238" stroke="#AC9DB3" stroke-width="8" stroke-linecap="round"/>
+  <path d="M1114 546h94" stroke="#603487" stroke-width="8" stroke-linecap="round"/><path d="m1184 522 25 24-25 24" stroke="#603487" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="1220" y="380" width="220" height="334" rx="26" fill="#D7C0EF"/>
+  <circle cx="1330" cy="464" r="34" fill="#603487"/>
+  <path d="M1330 446v36M1312 464h36" stroke="#FFFDF8" stroke-width="6" stroke-linecap="round"/>
+  <text x="1250" y="540" fill="#271A2E" font-family="Arial,sans-serif" font-size="22" font-weight="700">Owner review</text>
+  <text x="1250" y="575" fill="#51465A" font-family="Arial,sans-serif" font-size="18">Approve before</text>
+  <text x="1250" y="604" fill="#51465A" font-family="Arial,sans-serif" font-size="18">publication</text>
+  <rect x="1250" y="636" width="160" height="42" rx="21" fill="#D9EC65"/>
+  <text x="1270" y="664" fill="#271A2E" font-family="Arial,sans-serif" font-size="15" font-weight="700">Version trace</text>
+</svg>

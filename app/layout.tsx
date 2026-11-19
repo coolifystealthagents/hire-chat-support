@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   title: { default: `${site.name} | Specialist remote staff`, template: `%s | ${site.name}` },
   description: site.heroBody,
   icons: { icon: '/icon.svg' },
-  openGraph: { type: 'website', siteName: site.name, images: ['/editorial/chat-support-home-hero-v2.jpg'] }
+  openGraph: { type: 'website', siteName: site.name, images: ['/editorial/chat-support-home-photo.jpg'] }
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
