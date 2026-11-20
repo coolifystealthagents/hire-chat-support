@@ -69,6 +69,18 @@ export const november20ResearchPosts: ResearchPost[] = [
         "label": "PCI Security Standards Council",
         "url": "https://www.pcisecuritystandards.org/"
       }
+    ],
+    "methodology": [
+      "Define the chat identity verification step coverage population and observation window before sampling; use one conversation record as the unit.",
+      "Measure chat identity verification step coverage completeness with the same rule for every case and keep the denominator visible.",
+      "Record missing, unavailable, and confirmed negative as separate states; do not fill a blank from memory.",
+      "Have a second reviewer reproduce a small sample from the stored evidence.",
+      "Publish the limitations with the finding and name one process change with a check date."
+    ],
+    "findings": [
+      "The chat identity verification step coverage record can show whether a required step was documented, not whether the underlying judgement was correct.",
+      "Delay concentrates where the owner or source is unnamed, so the oldest open chat identity verification step coverage case is the useful review target.",
+      "A repeated exception is usually a template problem; change the form before coaching the person again."
     ]
   },
   {
@@ -140,6 +152,18 @@ export const november20ResearchPosts: ResearchPost[] = [
         "label": "PCI Security Standards Council",
         "url": "https://www.pcisecuritystandards.org/"
       }
+    ],
+    "methodology": [
+      "Define the conversation merge rule accuracy population and observation window before sampling; use one conversation record as the unit.",
+      "Measure conversation merge rule accuracy completeness with the same rule for every case and keep the denominator visible.",
+      "Record missing, unavailable, and confirmed negative as separate states; do not fill a blank from memory.",
+      "Have a second reviewer reproduce a small sample from the stored evidence.",
+      "Publish the limitations with the finding and name one process change with a check date."
+    ],
+    "findings": [
+      "The conversation merge rule accuracy record can show whether a required step was documented, not whether the underlying judgement was correct.",
+      "Delay concentrates where the owner or source is unnamed, so the oldest open conversation merge rule accuracy case is the useful review target.",
+      "A repeated exception is usually a template problem; change the form before coaching the person again."
     ]
   },
   {
@@ -211,6 +235,18 @@ export const november20ResearchPosts: ResearchPost[] = [
         "label": "PCI Security Standards Council",
         "url": "https://www.pcisecuritystandards.org/"
       }
+    ],
+    "methodology": [
+      "Define the agent break schedule coverage population and observation window before sampling; use one conversation record as the unit.",
+      "Measure agent break schedule coverage completeness with the same rule for every case and keep the denominator visible.",
+      "Record missing, unavailable, and confirmed negative as separate states; do not fill a blank from memory.",
+      "Have a second reviewer reproduce a small sample from the stored evidence.",
+      "Publish the limitations with the finding and name one process change with a check date."
+    ],
+    "findings": [
+      "The agent break schedule coverage record can show whether a required step was documented, not whether the underlying judgement was correct.",
+      "Delay concentrates where the owner or source is unnamed, so the oldest open agent break schedule coverage case is the useful review target.",
+      "A repeated exception is usually a template problem; change the form before coaching the person again."
     ]
   },
   {
@@ -282,6 +318,18 @@ export const november20ResearchPosts: ResearchPost[] = [
         "label": "PCI Security Standards Council",
         "url": "https://www.pcisecuritystandards.org/"
       }
+    ],
+    "methodology": [
+      "Define the attachment malware scan completion population and observation window before sampling; use one conversation record as the unit.",
+      "Measure attachment malware scan completion completeness with the same rule for every case and keep the denominator visible.",
+      "Record missing, unavailable, and confirmed negative as separate states; do not fill a blank from memory.",
+      "Have a second reviewer reproduce a small sample from the stored evidence.",
+      "Publish the limitations with the finding and name one process change with a check date."
+    ],
+    "findings": [
+      "The attachment malware scan completion record can show whether a required step was documented, not whether the underlying judgement was correct.",
+      "Delay concentrates where the owner or source is unnamed, so the oldest open attachment malware scan completion case is the useful review target.",
+      "A repeated exception is usually a template problem; change the form before coaching the person again."
     ]
   },
   {
@@ -353,6 +401,18 @@ export const november20ResearchPosts: ResearchPost[] = [
         "label": "PCI Security Standards Council",
         "url": "https://www.pcisecuritystandards.org/"
       }
+    ],
+    "methodology": [
+      "Define the proactive outreach trigger accuracy population and observation window before sampling; use one conversation record as the unit.",
+      "Measure proactive outreach trigger accuracy completeness with the same rule for every case and keep the denominator visible.",
+      "Record missing, unavailable, and confirmed negative as separate states; do not fill a blank from memory.",
+      "Have a second reviewer reproduce a small sample from the stored evidence.",
+      "Publish the limitations with the finding and name one process change with a check date."
+    ],
+    "findings": [
+      "The proactive outreach trigger accuracy record can show whether a required step was documented, not whether the underlying judgement was correct.",
+      "Delay concentrates where the owner or source is unnamed, so the oldest open proactive outreach trigger accuracy case is the useful review target.",
+      "A repeated exception is usually a template problem; change the form before coaching the person again."
     ]
   },
   {
@@ -424,6 +484,18 @@ export const november20ResearchPosts: ResearchPost[] = [
         "label": "PCI Security Standards Council",
         "url": "https://www.pcisecuritystandards.org/"
       }
+    ],
+    "methodology": [
+      "Define the conversation tagging consistency population and observation window before sampling; use one conversation record as the unit.",
+      "Measure conversation tagging consistency completeness with the same rule for every case and keep the denominator visible.",
+      "Record missing, unavailable, and confirmed negative as separate states; do not fill a blank from memory.",
+      "Have a second reviewer reproduce a small sample from the stored evidence.",
+      "Publish the limitations with the finding and name one process change with a check date."
+    ],
+    "findings": [
+      "The conversation tagging consistency record can show whether a required step was documented, not whether the underlying judgement was correct.",
+      "Delay concentrates where the owner or source is unnamed, so the oldest open conversation tagging consistency case is the useful review target.",
+      "A repeated exception is usually a template problem; change the form before coaching the person again."
     ]
   },
   {
@@ -495,6 +567,18 @@ export const november20ResearchPosts: ResearchPost[] = [
         "label": "PCI Security Standards Council",
         "url": "https://www.pcisecuritystandards.org/"
       }
+    ],
+    "methodology": [
+      "Define the language preference capture rate population and observation window before sampling; use one conversation record as the unit.",
+      "Measure language preference capture rate completeness with the same rule for every case and keep the denominator visible.",
+      "Record missing, unavailable, and confirmed negative as separate states; do not fill a blank from memory.",
+      "Have a second reviewer reproduce a small sample from the stored evidence.",
+      "Publish the limitations with the finding and name one process change with a check date."
+    ],
+    "findings": [
+      "The language preference capture rate record can show whether a required step was documented, not whether the underlying judgement was correct.",
+      "Delay concentrates where the owner or source is unnamed, so the oldest open language preference capture rate case is the useful review target.",
+      "A repeated exception is usually a template problem; change the form before coaching the person again."
     ]
   }
 ];
