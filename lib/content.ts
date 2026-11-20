@@ -9,6 +9,7 @@ import { november10BlogPosts } from './november10-blog';
 import { november11BlogPosts } from './november11-blog';
 import { november16BlogPosts } from './november16-blog';
 import { november17BlogPosts } from './november17-blog';
+import { november20BlogPosts } from './november20-blog';
 import { november19BlogPosts } from './november19-blog';
 import { november18BlogPosts } from './november18-blog';
 import { november08BlogPosts } from './november08-blog';
@@ -24,6 +25,7 @@ import { november10ResearchPosts } from './november10-research';
 import { november11ResearchPosts } from './november11-research';
 import { november16ResearchPosts } from './november16-research';
 import { november17ResearchPosts } from './november17-research';
+import { november20ResearchPosts } from './november20-research';
 import { november19ResearchPosts } from './november19-research';
 import { november18ResearchPosts } from './november18-research';
 import { november08ResearchPosts } from './november08-research';
@@ -39,7 +41,7 @@ import { october27ResearchPosts } from './october27-research';
 import { october28BlogPosts, october28ResearchPosts } from './october28-batch';
 
 export const blogPosts: BlogPost[] = [
-  ...november11BlogPosts, ...november10BlogPosts, ...november09BlogPosts, ...november16BlogPosts, ...november17BlogPosts, ...november19BlogPosts, ...november18BlogPosts, ...november08BlogPosts, ...november07BlogPosts,
+  ...november11BlogPosts, ...november10BlogPosts, ...november09BlogPosts, ...november16BlogPosts, ...november17BlogPosts, ...november20BlogPosts, ...november19BlogPosts, ...november18BlogPosts, ...november08BlogPosts, ...november07BlogPosts,
   ...november06BlogPosts, ...november05BlogPosts, ...november03BlogPosts, ...november02BlogPosts, ...november01BlogPosts,
   ...october28BlogPosts,
   ...october27BlogPosts,
@@ -372,7 +374,7 @@ export const blogPosts: BlogPost[] = [
   }
 ].sort((a,b)=>String(b.publishedAt).localeCompare(String(a.publishedAt)));
 export const researchPosts: ResearchPost[] = [
-  ...november11ResearchPosts, ...november10ResearchPosts, ...november09ResearchPosts, ...november16ResearchPosts, ...november17ResearchPosts, ...november19ResearchPosts, ...november18ResearchPosts, ...november08ResearchPosts, ...november07ResearchPosts,
+  ...november11ResearchPosts, ...november10ResearchPosts, ...november09ResearchPosts, ...november16ResearchPosts, ...november17ResearchPosts, ...november20ResearchPosts, ...november19ResearchPosts, ...november18ResearchPosts, ...november08ResearchPosts, ...november07ResearchPosts,
   ...november06ResearchPosts, ...november05ResearchPosts, ...november03ResearchPosts, ...november02ResearchPosts, ...november01ResearchPosts,
   ...october28ResearchPosts,
   ...october27ResearchPosts,
