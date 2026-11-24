@@ -171,6 +171,7 @@ test('blog and research category controls filter published cards with history an
   assert.match(categoryFilter, /category === 'All'.*searchParams\.delete\('category'\)/s);
   assert.match(categoryFilter, /card\.hidden = !matchesCategory/);
   assert.match(globals, /\.category-button\{min-height:44px/);
+  assert.match(globals, /\.editorial-card-grid \[data-editorial-card\]\[hidden\]\{display:none!important\}/);
 });
 
 test('footer exposes grouped navigation and a readable mobile flow', () => {
@@ -183,10 +184,38 @@ test('footer exposes grouped navigation and a readable mobile flow', () => {
   assert.match(globals, /@media\(max-width:700px\).*?\.footer-main\{grid-template-columns:1fr/s);
 });
 
+test('buyer journey pages expose distinct decision support and verified conversion guidance', () => {
+  for (const requirement of ['Who this works for', 'Common chat workflows', 'Onboarding and escalation', 'Buyer decision support']) assert.match(home, new RegExp(requirement));
+  assert.match(home, /chat-support-home-photo|site\.heroImage/);
+  for (const requirement of ['What it covers', 'When you need it', 'See scope, workflow, and controls']) assert.match(servicesIndex, new RegExp(requirement));
+  assert.match(contact, /When you submit, your request is sent for review/);
+  assert.match(contact, /Validation messages stay beside the form/);
+  assert.match(contact, /thank you page, where the existing scheduling flow is available/);
+  assert.match(contact, /contact-form-card[\s\S]*<ReviewRail/);
+  assert.match(read('app/contact-us/contact.css'), /\.contact-intro,\.contact-form-card,\.contact-fold>\.reviews-block\{grid-column:1;grid-row:auto\}/);
+});
+
+test('editorial indexes frame published content by practical use without changing filtering', () => {
+  assert.match(blogIndex, /Practical takeaway/);
+  assert.match(blogIndex, /Move from a support problem to a practical next step/);
+  assert.match(researchIndex, /Operational question/);
+  assert.match(researchIndex, /They do not present original measured results/);
+  assert.match(read('components/ArticleLayout.tsx'), /Operational question and proposed evidence path/);
+  assert.match(globals, /aspect-ratio:16\/9;object-fit:cover/);
+  assert.match(globals, /max-width:68ch/);
+});
+
+test('footer includes core journeys plus grouped company and legal destinations', () => {
+  for (const href of ['/services', '/blog', '/research', '/contact-us', '/about', '/privacy', '/terms']) assert.match(chrome, new RegExp(`href="\\${href}"`));
+  assert.match(chrome, /aria-label="Company and legal"/);
+  assert.match(globals, /footer-main\{grid-template-columns:minmax\(230px,1\.1fr\)/);
+});
+
 test('editorial routes use the shared article system with TOC and supporting sidebar', () => {
   assert.match(read('app/blog/[slug]/page.tsx'), /ArticleLayout/);
   assert.match(read('app/research/[slug]/page.tsx'), /ArticleLayout/);
   assert.ok(existsSync(new URL('components/ArticleLayout.tsx', root)));
+  assert.match(globals, /\.article-body>section>div\[id\]\{scroll-margin-top:calc\(var\(--header-height\) \+ 2rem\)\}/);
 });
 
 test('forbidden decorative labels and visible dash punctuation are absent from commercial templates', () => {

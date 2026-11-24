@@ -26,9 +26,9 @@ export default function ContactPage() {
         <p className="contact-lede">Tell us where context gets lost, queues build up, or ownership becomes unclear. We will help map a focused role with approved sources and practical escalation rules.</p>
         <a className="button primary contact-jump" href="#consultation-form">Start the consultation form</a>
         <div className="scope-chips" aria-label="Consultation scope"><span>One clear workflow</span><span>Human approval stays visible</span><span>No sensitive records needed</span></div>
-        <ReviewRail />
       </div>
-      <div className="contact-form-card" id="consultation-form"><p className="eyebrow">Free consultation</p><h2>Give us the working context.</h2><p>Complete the form without sharing customer credentials, payment details, health information, or private account records.</p><LeadForm source="contact-page-consultation" /></div>
+      <div className="contact-form-card" id="consultation-form"><p className="eyebrow">Free consultation</p><h2>Give us the working context.</h2><p>Complete the form without sharing customer credentials, payment details, health information, or private account records.</p><div className="submission-path" aria-label="What happens after submission"><strong>What happens next</strong><p>When you submit, your request is sent for review. Validation messages stay beside the form so you can correct any missing or invalid information. After a successful submission, you will continue to the thank you page, where the existing scheduling flow is available.</p></div><LeadForm source="contact-page-consultation" /></div>
+      <ReviewRail />
     </section>
 
     <section className="parent-evidence">
