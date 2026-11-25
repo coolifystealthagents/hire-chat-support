@@ -159,3 +159,20 @@ html,body{max-width:100%;overflow-x:clip}figure{margin:0}.button:focus-visible,a
 @media(max-width:1100px){.footer-main{grid-template-columns:repeat(2,minmax(0,1fr))}.footer-services{grid-column:auto;display:flex}.article-hero{grid-template-columns:1fr}.article-hero-image{width:100%;aspect-ratio:16/9}}
 @media(max-width:900px){.buyer-fit-layout,.workflow-library,.onboarding,.decision-support,.editorial-index-intro{grid-template-columns:1fr}.workflow-library-intro{position:static}.service-comparison-key{display:none}.service-compare-detail{grid-template-columns:1fr}.article-shell{display:flex;flex-direction:column}.article-sidebar{width:100%;order:2}.article-body{order:1;max-width:68ch}.mobile-toc{order:0}}
 @media(max-width:700px){.buyer-fit-layout{grid-template-columns:1fr}.workflow-ledger article,.onboarding li{grid-template-columns:1fr}.workflow-ledger span{grid-column:1}.editorial-index-intro{padding:3.5rem 5vw;gap:1.25rem}.editorial-index-intro .eyebrow{margin-bottom:0}.editorial-card-grid :is(.article-card,.content-card){padding:0 1.1rem 1.25rem}.editorial-card-grid :is(.article-card,.content-card)>img{width:calc(100% + 2.2rem);margin-inline:-1.1rem}.article-hero{padding:3rem 5vw}.article-hero-image{aspect-ratio:4/3}.footer-main{grid-template-columns:1fr}.footer-services{display:flex}}
+
+/* Shared centered service detail layout */
+:root{--service-content-max:1120px}
+.service-hero,.service-manual{width:min(calc(100% - 10vw),var(--service-content-max));margin-inline:auto;padding-inline:0}
+.service-breadcrumb{width:min(calc(100% - 10vw),var(--service-content-max))}
+.service-detail--escalation .service-manual{width:min(calc(100% - 10vw),var(--service-content-max))}
+.service-prose{width:100%;margin-inline:auto;text-align:left}
+.service-prose :is(p,ul,ol,details){text-align:left}
+.service-section-intro{max-width:760px;margin-inline:auto;text-align:center}
+.service-prose .service-section-intro>.eyebrow,.service-prose .service-section-intro>h2{text-align:center}
+.service-section-intro>p:not(.eyebrow){max-width:65ch;margin-inline:auto;text-align:left}
+.service-prose .service-scenarios>.eyebrow,.service-prose .service-scenarios>h2,.service-prose .service-faq>.eyebrow,.service-prose .service-faq>h2,.service-prose .service-related>h2{text-align:center}
+.service-scenarios>h2,.service-faq>h2,.service-related>h2{margin-bottom:clamp(2rem,4vw,3rem)}
+.service-final{text-align:center}
+.service-prose .service-final :is(h2,p){text-align:center}
+.service-final p{max-width:65ch;margin-inline:auto}
+@media(max-width:700px){.service-hero,.service-manual{width:min(calc(100% - 10vw),var(--service-content-max));padding-inline:0}.service-hero{align-items:stretch}.service-breadcrumb{width:min(calc(100% - 10vw),var(--service-content-max));padding-inline:0}.service-detail--escalation .service-manual{width:min(calc(100% - 10vw),var(--service-content-max))}}
