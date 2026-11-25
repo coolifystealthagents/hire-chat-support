@@ -18,6 +18,7 @@ const servicesIndex = read('app/services/page.tsx');
 const blogIndex = read('app/blog/page.tsx');
 const researchIndex = read('app/research/page.tsx');
 const categoryFilter = read('components/CategoryFilter.tsx');
+const icons = read('components/Icons.tsx');
 const site = read('lib/site.ts');
 const nextConfig = read('next.config.mjs');
 
@@ -174,6 +175,29 @@ test('Escalation coordination alone uses the verified photo in a breadcrumb led 
   assert.doesNotMatch(globals, /\.service-hero--stacked/);
   assert.match(globals, /\.service-detail--escalation \.service-manual\{display:block;width:min\(calc\(100% - 10vw\),1120px\)\}/);
   assert.match(globals, /\.service-detail--escalation \.service-prose\{margin-inline:auto\}/);
+});
+
+test('Escalation coordination workflow replaces only its decorative numbers with accessible hidden icons', () => {
+  const expectedWorkflow = [
+    'Confirm the escalation trigger',
+    'Prepare a concise evidence based summary',
+    'Assign the documented owner',
+    'Track approved updates and record the outcome',
+  ];
+  assert.match(site, new RegExp(`workflow: \\[${expectedWorkflow.map((item) => `'${item}'`).join(', ')}\\]`));
+  assert.match(services, /const escalationWorkflowIcons = \[AlertCircleIcon, DocumentTextIcon, UserCheckIcon, ClipboardCheckIcon\] as const/);
+  assert.match(services, /<ol className="service-workflow-list">/);
+  assert.match(services, /<li key=\{item\}>\{isEscalationCoordination \? <span className="service-workflow-icon" aria-hidden="true"><WorkflowIcon \/><\/span> : <span>\{String\(index \+ 1\)\.padStart\(2, '0'\)\}<\/span>\}<p>\{item\}<\/p><\/li>/);
+  assert.doesNotMatch(services, /role="(?:none|presentation)"/);
+  for (const name of ['AlertCircleIcon', 'DocumentTextIcon', 'UserCheckIcon', 'ClipboardCheckIcon']) {
+    assert.match(icons, new RegExp(`export function ${name}\\(\\)`));
+  }
+  assert.equal((icons.match(/focusable="false"/g) || []).length >= 4, true);
+  assert.match(globals, /\.service-detail--escalation \.service-workflow-list\{list-style:none/);
+  assert.match(globals, /\.service-workflow-icon\{[^}]*width:2\.5rem;height:2\.5rem;[^}]*color:var\(--primary\)/);
+  assert.match(globals, /\.service-workflow-icon svg\{[^}]*width:1\.5rem;height:1\.5rem;[^}]*fill:none;stroke:currentColor/);
+  assert.match(globals, /\.service-workflow-list li\{display:grid;grid-template-columns:2\.5rem 1fr/);
+  assert.match(globals, /\.service-detail--escalation \.service-workflow-list li\{grid-template-columns:2\.5rem minmax\(0,1fr\)\}/);
 });
 
 test('wide service and editorial heroes retain useful tracks without nested viewport padding', () => {
