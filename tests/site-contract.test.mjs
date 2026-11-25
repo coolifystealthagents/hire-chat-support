@@ -21,6 +21,8 @@ const categoryFilter = read('components/CategoryFilter.tsx');
 const icons = read('components/Icons.tsx');
 const site = read('lib/site.ts');
 const nextConfig = read('next.config.mjs');
+const imageCredits = read('app/image-credits/page.tsx');
+const sitemap = read('app/sitemap.ts');
 
 const visibleSources = [
   chrome,
@@ -42,6 +44,16 @@ test('primary chrome follows the three-link and parent-attribution contract', ()
   assert.match(chrome, /Powered by StealthAgents/g);
   assert.doesNotMatch(chrome, /TimedLeadModal/);
   assert.match(chrome, /href="\/research" aria-label="Research library">Research/);
+});
+
+test('the CC BY-SA support photo has a public and discoverable attribution notice', () => {
+  assert.match(chrome, /<Link href="\/image-credits">Image credits<\/Link>/);
+  assert.match(sitemap, /'\/image-credits'/);
+  assert.match(imageCredits, /Call center PV/);
+  assert.match(imageCredits, /Kellie Walenciak/);
+  assert.match(imageCredits, /https:\/\/commons\.wikimedia\.org\/wiki\/File:Call_center_PV\.jpg/);
+  assert.match(imageCredits, /https:\/\/creativecommons\.org\/licenses\/by-sa\/4\.0\//);
+  assert.match(imageCredits, /Converted from JPEG to WebP/);
 });
 
 test('contact uses ten unique approved reviews, relevant imagery, and parent-brand evidence', () => {
@@ -136,23 +148,25 @@ test('homepage hero and service detail layouts follow the scoped review contract
 test('Context Thread and service pages use distinct route-appropriate hero media', () => {
   assert.match(home, /src="\/editorial\/source-conversation-owner\.svg"/);
   assert.match(home, /workflow-image/);
-  const serviceImages = [...site.matchAll(/image: '(\/editorial\/service-[^']+\.svg)'/g)].map((match) => match[1]);
-  assert.equal(serviceImages.length, 5);
-  assert.equal(new Set(serviceImages).size, 5);
+  const serviceImages = [...site.matchAll(/image: '(\/editorial\/services-detail\/[^']+\.webp)'/g)].map((match) => match[1]);
+  assert.equal(serviceImages.length, 6);
+  assert.equal(new Set(serviceImages).size, 6);
   for (const image of serviceImages) {
     assert.ok(existsSync(new URL(`public${image}`, root)), `${image} must exist`);
   }
-  assert.match(site, /image: '\/editorial\/customer-escalation-hero\.jpg'/);
-  assert.ok(existsSync(new URL('public/editorial/customer-escalation-hero.jpg', root)));
+  const serviceImageHashes = serviceImages.map((image) => createHash('sha256').update(readFileSync(new URL(`public${image}`, root))).digest('hex'));
+  assert.equal(new Set(serviceImageHashes).size, 6);
+  assert.equal((site.match(/imagePosition:/g) || []).length, 6);
+  assert.doesNotMatch(site, /image: '\/editorial\/service-[^']+\.svg'/);
   assert.match(globals, /\.workflow-image img\{object-fit:contain\}/);
-  assert.match(globals, /\.service-detail-photo img\{object-fit:contain\}/);
+  assert.match(globals, /\.service-detail-photo img\{object-fit:cover\}/);
   assert.match(globals, /\.service-hero--escalation \.service-detail-photo img\{object-fit:cover;object-position:center\}/);
 });
 
 test('Escalation coordination alone uses the verified photo in a breadcrumb led responsive split hero', () => {
-  const hero = new URL('public/editorial/customer-escalation-hero.jpg', root);
+  const hero = new URL('public/editorial/services-detail/customer-escalation.webp', root);
   const indexThumbnail = new URL('public/editorial/services-index/customer-escalation.webp', root);
-  assert.equal(createHash('sha256').update(readFileSync(hero)).digest('hex'), 'f03b1b8f258b1dedfb31e90069f436b14cc757934e7eef51d6a47acfdfdfa984');
+  assert.ok(existsSync(hero));
   assert.equal(createHash('sha256').update(readFileSync(indexThumbnail)).digest('hex'), 'f46ba7b3dfe5fff5fb3ab67105c9f0292b737b3de19dcebc233be6bd3380931b');
   assert.match(site, /slug: 'customer-escalation', name: 'Escalation coordination', short: 'Keep high context issues visible until the accountable owner resolves them\.'/);
   assert.match(site, /imageAlt: 'Two colleagues coordinating a handoff over a shared tablet'/);
@@ -163,6 +177,7 @@ test('Escalation coordination alone uses the verified photo in a breadcrumb led 
   assert.match(services, /<Link href="\/services">Services<\/Link><span aria-hidden="true">\/</);
   assert.match(services, /<span aria-current="page">\{service\.name\}<\/span>/);
   assert.match(services, /className=\{`page-hero service-hero\$\{isEscalationCoordination \? ' service-hero--escalation' : ''\}`\}/);
+  assert.match(services, /style=\{\{ objectPosition: service\.imagePosition \}\}/);
   assert.match(services, /sizes=\{isEscalationCoordination \? '\(max-width: 700px\) 90vw, \(max-width: 1100px\) 95vw, 48vw' : '\(max-width: 1100px\) 90vw, 43vw'\}/);
   assert.match(services, /Discuss this role in a free call/);
   assert.match(services, /href="\/contact-us"/);

@@ -6,6 +6,7 @@ export type Service = {
   short: string;
   image: string;
   imageAlt: string;
+  imagePosition: string;
   audience: string;
   problem: string;
   inputs: string[];
