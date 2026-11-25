@@ -79,7 +79,7 @@ export const site: SiteConfig = {
     },
     {
       slug: 'customer-escalation', name: 'Escalation coordination', short: 'Keep high context issues visible until the accountable owner resolves them.',
-      image: '/editorial/service-customer-escalation.svg', imageAlt: 'Escalation trigger and context packet routed to an authorized decision owner',
+      image: '/editorial/customer-escalation-hero.jpg', imageAlt: 'Two colleagues coordinating a handoff over a shared tablet',
       audience: 'Support teams managing sensitive, urgent, or cross functional cases that need reliable context and follow through.',
       problem: 'Escalations stall when ownership is implicit, evidence is scattered, or customers receive updates that are not tied to a decision owner.',
       inputs: ['Escalation matrix', 'Approved customer update language', 'Case records and relevant evidence', 'Owner roster and response expectations'],

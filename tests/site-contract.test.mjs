@@ -132,17 +132,39 @@ test('homepage hero and service detail layouts follow the scoped review contract
   assert.match(globals, /@media\(max-width:700px\).*?\.service-hero-copy h1\{max-width:none/s);
 });
 
-test('Context Thread and six service pages use distinct responsive workflow illustrations', () => {
+test('Context Thread and service pages use distinct route-appropriate hero media', () => {
   assert.match(home, /src="\/editorial\/source-conversation-owner\.svg"/);
   assert.match(home, /workflow-image/);
   const serviceImages = [...site.matchAll(/image: '(\/editorial\/service-[^']+\.svg)'/g)].map((match) => match[1]);
-  assert.equal(serviceImages.length, 6);
-  assert.equal(new Set(serviceImages).size, 6);
+  assert.equal(serviceImages.length, 5);
+  assert.equal(new Set(serviceImages).size, 5);
   for (const image of serviceImages) {
     assert.ok(existsSync(new URL(`public${image}`, root)), `${image} must exist`);
   }
+  assert.match(site, /image: '\/editorial\/customer-escalation-hero\.jpg'/);
+  assert.ok(existsSync(new URL('public/editorial/customer-escalation-hero.jpg', root)));
   assert.match(globals, /\.workflow-image img\{object-fit:contain\}/);
   assert.match(globals, /\.service-detail-photo img\{object-fit:contain\}/);
+  assert.match(globals, /\.service-hero--stacked \.service-detail-photo img\{object-fit:cover;object-position:center\}/);
+});
+
+test('Escalation coordination alone uses the verified stacked photo hero and centered page axis', () => {
+  const hero = new URL('public/editorial/customer-escalation-hero.jpg', root);
+  const indexThumbnail = new URL('public/editorial/services-index/customer-escalation.webp', root);
+  assert.equal(createHash('sha256').update(readFileSync(hero)).digest('hex'), 'f03b1b8f258b1dedfb31e90069f436b14cc757934e7eef51d6a47acfdfdfa984');
+  assert.equal(createHash('sha256').update(readFileSync(indexThumbnail)).digest('hex'), 'f46ba7b3dfe5fff5fb3ab67105c9f0292b737b3de19dcebc233be6bd3380931b');
+  assert.match(site, /slug: 'customer-escalation', name: 'Escalation coordination', short: 'Keep high context issues visible until the accountable owner resolves them\.'/);
+  assert.match(site, /imageAlt: 'Two colleagues coordinating a handoff over a shared tablet'/);
+  assert.match(servicesIndex, /'customer-escalation':[\s\S]*?src: '\/editorial\/services-index\/customer-escalation\.webp'/);
+  assert.match(services, /service\.slug === 'customer-escalation'/);
+  assert.match(services, /className=\{`service-detail\$\{isEscalationCoordination \? ' service-detail--escalation' : ''\}`\}/);
+  assert.match(services, /className=\{`page-hero service-hero\$\{isEscalationCoordination \? ' service-hero--stacked' : ''\}`\}/);
+  assert.match(services, /sizes=\{isEscalationCoordination \? '\(max-width: 700px\) 90vw, \(max-width: 1200px\) 90vw, 1120px' : '\(max-width: 1100px\) 90vw, 43vw'\}/);
+  assert.match(services, /Discuss this role in a free call/);
+  assert.match(services, /href="\/contact-us"/);
+  assert.match(globals, /\.service-hero--stacked\{grid-template-columns:minmax\(0,1fr\);justify-items:center/);
+  assert.match(globals, /\.service-detail--escalation \.service-manual\{display:block;width:min\(calc\(100% - 10vw\),1120px\)\}/);
+  assert.match(globals, /\.service-detail--escalation \.service-prose\{margin-inline:auto\}/);
 });
 
 test('wide service and editorial heroes retain useful tracks without nested viewport padding', () => {

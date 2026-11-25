@@ -12,9 +12,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const service = serviceBySlug(slug);
   if (!service) notFound();
+  const isEscalationCoordination = service.slug === 'customer-escalation';
   const related = service.related.map((item) => serviceBySlug(item)).filter(Boolean);
-  return <main className="service-detail">
-    <header className="page-hero service-hero"><div className="service-hero-copy"><p className="eyebrow">Specialist chat support role</p><h1>{service.name}</h1><p>{service.short}</p><Link id={`cta-services-${service.slug}-bookcall`} className="button primary" href="/contact-us">Discuss this role in a free call</Link></div><figure className="page-hero-media service-detail-photo motion-image"><Image src={service.image} alt={service.imageAlt} fill priority sizes="(max-width: 1100px) 90vw, 43vw" /></figure></header>
+  return <main className={`service-detail${isEscalationCoordination ? ' service-detail--escalation' : ''}`}>
+    <header className={`page-hero service-hero${isEscalationCoordination ? ' service-hero--stacked' : ''}`}><div className="service-hero-copy"><p className="eyebrow">Specialist chat support role</p><h1>{service.name}</h1><p>{service.short}</p><Link id={`cta-services-${service.slug}-bookcall`} className="button primary" href="/contact-us">Discuss this role in a free call</Link></div><figure className="page-hero-media service-detail-photo motion-image"><Image src={service.image} alt={service.imageAlt} fill priority sizes={isEscalationCoordination ? '(max-width: 700px) 90vw, (max-width: 1200px) 90vw, 1120px' : '(max-width: 1100px) 90vw, 43vw'} /></figure></header>
     <div className="service-manual">
       <article className="service-prose">
         <section className="service-audience motion-copy"><div><p className="eyebrow">Best fit</p><h2>Who this role is for</h2><p>{service.audience}</p></div><div><p className="eyebrow">Pressure point</p><h3>The operating problem</h3><p>{service.problem}</p><p>This role adds capacity by making repeatable preparation and coordination explicit. Your team still owns policy, material account actions, security decisions, and every exception that requires accountable judgment.</p></div></section>
