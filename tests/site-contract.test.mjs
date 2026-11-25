@@ -145,10 +145,10 @@ test('Context Thread and service pages use distinct route-appropriate hero media
   assert.ok(existsSync(new URL('public/editorial/customer-escalation-hero.jpg', root)));
   assert.match(globals, /\.workflow-image img\{object-fit:contain\}/);
   assert.match(globals, /\.service-detail-photo img\{object-fit:contain\}/);
-  assert.match(globals, /\.service-hero--stacked \.service-detail-photo img\{object-fit:cover;object-position:center\}/);
+  assert.match(globals, /\.service-hero--escalation \.service-detail-photo img\{object-fit:cover;object-position:center\}/);
 });
 
-test('Escalation coordination alone uses the verified stacked photo hero and centered page axis', () => {
+test('Escalation coordination alone uses the verified photo in a breadcrumb led responsive split hero', () => {
   const hero = new URL('public/editorial/customer-escalation-hero.jpg', root);
   const indexThumbnail = new URL('public/editorial/services-index/customer-escalation.webp', root);
   assert.equal(createHash('sha256').update(readFileSync(hero)).digest('hex'), 'f03b1b8f258b1dedfb31e90069f436b14cc757934e7eef51d6a47acfdfdfa984');
@@ -158,11 +158,20 @@ test('Escalation coordination alone uses the verified stacked photo hero and cen
   assert.match(servicesIndex, /'customer-escalation':[\s\S]*?src: '\/editorial\/services-index\/customer-escalation\.webp'/);
   assert.match(services, /service\.slug === 'customer-escalation'/);
   assert.match(services, /className=\{`service-detail\$\{isEscalationCoordination \? ' service-detail--escalation' : ''\}`\}/);
-  assert.match(services, /className=\{`page-hero service-hero\$\{isEscalationCoordination \? ' service-hero--stacked' : ''\}`\}/);
-  assert.match(services, /sizes=\{isEscalationCoordination \? '\(max-width: 700px\) 90vw, \(max-width: 1200px\) 90vw, 1120px' : '\(max-width: 1100px\) 90vw, 43vw'\}/);
+  assert.match(services, /isEscalationCoordination && <nav className="service-breadcrumb" aria-label="Breadcrumb">/);
+  assert.match(services, /<Link href="\/services">Services<\/Link><span aria-hidden="true">\/</);
+  assert.match(services, /<span aria-current="page">\{service\.name\}<\/span>/);
+  assert.match(services, /className=\{`page-hero service-hero\$\{isEscalationCoordination \? ' service-hero--escalation' : ''\}`\}/);
+  assert.match(services, /sizes=\{isEscalationCoordination \? '\(max-width: 700px\) 90vw, \(max-width: 1100px\) 95vw, 48vw' : '\(max-width: 1100px\) 90vw, 43vw'\}/);
   assert.match(services, /Discuss this role in a free call/);
   assert.match(services, /href="\/contact-us"/);
-  assert.match(globals, /\.service-hero--stacked\{grid-template-columns:minmax\(0,1fr\);justify-items:center/);
+  assert.match(globals, /\.service-breadcrumb,\.service-hero--escalation\{width:min\(calc\(100% - 4\.8vw\),var\(--content-max\)\);margin-inline:auto\}/);
+  assert.match(globals, /\.service-hero--escalation\{grid-template-columns:minmax\(0,\.905fr\) minmax\(0,1fr\);gap:clamp\(2rem,4\.8vw,3\.45rem\);align-items:center/);
+  assert.match(globals, /\.service-hero--escalation \.service-hero-copy\{[^}]*align-items:flex-start;[^}]*text-align:left\}/);
+  assert.match(globals, /@media\(max-width:1100px\)\{\.service-hero--escalation\{grid-template-columns:minmax\(0,1fr\)/);
+  assert.match(globals, /@media\(max-width:700px\)\{\.service-breadcrumb,\.service-hero--escalation\{width:100%/);
+  assert.doesNotMatch(services, /service-hero--stacked/);
+  assert.doesNotMatch(globals, /\.service-hero--stacked/);
   assert.match(globals, /\.service-detail--escalation \.service-manual\{display:block;width:min\(calc\(100% - 10vw\),1120px\)\}/);
   assert.match(globals, /\.service-detail--escalation \.service-prose\{margin-inline:auto\}/);
 });
