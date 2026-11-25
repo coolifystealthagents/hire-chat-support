@@ -85,7 +85,10 @@ test('role visuals and research presentation do not mislabel evidence', () => {
   const serviceIndex = read('app/services/page.tsx');
   const about = read('app/about/page.tsx');
   const research = read('app/research/[slug]/page.tsx');
-  assert.match(serviceIndex, /ServiceVisual/);
+  for (const slug of ['live-chat-support', 'helpdesk-triage', 'knowledge-base-support', 'qa-review-support', 'customer-escalation', 'multichannel-support']) {
+    assert.match(serviceIndex, new RegExp(`/editorial/services-index/${slug}\\.webp`));
+  }
+  assert.doesNotMatch(serviceIndex, /ServiceVisual/);
   assert.match(services, /src=\{service\.image\}/);
   assert.match(services, /alt=\{service\.imageAlt\}/);
   assert.match(about, /src=\{site\.heroImage\}/);

@@ -3,14 +3,40 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { site } from '@/lib/site';
 import { ArrowIcon } from '@/components/Icons';
-import { ServiceVisual } from '@/components/ServiceVisual';
+
+const serviceIndexPhotos: Record<string, { src: string; alt: string }> = {
+  'live-chat-support': {
+    src: '/editorial/services-index/live-chat-support.webp',
+    alt: 'Live support specialists wearing headsets in a customer service workspace',
+  },
+  'helpdesk-triage': {
+    src: '/editorial/services-index/helpdesk-triage.webp',
+    alt: 'Helpdesk colleague reviewing an issue with a headset support agent',
+  },
+  'knowledge-base-support': {
+    src: '/editorial/services-index/knowledge-base-support.webp',
+    alt: 'Colleague editing documentation beside an open laptop and notebook',
+  },
+  'qa-review-support': {
+    src: '/editorial/services-index/qa-review-support.webp',
+    alt: 'Two quality reviewers comparing anonymized examples beside laptops',
+  },
+  'customer-escalation': {
+    src: '/editorial/services-index/customer-escalation.webp',
+    alt: 'Two colleagues discussing an escalation handoff over a shared tablet',
+  },
+  'multichannel-support': {
+    src: '/editorial/services-index/multichannel-support.webp',
+    alt: 'Support specialists working across adjacent computer workstations',
+  },
+};
 
 export const metadata: Metadata = { title: 'Chat support services', description: `Explore remote support roles shaped for ${site.audience}.`, alternates: { canonical: '/services' } };
 
 export default function ServicesPage() {
   return <main>
     <header className="page-hero service-index-hero"><div><p className="eyebrow">Services</p><h1>Give each conversation a clear path.</h1><p>Choose a focused support lane, then define the approved sources, completion standard, accountable owner, and escalation conditions that make it reliable.</p><Link className="button primary" href="/contact-us">Plan a free consultation <ArrowIcon /></Link></div><figure className="page-hero-media service-index-photo motion-image"><Image src="/editorial/chat-support-services-hero.jpg" alt="Support operations team reviewing a queue and handoff plan together" fill priority sizes="(max-width: 1050px) 90vw, 44vw" /></figure></header>
-    <section className="service-directory"><div className="section-heading"><p className="eyebrow">Compare six focused roles</p><h2>Start where context breaks down most often.</h2><p>Compare the work each role completes and the operating signal that makes it useful. Every option can begin with one queue or recurring workflow, then expand only after the handoff is visible and reviewable.</p></div><div className="service-comparison-key" aria-label="How to compare services"><span>What it covers</span><span>When you need it</span><span>Full scope and controls</span></div>{site.services.map((service) => <article className="service-row" key={service.slug}><div className="service-row-image"><ServiceVisual service={service} compact /></div><div className="service-row-copy"><h3>{service.name}</h3><p className="service-promise">{service.short}</p><div className="service-compare-detail"><div><h4>What it covers</h4><ul>{service.tasks.slice(0, 3).map((task) => <li key={task}>{task}</li>)}</ul></div><div><h4>When you need it</h4><p>{service.problem}</p></div></div><Link className="text-link" href={`/services/${service.slug}`}>See scope, workflow, and controls <ArrowIcon /></Link></div></article>)}</section>
+    <section className="service-directory"><div className="section-heading"><p className="eyebrow">Compare six focused roles</p><h2>Start where context breaks down most often.</h2><p>Compare the work each role completes and the operating signal that makes it useful. Every option can begin with one queue or recurring workflow, then expand only after the handoff is visible and reviewable.</p></div><div className="service-comparison-key" aria-label="How to compare services"><span>What it covers</span><span>When you need it</span><span>Full scope and controls</span></div>{site.services.map((service) => { const photo = serviceIndexPhotos[service.slug]; return <article className="service-row" key={service.slug}><div className="service-row-image"><Image src={photo.src} alt={photo.alt} fill sizes="(max-width: 900px) 90vw, 36vw" style={{ objectFit: 'cover' }} /></div><div className="service-row-copy"><h3>{service.name}</h3><p className="service-promise">{service.short}</p><div className="service-compare-detail"><div><h4>What it covers</h4><ul>{service.tasks.slice(0, 3).map((task) => <li key={task}>{task}</li>)}</ul></div><div><h4>When you need it</h4><p>{service.problem}</p></div></div><Link className="text-link" href={`/services/${service.slug}`}>See scope, workflow, and controls <ArrowIcon /></Link></div></article>; })}</section>
     <section className="service-decisions"><div><p className="eyebrow">A practical selection lens</p><h2>Choose by the work product, not by a broad title.</h2></div><div><h3>Choose live coverage when response continuity is the gap.</h3><p>Live chat and multichannel support keep approved conversations moving while preserving customer context.</p><h3>Choose operations support when the handoff is the gap.</h3><p>Triage and escalation coordination create reliable routing, ownership, and evidence for the people who make decisions.</p><h3>Choose knowledge or quality support when consistency is the gap.</h3><p>Knowledge maintenance and review preparation help managers improve the sources and controls behind frontline work.</p></div></section>
     <section className="closing"><p className="eyebrow">Shape a controlled first workflow</p><h2>Bring one queue and leave with a clearer role brief.</h2><p>We will discuss inputs, permissions, output standards, review ownership, and the exceptions that must remain with your team.</p><Link className="button primary" href="/contact-us">Book a free consultation</Link></section>
   </main>;
