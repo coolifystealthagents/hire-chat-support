@@ -177,27 +177,33 @@ test('Escalation coordination alone uses the verified photo in a breadcrumb led 
   assert.match(globals, /\.service-detail--escalation \.service-prose\{margin-inline:auto\}/);
 });
 
-test('Escalation coordination workflow replaces only its decorative numbers with accessible hidden icons', () => {
-  const expectedWorkflow = [
-    'Confirm the escalation trigger',
-    'Prepare a concise evidence based summary',
-    'Assign the documented owner',
-    'Track approved updates and record the outcome',
-  ];
-  assert.match(site, new RegExp(`workflow: \\[${expectedWorkflow.map((item) => `'${item}'`).join(', ')}\\]`));
-  assert.match(services, /const escalationWorkflowIcons = \[AlertCircleIcon, DocumentTextIcon, UserCheckIcon, ClipboardCheckIcon\] as const/);
+test('all service workflows use complete route-matched icon tuples while preserving ordered-list semantics', () => {
+  const expectedIconMap = {
+    'live-chat-support': ['ClipboardCheckIcon', 'UserCheckIcon', 'DocumentTextIcon', 'AlertCircleIcon'],
+    'helpdesk-triage': ['DocumentTextIcon', 'ClipboardCheckIcon', 'AlertCircleIcon', 'UserCheckIcon'],
+    'knowledge-base-support': ['ClipboardCheckIcon', 'AlertCircleIcon', 'DocumentTextIcon', 'UserCheckIcon'],
+    'qa-review-support': ['ClipboardCheckIcon', 'AlertCircleIcon', 'DocumentTextIcon', 'UserCheckIcon'],
+    'customer-escalation': ['AlertCircleIcon', 'DocumentTextIcon', 'UserCheckIcon', 'ClipboardCheckIcon'],
+    'multichannel-support': ['AlertCircleIcon', 'UserCheckIcon', 'DocumentTextIcon', 'ClipboardCheckIcon'],
+  };
+  for (const [slug, iconNames] of Object.entries(expectedIconMap)) {
+    assert.match(services, new RegExp(`'${slug}': \\[${iconNames.join(', ')}\\]`));
+  }
+  assert.match(services, /const workflowIcons = serviceWorkflowIcons\[service\.slug as ServiceWorkflowSlug\]/);
+  assert.match(services, /if \(!workflowIcons \|\| workflowIcons\.length !== service\.workflow\.length\) throw new Error\(`Workflow icon count mismatch for \$\{service\.slug\}`\)/);
   assert.match(services, /<ol className="service-workflow-list">/);
-  assert.match(services, /<li key=\{item\}>\{isEscalationCoordination \? <span className="service-workflow-icon" aria-hidden="true"><WorkflowIcon \/><\/span> : <span>\{String\(index \+ 1\)\.padStart\(2, '0'\)\}<\/span>\}<p>\{item\}<\/p><\/li>/);
+  assert.match(services, /<li key=\{item\}><span className="service-workflow-icon" aria-hidden="true"><WorkflowIcon \/><\/span><p>\{item\}<\/p><\/li>/);
   assert.doesNotMatch(services, /role="(?:none|presentation)"/);
+  assert.doesNotMatch(services, /String\(index \+ 1\)\.padStart/);
   for (const name of ['AlertCircleIcon', 'DocumentTextIcon', 'UserCheckIcon', 'ClipboardCheckIcon']) {
     assert.match(icons, new RegExp(`export function ${name}\\(\\)`));
   }
   assert.equal((icons.match(/focusable="false"/g) || []).length >= 4, true);
-  assert.match(globals, /\.service-detail--escalation \.service-workflow-list\{list-style:none/);
+  assert.match(globals, /\.service-workflow-list\{list-style:none/);
   assert.match(globals, /\.service-workflow-icon\{[^}]*width:2\.5rem;height:2\.5rem;[^}]*color:var\(--primary\)/);
   assert.match(globals, /\.service-workflow-icon svg\{[^}]*width:1\.5rem;height:1\.5rem;[^}]*fill:none;stroke:currentColor/);
   assert.match(globals, /\.service-workflow-list li\{display:grid;grid-template-columns:2\.5rem 1fr/);
-  assert.match(globals, /\.service-detail--escalation \.service-workflow-list li\{grid-template-columns:2\.5rem minmax\(0,1fr\)\}/);
+  assert.doesNotMatch(servicesIndex, /service-workflow-icon|serviceWorkflowIcons/);
 });
 
 test('wide service and editorial heroes retain useful tracks without nested viewport padding', () => {
