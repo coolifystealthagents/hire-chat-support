@@ -146,8 +146,20 @@ test('homepage hero and service detail layouts follow the scoped review contract
 });
 
 test('Context Thread and service pages use distinct route-appropriate hero media', () => {
-  assert.match(home, /src="\/editorial\/source-conversation-owner\.svg"/);
-  assert.match(home, /workflow-image/);
+  const contextDesktop = new URL('public/editorial/context-thread/support-colleagues-desktop.webp', root);
+  const contextMobile = new URL('public/editorial/context-thread/support-colleagues-mobile.webp', root);
+  assert.ok(existsSync(contextDesktop), 'desktop Context Thread photo is missing');
+  assert.ok(existsSync(contextMobile), 'mobile Context Thread photo is missing');
+  assert.match(home, /<picture>/);
+  assert.match(home, /media="\(max-width: 700px\)" srcSet="\/editorial\/context-thread\/support-colleagues-mobile\.webp" type="image\/webp"/);
+  assert.match(home, /src="\/editorial\/context-thread\/support-colleagues-desktop\.webp"/);
+  assert.match(home, /alt="Two colleagues reviewing a laptop together at a shared workstation"/);
+  assert.match(home, /width="1200" height="1000" loading="lazy" decoding="async"/);
+  assert.doesNotMatch(home, /source-conversation-owner\.svg/);
+  assert.match(home, /workflow-image workflow-photo/);
+  assert.match(imageCredits, /https:\/\/unsplash\.com\/photos\/UTw3j_aoIKM/);
+  assert.match(imageCredits, /Christina @ wocintechchat\.com/);
+  assert.match(imageCredits, /https:\/\/unsplash\.com\/license/);
   const serviceImages = [...site.matchAll(/image: '(\/editorial\/services-detail\/[^']+\.webp)'/g)].map((match) => match[1]);
   assert.equal(serviceImages.length, 6);
   assert.equal(new Set(serviceImages).size, 6);
@@ -159,6 +171,8 @@ test('Context Thread and service pages use distinct route-appropriate hero media
   assert.equal((site.match(/imagePosition:/g) || []).length, 6);
   assert.doesNotMatch(site, /image: '\/editorial\/service-[^']+\.svg'/);
   assert.match(globals, /\.workflow-image img\{object-fit:contain\}/);
+  assert.match(globals, /\.workflow-photo img\{object-fit:cover;object-position:center\}/);
+  assert.match(globals, /\.workflow-photo picture,\.workflow-photo img\{position:absolute;inset:0;width:100%;height:100%\}/);
   assert.match(globals, /\.service-detail-photo img\{object-fit:cover\}/);
   assert.match(globals, /\.service-hero--escalation \.service-detail-photo img\{object-fit:cover;object-position:center\}/);
 });
