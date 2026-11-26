@@ -12,3 +12,8 @@
 
 .submission-path{margin:1rem 0;padding:1rem;border-left:4px solid var(--primary);background:var(--secondary)}.submission-path strong{display:block;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em}.submission-path p{margin:.35rem 0 0;font-size:.8rem;line-height:1.5}
 @media(min-width:1051px){.submission-path{margin:.55rem 0;padding:.65rem .75rem}.submission-path p{font-size:.7rem;line-height:1.35}}
+
+/* Contact handoff typography */
+@media(min-width:1051px){.parent-copy{padding-inline:clamp(2.5rem,4vw,5rem)}.parent-copy h2{font-size:clamp(3.25rem,3.6vw,4.25rem);line-height:.98;max-width:19ch;text-wrap:balance}}
+@media(max-width:1050px){.parent-copy h2{font-size:clamp(2.5rem,7vw,3.5rem);line-height:1.02;max-width:20ch;text-wrap:balance}}
+@media(max-width:600px){.parent-copy h2{font-size:clamp(2.125rem,8.75vw,2.5rem);max-width:19ch}}

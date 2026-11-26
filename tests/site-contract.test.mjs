@@ -72,6 +72,16 @@ test('contact uses ten unique approved reviews, relevant imagery, and parent-bra
   assert.doesNotMatch(contact, /<iframe/);
 });
 
+test('the contact handoff heading keeps its content and uses scoped responsive typography', () => {
+  assert.match(contact, /Before the first shift/);
+  assert.match(contact, /Staffing support grounded in a documented handoff\./);
+  assert.match(contact, /chat-support-contact\.jpg/);
+  assert.match(contactCss, /@media\(min-width:1051px\)[\s\S]*?\.parent-copy h2\{font-size:clamp\(3\.25rem,3\.6vw,4\.25rem\);line-height:\.98;max-width:19ch;text-wrap:balance\}/);
+  assert.match(contactCss, /@media\(max-width:1050px\)[\s\S]*?\.parent-copy h2\{font-size:clamp\(2\.5rem,7vw,3\.5rem\);line-height:1\.02;max-width:20ch;text-wrap:balance\}/);
+  assert.match(contactCss, /@media\(max-width:600px\)\{\.parent-copy h2\{font-size:clamp\(2\.125rem,8\.75vw,2\.5rem\);max-width:19ch\}\}/);
+  assert.doesNotMatch(contactCss, /\.parent-(?:evidence|copy)[^{]*\{[^}]*\bzoom\s*:|\.parent-(?:evidence|copy)[^{]*\{[^}]*transform\s*:/);
+});
+
 test('the conversion path keeps scheduling on thank-you only', () => {
   assert.match(read('app/thank-you/page.tsx'), /go\.oncehub\.com\/StealthAgentsTeam/);
   assert.match(read('components/LeadForm.tsx'), /router\.push\('\/thank-you'\)/);
