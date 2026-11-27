@@ -36,6 +36,8 @@ Except for the licensed homepage photograph documented below, the raster editori
 | --- | ---: | --- |
 | `chat-support-home-hero.jpg` | 1536×1024 | Homepage hero |
 | `chat-support-home-photo.jpg` | 1600×900 | Homepage hero; [Pexels photo 7709145](https://www.pexels.com/photo/a-woman-working-in-customer-support-7709145/) by MART PRODUCTION, used under the [Pexels license](https://www.pexels.com/license/), SHA-256 `9f94343f9edcd8f9f113019001c6e9081987890eb7d60233cdf7cac31e15e521` |
+| `context-thread/support-colleagues-desktop.webp` | 1200×1000 | Homepage Context Thread; [Unsplash photo UTw3j_aoIKM](https://unsplash.com/photos/UTw3j_aoIKM) by Christina @ wocintechchat.com, used under the [Unsplash License](https://unsplash.com/license), SHA-256 `ed0133e1e64ebe1db061645cd26d0aa6416afb61b7b196f7630ca912141a723c` |
+| `home-closing/support-handoff-shared-desk.webp` | 1280×960 | Homepage closing CTA; optimized from user-supplied generated asset `Support_handoff_at_a_shared_desk.png` on 2026-11-27. Source PNG SHA-256 `e98fcf6e0de5bb30ccae52c9d75985f9820eb967bca885fa2fb80fc0b18dcec7`; output WebP SHA-256 `013044c58cbdd4f0bc8c0f25e29cd7dff8c7b6044a103aff2b084d4cadf61b0a` |
 | `chat-support-services-hero.jpg` | 1536×1024 | Services index hero |
 | `chat-support-contact.jpg` | 1536×1024 | Contact workflow section |
 | `chat-support-blog-hero.jpg` | 1672×941 | Blog index hero |

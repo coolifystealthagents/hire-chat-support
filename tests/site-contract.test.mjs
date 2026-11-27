@@ -22,6 +22,7 @@ const icons = read('components/Icons.tsx');
 const site = read('lib/site.ts');
 const nextConfig = read('next.config.mjs');
 const imageCredits = read('app/image-credits/page.tsx');
+const optimizationReview = read('docs/optimization-review.md');
 const sitemap = read('app/sitemap.ts');
 
 const visibleSources = [
@@ -139,6 +140,18 @@ test('all six service records expose the long-form content contract', () => {
   }
 });
 
+test('homepage hero removes only the three photograph badges', () => {
+  assert.match(home, /<section className="hero ceramic-hero">/);
+  assert.match(home, /<figure className="context-studio motion-image"><Image src=\{site\.heroImage\} alt=\{site\.heroAlt\} fill priority sizes="\(max-width: 700px\) 90vw, \(max-width: 1050px\) 92vw, 48vw" \/><\/figure>/);
+  assert.match(home, /<CTA id="cta-home-hero-bookcall">Book a free consultation<\/CTA>/);
+  assert.match(home, /Explore support roles/);
+  assert.doesNotMatch(home, /className="context-thread"/);
+  assert.doesNotMatch(home, /Customer context|Approved answer|Right owner/);
+  assert.doesNotMatch(globals, /\.context-thread(?:\s|\{|\.)/);
+  assert.match(globals, /\.context-studio img\{object-position:58% center\}/);
+  assert.match(globals, /@media\(max-width:700px\)[\s\S]*?\.context-studio img\{object-position:57% center\}/);
+});
+
 test('homepage hero and service detail layouts follow the scoped review contract', () => {
   const homePhoto = new URL('public/editorial/chat-support-home-photo.jpg', root);
   assert.ok(existsSync(homePhoto));
@@ -156,14 +169,22 @@ test('homepage hero and service detail layouts follow the scoped review contract
 });
 
 test('homepage closing CTA pairs preserved conversion copy with responsive approved photography', () => {
-  assert.match(home, /<section className="closing">/);
-  assert.match(home, /Start with one recurring conversation/);
-  assert.match(home, /Build a support role that knows what to carry forward\./);
-  assert.match(home, /Schedule a free call/);
-  assert.match(home, /className="closing-photo"/);
-  assert.match(home, /src="\/editorial\/chat-support-home-photo\.jpg"/);
-  assert.match(home, /alt="Customer support specialist reviewing her queue at a laptop workstation"/);
-  assert.match(home, /sizes="\(max-width: 700px\) 90vw, 42vw"/);
+  const closing = home.match(/<section className="closing">[\s\S]*?<\/section>/)?.[0];
+  assert.ok(closing, 'closing CTA section is missing');
+  assert.match(closing, /Start with one recurring conversation/);
+  assert.match(closing, /Build a support role that knows what to carry forward\./);
+  assert.match(closing, /Bring the queue, knowledge source, and escalation points\. We will help turn them into a focused, reviewable role\./);
+  assert.match(closing, /<CTA id="cta-home-closing-schedulecall">Schedule a free call<\/CTA>/);
+  assert.match(closing, /src="\/editorial\/home-closing\/support-handoff-shared-desk\.webp"/);
+  assert.match(closing, /alt="Two colleagues reviewing support work together on a laptop"/);
+  assert.match(closing, /fill sizes="\(max-width: 700px\) 90vw, 42vw"/);
+  assert.doesNotMatch(closing, /chat-support-home-photo\.jpg|chat-support-home-hero(?:-v2)?\.jpg|context-thread\/support-colleagues-desktop\.webp/);
+
+  const closingPhoto = new URL('public/editorial/home-closing/support-handoff-shared-desk.webp', root);
+  assert.ok(existsSync(closingPhoto), 'dedicated closing CTA photo is missing');
+  assert.equal(createHash('sha256').update(readFileSync(closingPhoto)).digest('hex'), '013044c58cbdd4f0bc8c0f25e29cd7dff8c7b6044a103aff2b084d4cadf61b0a');
+  assert.match(optimizationReview, /home-closing\/support-handoff-shared-desk\.webp.*1280×960.*Homepage closing CTA.*user-supplied.*Support_handoff_at_a_shared_desk\.png.*e98fcf6e0de5bb30ccae52c9d75985f9820eb967bca885fa2fb80fc0b18dcec7.*013044c58cbdd4f0bc8c0f25e29cd7dff8c7b6044a103aff2b084d4cadf61b0a/);
+
   assert.match(globals, /\.closing\{display:grid;grid-template-columns:minmax\(0,1fr\) minmax\(320px,\.9fr\)/);
   assert.match(globals, /\.closing-photo\{[^}]*aspect-ratio:4\/3/);
   assert.match(globals, /@media \(max-width:700px\)\{\.closing\{grid-template-columns:1fr/);
