@@ -32,7 +32,7 @@ export default function ContactPage() {
     </section>
 
     <section className="parent-evidence">
-      <figure className="team-photo motion-image"><Image src="/editorial/chat-support-contact.jpg" alt="Support professional listening during a remote consultation while taking workflow notes" fill sizes="(max-width: 900px) 100vw, 54vw" /></figure>
+      <figure className="team-photo motion-image"><Image src="/stealth-agents-team.webp" alt="Official StealthAgents team in Bacolod" fill sizes="(max-width: 900px) 100vw, 54vw" /></figure>
       <div className="parent-copy motion-copy"><p className="eyebrow">Before the first shift</p><h2>Staffing support grounded in a documented handoff.</h2><p>StealthAgents supports recruitment, matching, and managed operations for Hire Chat Support. Your role begins with documented work, approved access, clear review ownership, and a practical escalation path. Hire Chat Support remains focused on customer conversation workflows while StealthAgents provides staffing and operating support.</p><div className="official-plate"><Image src="/stealth-agents-logo-black.png" alt="StealthAgents official logo" width={180} height={48} /><strong>Staffing and managed operations partner</strong></div></div>
     </section>
 

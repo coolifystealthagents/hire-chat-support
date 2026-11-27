@@ -65,7 +65,7 @@ test('contact uses ten unique approved reviews, relevant imagery, and parent-bra
   assert.equal(new Set(reviews.map((review) => review.evidenceId)).size, reviews.length);
   assert.ok(reviews.every((review) => review.sourceUrl === 'https://stealthagents.com'));
   assert.match(reviewRail, /StealthAgents reviews/);
-  assert.match(contact, /chat-support-contact\.jpg/);
+  assert.match(contact, /stealth-agents-team\.webp/);
   assert.doesNotMatch(contact, /illustrative consultation workflow (?:scene|access)/i);
   assert.doesNotMatch(contact, /<figcaption>/);
   assert.match(contact, /Staffing and managed operations partner/);
@@ -76,7 +76,7 @@ test('contact uses ten unique approved reviews, relevant imagery, and parent-bra
 test('the contact handoff heading keeps its content and uses scoped responsive typography', () => {
   assert.match(contact, /Before the first shift/);
   assert.match(contact, /Staffing support grounded in a documented handoff\./);
-  assert.match(contact, /chat-support-contact\.jpg/);
+  assert.match(contact, /stealth-agents-team\.webp/);
   assert.match(contactCss, /@media\(min-width:1051px\)[\s\S]*?\.parent-copy h2\{font-size:clamp\(3\.25rem,3\.6vw,4\.25rem\);line-height:\.98;max-width:19ch;text-wrap:balance\}/);
   assert.match(contactCss, /@media\(max-width:1050px\)[\s\S]*?\.parent-copy h2\{font-size:clamp\(2\.5rem,7vw,3\.5rem\);line-height:1\.02;max-width:20ch;text-wrap:balance\}/);
   assert.match(contactCss, /@media\(max-width:600px\)\{\.parent-copy h2\{font-size:clamp\(2\.125rem,8\.75vw,2\.5rem\);max-width:19ch\}\}/);
@@ -138,6 +138,24 @@ test('all six service records expose the long-form content contract', () => {
   for (const heading of ['Who this role is for', 'Inputs and approved sources', 'Workflow and deliverables', 'Quality checks', 'Decision boundaries', 'Frequently asked questions']) {
     assert.match(services, new RegExp(heading));
   }
+});
+
+test('contact page parent evidence uses the approved StealthAgents team photograph', () => {
+  const section = contact.match(/<section className="parent-evidence">[\s\S]*?<\/section>/)?.[0];
+  assert.ok(section, 'contact parent evidence section is missing');
+  assert.match(section, /<p className="eyebrow">Before the first shift<\/p>/);
+  assert.match(section, /<h2>Staffing support grounded in a documented handoff\.<\/h2>/);
+  assert.match(section, /src="\/stealth-agents-team\.webp"/);
+  assert.match(section, /alt="Official StealthAgents team in Bacolod"/);
+  assert.match(section, /fill sizes="\(max-width: 900px\) 100vw, 54vw"/);
+  assert.doesNotMatch(section, /chat-support-contact\.jpg/);
+  assert.match(section, /src="\/stealth-agents-logo-black\.png"/);
+  assert.match(section, /Staffing and managed operations partner/);
+
+  const teamPhoto = new URL('public/stealth-agents-team.webp', root);
+  assert.ok(existsSync(teamPhoto), 'approved StealthAgents team photo is missing');
+  assert.equal(createHash('sha256').update(readFileSync(teamPhoto)).digest('hex'), '58d4a9d71f30927c0447a44ce91b818ba7a5f6ebcae495b64acaf5518161c721');
+  assert.match(contactCss, /\.team-photo img\{object-position:center\}/);
 });
 
 test('homepage hero removes only the three photograph badges', () => {
