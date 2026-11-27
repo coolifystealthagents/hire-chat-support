@@ -152,6 +152,27 @@ test('homepage hero removes only the three photograph badges', () => {
   assert.match(globals, /@media\(max-width:700px\)[\s\S]*?\.context-studio img\{object-position:57% center\}/);
 });
 
+test('homepage removes the separate message strip and prepares the context-first intro for dedicated responsive media', () => {
+  assert.doesNotMatch(home, /conversation-band|thread-line|className="bubble/);
+  assert.doesNotMatch(home, /I need help with my account\.|I have the context\. Let me check the approved path\.|This needs the account owner\. I will carry the details forward\./);
+  assert.doesNotMatch(globals, /\.conversation-band|\.thread-line|\.bubble(?:\.|\{|\s)/);
+
+  const intro = home.match(/<section className="section intro">[\s\S]*?<\/section>/)?.[0];
+  assert.ok(intro, 'context-first intro section is missing');
+  assert.match(intro, /<p className="eyebrow">A context first operating model<\/p>/);
+  assert.match(intro, /<div className="intro-layout">/);
+  assert.match(intro, /<div className="motion-copy intro-copy"><h2>More coverage should not mean less care\.<\/h2>/);
+  assert.match(intro, /Chat support works when the person responding can find the right source/);
+  assert.match(intro, /The assistant keeps routine conversations, documentation, and handoffs moving\./);
+  assert.match(globals, /\.intro-layout\{display:grid/);
+  assert.match(globals, /\.intro-layout:has\(\.intro-photo\)\{grid-template-columns:minmax\(280px,\.9fr\) minmax\(0,1\.1fr\)/);
+  assert.match(globals, /\.intro-photo\{[^}]*aspect-ratio:4\/3/);
+  assert.match(globals, /@media\(max-width:700px\)[\s\S]*?\.intro-layout:has\(\.intro-photo\)\{grid-template-columns:1fr/);
+
+  assert.match(home, /src="\/editorial\/home-closing\/support-handoff-shared-desk\.webp"/);
+  assert.match(home, /alt="Two colleagues reviewing support work together on a laptop"/);
+});
+
 test('homepage hero and service detail layouts follow the scoped review contract', () => {
   const homePhoto = new URL('public/editorial/chat-support-home-photo.jpg', root);
   assert.ok(existsSync(homePhoto));
