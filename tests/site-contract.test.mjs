@@ -155,6 +155,21 @@ test('homepage hero and service detail layouts follow the scoped review contract
   assert.match(globals, /@media\(max-width:700px\).*?\.service-hero-copy h1\{max-width:none/s);
 });
 
+test('homepage closing CTA pairs preserved conversion copy with responsive approved photography', () => {
+  assert.match(home, /<section className="closing">/);
+  assert.match(home, /Start with one recurring conversation/);
+  assert.match(home, /Build a support role that knows what to carry forward\./);
+  assert.match(home, /Schedule a free call/);
+  assert.match(home, /className="closing-photo"/);
+  assert.match(home, /src="\/editorial\/chat-support-home-photo\.jpg"/);
+  assert.match(home, /alt="Customer support specialist reviewing her queue at a laptop workstation"/);
+  assert.match(home, /sizes="\(max-width: 700px\) 90vw, 42vw"/);
+  assert.match(globals, /\.closing\{display:grid;grid-template-columns:minmax\(0,1fr\) minmax\(320px,\.9fr\)/);
+  assert.match(globals, /\.closing-photo\{[^}]*aspect-ratio:4\/3/);
+  assert.match(globals, /@media \(max-width:700px\)\{\.closing\{grid-template-columns:1fr/);
+  assert.match(globals, /\.closing-photo img\{[^}]*object-position:58% center\}/);
+});
+
 test('Context Thread and service pages use distinct route-appropriate hero media', () => {
   const contextDesktop = new URL('public/editorial/context-thread/support-colleagues-desktop.webp', root);
   const contextMobile = new URL('public/editorial/context-thread/support-colleagues-mobile.webp', root);

@@ -178,3 +178,10 @@ html,body{max-width:100%;overflow-x:clip}figure{margin:0}.button:focus-visible,a
 .service-prose .service-final :is(h2,p){text-align:center}
 .service-final p{max-width:65ch;margin-inline:auto}
 @media(max-width:700px){.service-hero,.service-manual{width:min(calc(100% - 10vw),var(--service-content-max));padding-inline:0}.service-hero{align-items:stretch}.service-breadcrumb{width:min(calc(100% - 10vw),var(--service-content-max));padding-inline:0}.service-detail--escalation .service-manual{width:min(calc(100% - 10vw),var(--service-content-max))}}
+
+/* Homepage closing CTA: preserve the dark conversion panel while giving its editorial photo a stable frame. */
+.closing{display:grid;grid-template-columns:minmax(0,1fr) minmax(320px,.9fr);align-items:center;gap:clamp(2.5rem,6vw,6rem)}
+.closing-copy{min-width:0}.closing-copy h2{max-width:12ch}.closing-copy p:not(.eyebrow){max-width:56ch}
+.closing-photo{position:relative;width:100%;min-width:0;aspect-ratio:4/3;overflow:hidden;border-radius:20px;background:color-mix(in srgb,var(--paper) 10%,var(--ink))}
+.closing-photo img{object-fit:cover;object-position:58% center}
+@media (max-width:700px){.closing{grid-template-columns:1fr;gap:2.5rem}.closing-copy h2{max-width:13ch}.closing-photo{aspect-ratio:4/3}}
