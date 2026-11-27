@@ -51,7 +51,7 @@ export function Header() {
 
   return <>
     <a className="skip-link" href="#main-content">Skip to main content</a>
-    <header className="site-header">
+    <header data-site-header="sticky" className="site-header">
       <Link className="brand" href="/" aria-label={`${site.name} home`}><Image src="/logo.svg" alt="" width={42} height={42} priority /><span>{site.name}</span></Link>
       <nav ref={panelRef} id="primary-navigation" className={open ? 'primary-nav is-open' : 'primary-nav'} aria-label="Primary navigation">
         {primaryNav.map((item) => <Link key={item.href} href={item.href} aria-current={isActive(item) ? 'page' : undefined}>{item.label}</Link>)}
@@ -63,13 +63,13 @@ export function Header() {
 }
 
 export function Footer() {
-  return <footer className="site-footer">
+  return <footer data-site-footer="true" className="site-footer">
     <div className="footer-main">
       <div className="footer-intro"><Link className="brand inverse" href="/"><Image src="/logo.svg" alt="" width={44} height={44} /><span>{site.name}</span></Link><p>Context aware chat support built around approved knowledge and clear ownership.</p><Link className="button footer-cta" href="/contact-us">Discuss a support role</Link></div>
-      <nav className="footer-group" aria-label="Explore"><p>Explore</p><Link href="/">Home</Link><Link href="/services">Services</Link><Link href="/blog">Blog</Link><Link href="/research" aria-label="Research library">Research</Link><Link href="/contact-us">Contact Us</Link></nav>
+      <nav data-footer-menu="true" className="footer-group" aria-label="Explore"><p>Explore</p><Link href="/">Home</Link><Link href="/services">Services</Link><Link href="/blog">Blog</Link><Link href="/research" aria-label="Research library">Research</Link><Link href="/contact-us">Contact Us</Link></nav>
       <nav className="footer-group footer-company" aria-label="Company and legal"><p>Company and legal</p><Link href="/about">About</Link><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><Link href="/image-credits">Image credits</Link></nav>
-      <nav className="footer-group footer-services" aria-label="Support services"><p>Support services</p>{site.services.map((service) => <Link key={service.slug} href={`/services/${service.slug}`}>{service.name}</Link>)}</nav>
+      <nav data-footer-menu="true" className="footer-group footer-services" aria-label="Support services"><p>Support services</p>{site.services.map((service) => <Link key={service.slug} href={`/services/${service.slug}`}>{service.name}</Link>)}</nav>
     </div>
-    <div className="footer-closing"><div className="footer-legal"><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><span>© {new Date().getFullYear()} {site.name}</span></div><a className="parent-mark" href="https://stealthagents.com" rel="noopener noreferrer"><span>Powered by StealthAgents</span><Image src="/stealth-agents-logo-black.png" alt="StealthAgents" width={124} height={34} /></a></div>
+    <section className="site-parent-company" aria-label="Powered by StealthAgents"><a className="site-parent-logo" href="https://stealthagents.com/" aria-label="Visit StealthAgents"><img src="/stealthagents-parent-logo.png" alt="StealthAgents" width="158" height="53" loading="lazy" /></a><div><h2>Powered by StealthAgents</h2><p>StealthAgents recruits and supports the remote professionals behind our services, from matching and onboarding to ongoing team support.</p><a className="site-parent-link" href="https://stealthagents.com/">Explore StealthAgents ↗</a></div></section><div className="footer-closing"><div className="footer-legal"><Link href="/privacy">Privacy</Link><Link href="/terms">Terms</Link><span>© {new Date().getFullYear()} {site.name}</span></div><a className="parent-mark" href="https://stealthagents.com" rel="noopener noreferrer"><span>Powered by StealthAgents</span><Image src="/stealth-agents-logo-black.png" alt="StealthAgents" width={124} height={34} /></a></div>
   </footer>;
 }

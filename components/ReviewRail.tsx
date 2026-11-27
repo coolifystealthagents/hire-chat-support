@@ -12,7 +12,7 @@ export function ReviewRail() {
     const stage = stageRef.current;
     const track = trackRef.current;
     if (!stage || !track) return;
-    const staticMode = window.matchMedia('(max-width: 600px), (prefers-reduced-motion: reduce)');
+    const staticMode = window.matchMedia('(prefers-reduced-motion: reduce)');
     let offset = 0;
 
     const tick = () => {
@@ -43,9 +43,9 @@ export function ReviewRail() {
       ref={stageRef}
       className="review-stage"
       tabIndex={0}
-      aria-label="StealthAgents client reviews. Focus or hover to pause movement."
-      onMouseEnter={() => { pausedRef.current = true; }}
-      onMouseLeave={() => { pausedRef.current = false; }}
+      aria-label="StealthAgents client reviews. Focus to pause movement."
+      
+      
       onFocus={() => { pausedRef.current = true; }}
       onBlur={() => { pausedRef.current = false; }}
     >
